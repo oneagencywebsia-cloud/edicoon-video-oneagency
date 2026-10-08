@@ -1,4 +1,4 @@
-# Estado del proyecto (traspaso a la sesión en el PC con Windows)
+# Estado del proyecto
 
 Idioma de trabajo: español. Trabajar por fases y parar en cada punto de control hasta que Ángel conteste.
 No publicar, no gastar créditos y no subir archivos a ningún servicio sin preguntar antes.
@@ -29,3 +29,12 @@ No publicar, no gastar créditos y no subir archivos a ningún servicio sin preg
 3. Proyecto Remotion en `remotion/` (1080x1920, 60 fps) y prueba de render de un still.
 4. Anotar cada fallo en «Reglas técnicas» del CLAUDE.md.
 Después: fase 1b (Drive API), fase 2 (estructura), fase 3 (pipeline de cámara), fase 4 (escenas), etc.
+
+## ACTUALIZACIÓN: se trabaja TODO en la nube (decisión de Ángel)
+- Fase 1 hecha en la nube: .venv (faster-whisper turbo CPU OK), Remotion 1080x1920@60 con still de prueba OK
+  (`out/qa/prueba.png`), fuentes locales. Detalles y fallos en `CLAUDE.md`.
+- El PC con Windows ya no se usa para procesar. Node/ffmpeg/Python del PC no hacen falta.
+- Pendiente fase 1b: acceso a Drive. Probar primero el conector de Drive de la sesión (descarga de un vídeo corto);
+  si no sirve para archivos grandes, OAuth «aplicación de escritorio» con `drive.readonly`.
+  Las credenciales NO van al repo (`secrets/` ignorado); en la nube hay que guardarlas como secretos del entorno.
+- Limitación: el contenedor es efímero. Lo que importa va a git (sin vídeos) y a Drive (entregas).
