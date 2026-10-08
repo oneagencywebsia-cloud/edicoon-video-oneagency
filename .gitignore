@@ -1,0 +1,11 @@
+secrets/
+.env.local
+.env
+raw/
+out/
+node_modules/
+.venv/
+__pycache__/
+*.mp4
+*.mov
+*.wav

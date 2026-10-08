@@ -1,0 +1,16 @@
+{
+  "nombre": "O.N.E-Agency",
+  "handle": "@one-agency.es",
+  "idioma": "es",
+  "avatar": "marca/avatar.png",
+  "suscriptores": null,
+  "web": "https://one-agency.es",
+  "drive": {
+    "raiz": "O.N.E Agency / videos / contenido en vertical",
+    "brutos": "videos brutos/<id>",
+    "finales": "videos finales/<id>",
+    "nota": "ruta exacta pendiente de confirmar con la API de Drive (fase 1b)"
+  },
+  "equipo": { "so": "Windows 11 Pro", "cpu": "Ryzen 7 5800X", "ram_gb": 32, "gpu": "RTX 5060", "transcripcion": "faster-whisper (CUDA)" },
+  "grabacion": { "dispositivo": "móvil", "resolucion": "3840x2160", "fps": 60, "orientacion": "vertical", "palmada": false, "duracion_s": [20, 60] }
+}

@@ -1,0 +1,33 @@
+{
+  "nombre": "O.N.E Agency",
+  "eslogan": "Tu empresa trabaja. La IA trabaja más.",
+  "persona": { "nombre": "Ángel Carrillo", "cargo": "CEO & FOUNDER" },
+  "colores": {
+    "fondo": "#0d0d1a",
+    "texto": "#ffffff",
+    "acento": "#3B82F6",
+    "acento2": "#F97316",
+    "cristal": "rgba(255,255,255,0.12)"
+  },
+  "tipografia": {
+    "titulos": "Plus Jakarta Sans",
+    "texto": "Plus Jakarta Sans",
+    "datos": "JetBrains Mono",
+    "pesos": [400, 500, 600, 700, 800]
+  },
+  "logos": {
+    "isotipo": null,
+    "logotipo": null,
+    "avatar": "marca/avatar.png",
+    "nota": "Pendiente: extraer isotipo (cerebro) del avatar y componer logotipo en texto (fase 4)."
+  },
+  "formato": { "ancho": 1080, "alto": 1920, "fps": 60, "orientacion": "vertical" },
+  "estilo": {
+    "variedad": "alta: no repetir fondo ni formato de animación seguidos",
+    "sonido": "solo efectos reales de librería (clicks, teclado, whoosh de foley); nada generado con IA",
+    "subtitulos": {
+      "clave": "palabras clave grandes, semi detrás de la persona, con aparición animada y SFX",
+      "resto": "posición fija predeterminada, palabra activa en naranja"
+    }
+  }
+}
