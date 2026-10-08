@@ -38,3 +38,11 @@ Después: fase 1b (Drive API), fase 2 (estructura), fase 3 (pipeline de cámara)
   si no sirve para archivos grandes, OAuth «aplicación de escritorio» con `drive.readonly`.
   Las credenciales NO van al repo (`secrets/` ignorado); en la nube hay que guardarlas como secretos del entorno.
 - Limitación: el contenedor es efímero. Lo que importa va a git (sin vídeos) y a Drive (entregas).
+
+## Decisiones nuevas
+- Sin Blotato: Ángel publica y sube los vídeos a mano. No crear pipeline/publish.py ni pedir API key. (Higgsfield: no se menciona, preguntar solo si hace falta música/miniatura.)
+- Entrega por vídeo, en `videos finales/<video N>/` de Drive (solo tras confirmación de Ángel):
+  - el vídeo final
+  - `descripcion.txt`: descripción con ESTRATEGIA basada en lo que se habla en ese vídeo concreto y CTAs inteligentes
+    coherentes con el tema (ver plantilla en CLAUDE.md). Los CTAs se adaptan al contenido, no son genéricos.
+- Arranque por frase («edita el vídeo N»); revisión de borrador por Ángel antes de dar por bueno.

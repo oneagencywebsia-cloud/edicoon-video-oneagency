@@ -21,3 +21,14 @@ Ver `ESTADO.md` para el estado y las decisiones. Identidad solo desde `marca/` (
 - La webcam/móvil entra a ~30 fps aunque grabe a 60: `mpdecimate` antes de `fps` si se ve a saltos.
 - Umbral de voz relativo al nivel de la voz (voz − 24 dB). Palabras de Whisper con duración ~0 mal colocadas: no quitar huecos con voz ≥ 0,2 s.
 - Procesar siempre desde disco local; brutos de Drive por API a `raw/<id>/`. Nada de apps de escritorio sincronizadas.
+
+## Entregable: descripcion.txt (por vídeo)
+Se genera a partir de la transcripción del vídeo, nunca genérica. Estructura:
+1. Gancho (1-2 líneas): el problema que resuelve el vídeo, con las palabras de la audiencia (pymes, poco técnicos).
+2. Resumen con valor: qué va a aprender/llevarse, en 2-4 líneas, sin humo.
+3. Estrategia: por qué este vídeo (objetivo: concienciar sobre la IA y conectar), a quién va y qué acción buscamos.
+4. CTAs inteligentes ligados al tema (elegir 2-3): p. ej. «comenta qué tarea repites cada día» (si habla de tareas),
+   «guárdalo para cuando automatices X», y el CTA principal: diagnóstico gratuito de 30 min en https://one-agency.es.
+   El CTA de venta va el último y suave; primero valor.
+5. Hashtags y palabras clave del tema (5-8) y 3 opciones de título/primera línea.
+Tono: cercano, tuteo, sin jerga, honesto con los límites de la IA.
