@@ -32,3 +32,11 @@ Se genera a partir de la transcripción del vídeo, nunca genérica. Estructura:
    El CTA de venta va el último y suave; primero valor.
 5. Hashtags y palabras clave del tema (5-8) y 3 opciones de título/primera línea.
 Tono: cercano, tuteo, sin jerga, honesto con los límites de la IA.
+
+## Regla de b-roll (prioridad alta)
+- Un b-roll solo se coloca donde lo que muestra tiene sentido directo con lo que dice Ángel en ese instante.
+  Antes de colocarlo: mirar fotogramas del clip (qué muestra de verdad), leer la transcripción de ese tramo y justificar
+  la pareja en una línea en el guion (`motivo`). Si no hay pareja clara, NO se coloca; no se rellena por rellenar.
+- Anclar a la palabra exacta (inicio y fin), sin tapar frases clave del discurso ni los rótulos. Sin audio del b-roll.
+- Lo mismo vale para las animaciones: cada una refuerza lo que se dice en ese momento (dato → recorte de prensa/blog, etc.),
+  con variedad de formato y fondo entre una y otra.
