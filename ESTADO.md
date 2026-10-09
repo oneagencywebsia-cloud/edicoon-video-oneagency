@@ -46,3 +46,13 @@ Después: fase 1b (Drive API), fase 2 (estructura), fase 3 (pipeline de cámara)
   - `descripcion.txt`: descripción con ESTRATEGIA basada en lo que se habla en ese vídeo concreto y CTAs inteligentes
     coherentes con el tema (ver plantilla en CLAUDE.md). Los CTAs se adaptan al contenido, no son genéricos.
 - Arranque por frase («edita el vídeo N»); revisión de borrador por Ángel antes de dar por bueno.
+
+## Fase 1b (Drive) — en curso
+- El conector de Drive de la sesión NO ve los archivos de Ángel (ni búsqueda ni IDs). Se usa la API con OAuth de solo lectura.
+- Proyecto de Google Cloud y credencial «aplicación de escritorio» creados por Ángel; `pipeline/drive_auth.py` genera el refresh token.
+- Ángel indica que ya guardó GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET y GOOGLE_REFRESH_TOKEN como variables del entorno (no verificado).
+  Una sesión NUEVA debe comprobar que existen SIN imprimir su valor. Si no existen: repetir drive_auth.py desde la carpeta del repo.
+- Archivos de prueba en Drive (IDs de enlaces compartidos por Ángel): 1RumzQzxZU977aXJv4MO8PIz_dfveStgZ y 1RLS-APMXhzpvamVeQIf3rZe9n9_pKP2r
+  (uno es el vídeo de prueba y el otro, posiblemente el b-roll; confirmar con metadatos).
+- Siguiente: escribir `pipeline/drive_api.py` (listar, descargar reanudable en trozos, comprobar con ffprobe, no repetir descargas), probarlo con esos dos IDs.
+- Nunca imprimir ni guardar en archivos los valores de las variables.
