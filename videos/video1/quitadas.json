@@ -1,0 +1,14 @@
+[
+ {
+  "frase": "Todos los días atiendes clientes, haces trabajo, contestas llamadas.",
+  "t0": 8.48,
+  "t1": 13.34,
+  "motivo": "toma repetida (corregida tras «No.»)"
+ },
+ {
+  "frase": "No.",
+  "t0": 15.12,
+  "t1": 15.56,
+  "motivo": "marcador de corrección"
+ }
+]
