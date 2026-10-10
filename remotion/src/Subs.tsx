@@ -2,7 +2,9 @@ import {useCurrentFrame, useVideoConfig, spring} from 'remotion';
 import type {Chunk} from './types';
 import {C, FUENTE} from './util';
 
-export const Subs: React.FC<{chunks: Chunk[]; vozFx?: {t0: number; t1: number; fx: string}[]}> = ({chunks, vozFx = []}) => {
+const norm = (x: string) => x.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]/g, '');
+
+export const Subs: React.FC<{chunks: Chunk[]; vozFx?: {t0: number; t1: number; fx: string}[]; ocultar?: {t0: number; t1: number; tokens: string[]}[]}> = ({chunks, vozFx = [], ocultar = []}) => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
   const t = frame / fps;
@@ -12,7 +14,11 @@ export const Subs: React.FC<{chunks: Chunk[]; vozFx?: {t0: number; t1: number; f
     return t >= c.t0 - 0.03 && t < fin;
   });
   if (i < 0) return null;
-  const c = chunks[i];
+  const c0 = chunks[i];
+  // el subtítulo NO repite lo que ya dice el rótulo clave (preset) en pantalla
+  const palabras = c0.palabras.filter((w) => !ocultar.some((o) => w.t0 >= o.t0 - 0.15 && w.t0 <= o.t1 + 0.15 && o.tokens.includes(norm(w.w))));
+  if (palabras.length === 0) return null;
+  const c = {...c0, palabras};
   const pill = [{fondo: C.acento, texto: '#fff'}, {fondo: '#ffffff', texto: '#0d0d1a'}, {fondo: C.acento2, texto: '#fff'}][i % 3];
   const eco = vozFx.some((v) => t >= v.t0 && t <= v.t1 + 0.2 && (v.fx === 'eco' || v.fx === 'reverb'));
   const pop = spring({frame: frame - Math.round((c.t0 - 0.03) * fps), fps, config: {damping: 16, stiffness: 260}, durationInFrames: 8});

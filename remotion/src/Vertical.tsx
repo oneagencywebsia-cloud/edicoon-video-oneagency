@@ -149,7 +149,7 @@ export const Vertical: React.FC<{ed: Edicion}> = ({ed}) => {
         ) : null;
       })}
 
-      <Subs chunks={ed.chunks} vozFx={ed.vozFx} />
+      <Subs chunks={ed.chunks} vozFx={ed.vozFx} ocultar={claves.map((e) => ({t0: e.t0, t1: e.t1, tokens: e.lineas.join(' ').split(/\s+/).map((x) => x.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]/g, '')).filter(Boolean)}))} />
 
       {/* efectos de sonido: pista única (pipeline/08_sfx_bed.py) */}
       <Audio src={staticFile(`${ed.id}/sfx_bed.wav`)} />
