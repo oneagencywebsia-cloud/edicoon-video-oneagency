@@ -3,179 +3,413 @@
  "efectos": {
   "whoosh_aire": {
    "archivo": "sfx/whoosh_aire.wav",
-   "titulo_original": "Air woosh",
-   "id_mixkit": "1489",
+   "tipo": "whoosh",
    "uso": "entrada suave de rótulos",
-   "duracion": 2.26,
-   "pico_db": -3
+   "titulo_original": "Air woosh",
+   "id_mixkit": 1489,
+   "duracion": 1.657,
+   "pico_t": 0.64,
+   "inicio_t": 0.37
   },
   "whoosh_rapido": {
    "archivo": "sfx/whoosh_rapido.wav",
+   "tipo": "whoosh",
+   "uso": "transición rápida",
    "titulo_original": "Fast whoosh transition",
-   "id_mixkit": "1490",
-   "uso": "transiciones rápidas",
-   "duracion": 1.76,
-   "pico_db": -3
+   "id_mixkit": 1490,
+   "duracion": 0.807,
+   "pico_t": 0.72,
+   "inicio_t": 0.51
   },
   "whoosh_swoosh": {
    "archivo": "sfx/whoosh_swoosh.wav",
+   "tipo": "whoosh",
+   "uso": "cambio de escena",
    "titulo_original": "Fast transitions swoosh",
-   "id_mixkit": "3115",
-   "uso": "cambios de escena",
-   "duracion": 0.53,
-   "pico_db": -3
+   "id_mixkit": 3115,
+   "duracion": 0.276,
+   "pico_t": 0.06,
+   "inicio_t": 0.03
   },
   "whoosh_viento": {
    "archivo": "sfx/whoosh_viento.wav",
+   "tipo": "whoosh",
+   "uso": "salida",
    "titulo_original": "Transition windy swoosh",
-   "id_mixkit": "1474",
-   "uso": "salidas",
-   "duracion": 3.0,
-   "pico_db": -3
+   "id_mixkit": 1474,
+   "duracion": 2.685,
+   "pico_t": 0.95,
+   "inicio_t": 0.29
   },
   "golpe_grave": {
    "archivo": "sfx/golpe_grave.wav",
-   "titulo_original": "Short bass hit",
-   "id_mixkit": "2299",
+   "tipo": "golpe",
    "uso": "palabra clave (sub-hit)",
-   "duracion": 1.06,
-   "pico_db": -3
+   "titulo_original": "Short bass hit",
+   "id_mixkit": 2299,
+   "duracion": 0.918,
+   "pico_t": 0.04,
+   "inicio_t": 0.02
   },
   "golpe_sub": {
    "archivo": "sfx/golpe_sub.wav",
-   "titulo_original": "Knocking sub bass",
-   "id_mixkit": "2300",
+   "tipo": "golpe",
    "uso": "palabra clave fuerte",
-   "duracion": 3.0,
-   "pico_db": -3
+   "titulo_original": "Knocking sub bass",
+   "id_mixkit": 2300,
+   "duracion": 2.579,
+   "pico_t": 2.13,
+   "inicio_t": 1.07
   },
   "golpe_seco": {
    "archivo": "sfx/golpe_seco.wav",
-   "titulo_original": "Small hit in a game",
-   "id_mixkit": "2072",
+   "tipo": "golpe",
    "uso": "impacto pequeño",
-   "duracion": 1.11,
-   "pico_db": -3
+   "titulo_original": "Small hit in a game",
+   "id_mixkit": 2072,
+   "duracion": 0.196,
+   "pico_t": 0.02,
+   "inicio_t": 0.01
+  },
+  "latido_impacto": {
+   "archivo": "sfx/latido_impacto.wav",
+   "tipo": "golpe",
+   "uso": "latido grave: tensión humana",
+   "titulo_original": "Deep heartbeat impact",
+   "id_mixkit": 498,
+   "duracion": 2.139,
+   "pico_t": 0.09,
+   "inicio_t": 0.04
+  },
+  "latido_lento": {
+   "archivo": "sfx/latido_lento.wav",
+   "tipo": "golpe",
+   "uso": "latido lento",
+   "titulo_original": "Slow heartbeat",
+   "id_mixkit": 494,
+   "duracion": 45.34,
+   "pico_t": 9.6,
+   "inicio_t": 0.46
   },
   "click_raton": {
    "archivo": "sfx/click_raton.wav",
+   "tipo": "click",
+   "uso": "clic de ratón",
    "titulo_original": "Clear mouse clicks",
-   "id_mixkit": "2997",
-   "uso": "clics de interfaz",
-   "duracion": 1.05,
-   "pico_db": -3
+   "id_mixkit": 2997,
+   "duracion": 0.271,
+   "pico_t": 0.0,
+   "inicio_t": 0.0
   },
   "click_cerca": {
    "archivo": "sfx/click_cerca.wav",
-   "titulo_original": "Mouse click close",
-   "id_mixkit": "1113",
+   "tipo": "click",
    "uso": "clic cercano",
-   "duracion": 1.38,
-   "pico_db": -3
+   "titulo_original": "Mouse click close",
+   "id_mixkit": 1113,
+   "duracion": 0.199,
+   "pico_t": 0.13,
+   "inicio_t": 0.01
   },
   "click_select": {
    "archivo": "sfx/click_select.wav",
-   "titulo_original": "Select click",
-   "id_mixkit": "1109",
+   "tipo": "click",
    "uso": "selección",
-   "duracion": 1.1,
-   "pico_db": -3
+   "titulo_original": "Select click",
+   "id_mixkit": 1109,
+   "duracion": 0.322,
+   "pico_t": 0.06,
+   "inicio_t": 0.0
   },
   "click_dispositivo": {
    "archivo": "sfx/click_dispositivo.wav",
-   "titulo_original": "Interface device click",
-   "id_mixkit": "2577",
+   "tipo": "click",
    "uso": "interfaz",
-   "duracion": 1.05,
-   "pico_db": -3
+   "titulo_original": "Interface device click",
+   "id_mixkit": 2577,
+   "duracion": 0.161,
+   "pico_t": 0.0,
+   "inicio_t": 0.0
   },
   "click_burbuja": {
    "archivo": "sfx/click_burbuja.wav",
-   "titulo_original": "Plastic bubble click",
-   "id_mixkit": "1124",
+   "tipo": "click",
    "uso": "clic suave",
-   "duracion": 0.12,
-   "pico_db": -3
+   "titulo_original": "Plastic bubble click",
+   "id_mixkit": 1124,
+   "duracion": 0.081,
+   "pico_t": 0.01,
+   "inicio_t": 0.01
   },
-  "teclado_portatil": {
-   "archivo": "sfx/teclado_portatil.wav",
-   "titulo_original": "Typing on a laptop keyboard",
-   "id_mixkit": "2531",
-   "uso": "escribir (19 s)",
-   "duracion": 19.63,
-   "pico_db": -3
-  },
-  "teclado_duro": {
-   "archivo": "sfx/teclado_duro.wav",
-   "titulo_original": "Hard laptop keyboard typing",
-   "id_mixkit": "2538",
-   "uso": "teclas duras",
-   "duracion": 10.34,
-   "pico_db": -3
-  },
-  "teclado_rapido": {
-   "archivo": "sfx/teclado_rapido.wav",
-   "titulo_original": "Fast laptop keyboard typing",
-   "id_mixkit": "1392",
-   "uso": "tecleo rápido",
-   "duracion": 19.59,
-   "pico_db": -3
-  },
-  "papel_desliza": {
-   "archivo": "sfx/papel_desliza.wav",
-   "titulo_original": "Paper slide",
-   "id_mixkit": "1530",
-   "uso": "recortes de papel",
-   "duracion": 1.09,
-   "pico_db": -3
-  },
-  "papel_periodico": {
-   "archivo": "sfx/papel_periodico.wav",
-   "titulo_original": "Turning the newspaper big page",
-   "id_mixkit": "1097",
-   "uso": "periódico: pasar página",
-   "duracion": 9.27,
-   "pico_db": -3
-  },
-  "papel_movimiento": {
-   "archivo": "sfx/papel_movimiento.wav",
-   "titulo_original": "Paper quick movement",
-   "id_mixkit": "2380",
-   "uso": "papel rápido",
-   "duracion": 0.81,
-   "pico_db": -3
-  },
-  "papel_arruga": {
-   "archivo": "sfx/papel_arruga.wav",
-   "titulo_original": "Paper crinkle",
-   "id_mixkit": "2385",
-   "uso": "papel arrugado",
-   "duracion": 2.78,
-   "pico_db": -3
-  },
-  "reloj_tictac": {
-   "archivo": "sfx/reloj_tictac.wav",
-   "titulo_original": "Tick tock clock close up",
-   "id_mixkit": "1059",
-   "uso": "reloj",
-   "duracion": 11.62,
-   "pico_db": -3
-  },
-  "tono_confirmacion": {
-   "archivo": "sfx/tono_confirmacion.wav",
-   "titulo_original": "Confirmation tone",
-   "id_mixkit": "2867",
-   "uso": "éxito/cierre",
-   "duracion": 1.3,
-   "pico_db": -3
+  "interruptor_luz": {
+   "archivo": "sfx/interruptor_luz.wav",
+   "tipo": "click",
+   "uso": "idea / luz que se enciende",
+   "titulo_original": "On or off light switch tap",
+   "id_mixkit": 2585,
+   "duracion": 0.125,
+   "pico_t": 0.0,
+   "inicio_t": 0.0
   },
   "interfaz_abre": {
    "archivo": "sfx/interfaz_abre.wav",
+   "tipo": "interfaz",
+   "uso": "abrir ventana o web",
    "titulo_original": "Opening software interface",
-   "id_mixkit": "2578",
-   "uso": "abrir interfaz",
-   "duracion": 1.13,
-   "pico_db": -3
+   "id_mixkit": 2578,
+   "duracion": 0.351,
+   "pico_t": 0.17,
+   "inicio_t": 0.01
+  },
+  "interfaz_cierra": {
+   "archivo": "sfx/interfaz_cierra.wav",
+   "tipo": "interfaz",
+   "uso": "cerrar ventana",
+   "titulo_original": "Software interface remove",
+   "id_mixkit": 2576,
+   "duracion": 1.607,
+   "pico_t": 0.13,
+   "inicio_t": 0.0
+  },
+  "mensaje_alerta": {
+   "archivo": "sfx/mensaje_alerta.wav",
+   "tipo": "interfaz",
+   "uso": "notificación de mensaje",
+   "titulo_original": "Message pop alert",
+   "id_mixkit": 2354,
+   "duracion": 0.089,
+   "pico_t": 0.01,
+   "inicio_t": 0.01
+  },
+  "tono_confirmacion": {
+   "archivo": "sfx/tono_confirmacion.wav",
+   "tipo": "interfaz",
+   "uso": "éxito / cierre",
+   "titulo_original": "Confirmation tone",
+   "id_mixkit": 2867,
+   "duracion": 1.028,
+   "pico_t": 0.19,
+   "inicio_t": 0.0
+  },
+  "teclado_portatil": {
+   "archivo": "sfx/teclado_portatil.wav",
+   "tipo": "teclado",
+   "uso": "escribir (largo)",
+   "titulo_original": "Typing on a laptop keyboard",
+   "id_mixkit": 2531,
+   "duracion": 19.633,
+   "pico_t": 11.71,
+   "inicio_t": 0.0
+  },
+  "teclado_duro": {
+   "archivo": "sfx/teclado_duro.wav",
+   "tipo": "teclado",
+   "uso": "teclas duras",
+   "titulo_original": "Hard laptop keyboard typing",
+   "id_mixkit": 2538,
+   "duracion": 10.191,
+   "pico_t": 0.79,
+   "inicio_t": 0.19
+  },
+  "teclado_rapido": {
+   "archivo": "sfx/teclado_rapido.wav",
+   "tipo": "teclado",
+   "uso": "tecleo rápido",
+   "titulo_original": "Fast laptop keyboard typing",
+   "id_mixkit": 1392,
+   "duracion": 19.577,
+   "pico_t": 18.85,
+   "inicio_t": 0.01
+  },
+  "teclado_fuente": {
+   "archivo": "sfx/teclado_fuente.wav",
+   "tipo": "teclado",
+   "uso": "fuente para extraer teclas sueltas",
+   "titulo_original": "Keyboard typing",
+   "id_mixkit": 1386,
+   "duracion": 26.304,
+   "pico_t": 22.88,
+   "inicio_t": 0.29
+  },
+  "papel_desliza": {
+   "archivo": "sfx/papel_desliza.wav",
+   "tipo": "papel",
+   "uso": "papel que desliza",
+   "titulo_original": "Paper slide",
+   "id_mixkit": 1530,
+   "duracion": 0.484,
+   "pico_t": 0.34,
+   "inicio_t": 0.15
+  },
+  "papel_periodico": {
+   "archivo": "sfx/papel_periodico.wav",
+   "tipo": "papel",
+   "uso": "pasar página de periódico",
+   "titulo_original": "Turning the newspaper big page",
+   "id_mixkit": 1097,
+   "duracion": 9.265,
+   "pico_t": 8.51,
+   "inicio_t": 0.54
+  },
+  "papel_movimiento": {
+   "archivo": "sfx/papel_movimiento.wav",
+   "tipo": "papel",
+   "uso": "papel rápido",
+   "titulo_original": "Paper quick movement",
+   "id_mixkit": 2380,
+   "duracion": 0.71,
+   "pico_t": 0.32,
+   "inicio_t": 0.08
+  },
+  "papel_arruga": {
+   "archivo": "sfx/papel_arruga.wav",
+   "tipo": "papel",
+   "uso": "papel arrugado",
+   "titulo_original": "Paper crinkle",
+   "id_mixkit": 2385,
+   "duracion": 2.525,
+   "pico_t": 0.2,
+   "inicio_t": 0.15
+  },
+  "periodico_cae": {
+   "archivo": "sfx/periodico_cae.wav",
+   "tipo": "papel",
+   "uso": "periódico que cae",
+   "titulo_original": "Newspaper falling to the floor",
+   "id_mixkit": 386,
+   "duracion": 0.476,
+   "pico_t": 0.18,
+   "inicio_t": 0.12
+  },
+  "grapadora": {
+   "archivo": "sfx/grapadora.wav",
+   "tipo": "papel",
+   "uso": "grapar",
+   "titulo_original": "Stapling paper",
+   "id_mixkit": 2995,
+   "duracion": 0.201,
+   "pico_t": 0.11,
+   "inicio_t": 0.0
+  },
+  "lapiz_escribe": {
+   "archivo": "sfx/lapiz_escribe.wav",
+   "tipo": "papel",
+   "uso": "lápiz escribiendo",
+   "titulo_original": "Short pencil writing",
+   "id_mixkit": 2376,
+   "duracion": 0.915,
+   "pico_t": 0.42,
+   "inicio_t": 0.01
+  },
+  "rotulador": {
+   "archivo": "sfx/rotulador.wav",
+   "tipo": "papel",
+   "uso": "rotulador / subrayado",
+   "titulo_original": "Pen marker line",
+   "id_mixkit": 2998,
+   "duracion": 0.352,
+   "pico_t": 0.04,
+   "inicio_t": 0.01
+  },
+  "reloj_tictac": {
+   "archivo": "sfx/reloj_tictac.wav",
+   "tipo": "reloj",
+   "uso": "reloj",
+   "titulo_original": "Tick tock clock close up",
+   "id_mixkit": 1059,
+   "duracion": 11.594,
+   "pico_t": 6.03,
+   "inicio_t": 0.02
+  },
+  "riser_sintetico": {
+   "archivo": "sfx/riser_sintetico.wav",
+   "tipo": "riser",
+   "uso": "tensión tecnológica",
+   "titulo_original": "Cinematic synth riser",
+   "id_mixkit": 645,
+   "duracion": 9.089,
+   "pico_t": 1.85,
+   "inicio_t": 0.01
+  },
+  "riser_dramatico": {
+   "archivo": "sfx/riser_dramatico.wav",
+   "tipo": "riser",
+   "uso": "tensión dramática",
+   "titulo_original": "Cinematic drama riser",
+   "id_mixkit": 632,
+   "duracion": 30.012,
+   "pico_t": 25.79,
+   "inicio_t": 1.79
+  },
+  "riser_trailer": {
+   "archivo": "sfx/riser_trailer.wav",
+   "tipo": "riser",
+   "uso": "tensión de tráiler",
+   "titulo_original": "Cinematic trailer riser",
+   "id_mixkit": 790,
+   "duracion": 1.918,
+   "pico_t": 1.87,
+   "inicio_t": 0.83
+  },
+  "riser_suspense": {
+   "archivo": "sfx/riser_suspense.wav",
+   "tipo": "riser",
+   "uso": "swell de suspense",
+   "titulo_original": "Cinematic suspense swell",
+   "id_mixkit": 786,
+   "duracion": 11.151,
+   "pico_t": 3.71,
+   "inicio_t": 0.42
+  },
+  "riser_swell": {
+   "archivo": "sfx/riser_swell.wav",
+   "tipo": "riser",
+   "uso": "swell largo",
+   "titulo_original": "Trailer cinematic suspense swell",
+   "id_mixkit": 678,
+   "duracion": 11.124,
+   "pico_t": 0.29,
+   "inicio_t": 0.24
+  },
+  "tecla_1": {
+   "archivo": "sfx/tecla_1.wav",
+   "tipo": "tecla",
+   "uso": "pulsación suelta",
+   "titulo_original": "(recorte de teclado)",
+   "id_mixkit": 1386,
+   "duracion": 0.12,
+   "pico_t": 0.005,
+   "inicio_t": 0.0
+  },
+  "tecla_2": {
+   "archivo": "sfx/tecla_2.wav",
+   "tipo": "tecla",
+   "uso": "pulsación suelta",
+   "titulo_original": "(recorte de teclado)",
+   "id_mixkit": 1386,
+   "duracion": 0.12,
+   "pico_t": 0.005,
+   "inicio_t": 0.0
+  },
+  "tecla_3": {
+   "archivo": "sfx/tecla_3.wav",
+   "tipo": "tecla",
+   "uso": "pulsación suelta",
+   "titulo_original": "(recorte de teclado)",
+   "id_mixkit": 1386,
+   "duracion": 0.12,
+   "pico_t": 0.005,
+   "inicio_t": 0.0
+  },
+  "tecla_4": {
+   "archivo": "sfx/tecla_4.wav",
+   "tipo": "tecla",
+   "uso": "pulsación suelta",
+   "titulo_original": "(recorte de teclado)",
+   "id_mixkit": 1386,
+   "duracion": 0.12,
+   "pico_t": 0.005,
+   "inicio_t": 0.0
   }
  }
 }

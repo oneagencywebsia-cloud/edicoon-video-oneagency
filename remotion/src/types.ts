@@ -1,12 +1,13 @@
 export type Palabra = {w: string; t0: number; t1: number};
 export type Chunk = {t0: number; t1: number; palabras: Palabra[]};
-export type Sfx = {t: number; archivo: string; vol: number; dur: number};
+export type Sfx = {f: string; ini: number; archivo: string; vol: number; desde: number; dur: number; en: number};
 
 type Base = {t0: number; t1: number};
 export type Escena =
   | (Base & {tipo: 'lowerThird'; nombre: string; cargo: string})
   | (Base & {tipo: 'reloj'; desde: string; hasta: string; etiqueta: string})
-  | (Base & {tipo: 'claveDetras'; lineas: string[]})
+  | (Base & {tipo: 'claveDetras'; estilo?: 'centro' | 'diagonal' | 'gigante'; lineas: string[]})
+  | (Base & {tipo: 'claveFrente'; estilo: 'marcador'; lineas: string[]; resaltar: string; resaltarT: number})
   | (Base & {tipo: 'notas'; items: {texto: string; t: number}[]})
   | (Base & {tipo: 'copiar'; origen: string; destino: string})
   | (Base & {tipo: 'periodico'; cabecera: string; titular: string[]; resaltar: string; resaltarT: number})

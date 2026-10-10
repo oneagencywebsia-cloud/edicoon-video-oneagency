@@ -36,19 +36,64 @@ const Camara: React.FC<{ed: Edicion; zoom: number; mascara?: string}> = ({ed, zo
   </div>
 );
 
-/* Rótulo grande que va DETRÁS de la persona */
+/* Rótulo que va DETRÁS de la persona, en tres formatos distintos */
 const TextoClave: React.FC<{e: Clave; dur: number}> = ({e, dur}) => {
   const frame = useCurrentFrame();
-  const a = entra(frame, 0, 8) * sale(frame, dur, 7);
-  const sube = interpolate(frame, [0, 10], [70, 0], {...clamp, easing: out5});
+  const a = entra(frame, 0, 6) * sale(frame, dur, 7);
+  const sube = interpolate(frame, [0, 9], [70, 0], {...clamp, easing: out5});
   const escala = interpolate(frame, [0, dur], [0.96, 1.05], clamp);
+  const brillo = (c: string) => `0 10px 60px rgba(0,0,0,0.45), 0 0 90px ${c}66`;
+  const ajusta = (l: string, max: number, ancho: number) => Math.min(max, Math.floor(ancho / (l.length * 0.64)));
+
+  if (e.estilo === 'diagonal') {
+    const deriva = interpolate(frame, [0, dur], [40, -40], clamp);
+    const barra = entra(frame, 6, 12);
+    return (
+      <div style={{position: 'absolute', left: 50, top: 300, opacity: a, transform: `translate(${deriva}px, ${sube * 0.6}px) rotate(-7deg)`, transformOrigin: 'left top'}}>
+        {e.lineas.map((l, i) => (
+          <div key={i} style={{fontFamily: FUENTE, fontWeight: 800, fontSize: ajusta(l, 200, 900), lineHeight: 1, letterSpacing: -6, marginLeft: i * 150, marginTop: i ? 10 : 0, color: i ? C.acento2 : C.texto, textShadow: brillo(i ? C.acento2 : C.acento)}}>
+            {l}
+          </div>
+        ))}
+        <div style={{height: 12, width: 620 * barra, background: C.acento, borderRadius: 6, marginTop: 22, marginLeft: 150, boxShadow: `0 0 40px ${C.acento}`}} />
+      </div>
+    );
+  }
+  if (e.estilo === 'gigante') {
+    const [pequena, grande] = e.lineas;
+    return (
+      <div style={{position: 'absolute', left: 0, right: 0, top: 150, opacity: a, transform: `translateY(${sube * 0.5}px) scale(${escala})`, textAlign: 'center'}}>
+        <div style={{fontFamily: FUENTE, fontWeight: 800, fontSize: 112, letterSpacing: 18, color: C.acento2, textShadow: brillo(C.acento2)}}>{pequena}</div>
+        <div style={{fontFamily: FUENTE, fontWeight: 800, fontSize: 760, lineHeight: 0.82, letterSpacing: -30, color: C.texto, textShadow: brillo(C.acento), marginTop: 150}}>{grande}</div>
+      </div>
+    );
+  }
   return (
     <div style={{position: 'absolute', left: 0, right: 0, top: 350, opacity: a, transform: `translateY(${sube}px) scale(${escala})`, textAlign: 'center'}}>
       {e.lineas.map((l, i) => (
-        <div key={i} style={{fontFamily: FUENTE, fontWeight: 800, fontSize: Math.min(250, Math.floor(960 / (l.length * 0.64))), lineHeight: 0.98, letterSpacing: -6, marginTop: i ? 14 : 0, color: i % 2 ? C.acento2 : C.texto, textShadow: `0 10px 60px rgba(0,0,0,0.45), 0 0 90px ${i % 2 ? C.acento2 : C.acento}66`}}>
+        <div key={i} style={{fontFamily: FUENTE, fontWeight: 800, fontSize: ajusta(l, 250, 960), lineHeight: 0.98, letterSpacing: -6, marginTop: i ? 14 : 0, color: i % 2 ? C.acento2 : C.texto, textShadow: brillo(i % 2 ? C.acento2 : C.acento)}}>
           {l}
         </div>
       ))}
+    </div>
+  );
+};
+
+/* Rótulo DELANTE con marcador (sin recorte de persona) */
+const ClaveMarcador: React.FC<{e: Extract<Escena, {tipo: 'claveFrente'}>; f0: number; dur: number}> = ({e, f0, dur}) => {
+  const frame = useCurrentFrame();
+  const {fps} = useVideoConfig();
+  const a = entra(frame, 0, 7) * sale(frame, dur, 7);
+  const sube = interpolate(frame, [0, 9], [50, 0], {...clamp, easing: out5});
+  const ini = Math.round(e.resaltarT * fps) - f0;
+  const barra = interpolate(frame, [ini, ini + 9], [0, 100], {...clamp, easing: out5});
+  const [uno, dos] = e.lineas;
+  return (
+    <div style={{position: 'absolute', left: 0, right: 0, top: 290, opacity: a, transform: `translateY(${sube}px)`, textAlign: 'center'}}>
+      <div style={{fontFamily: FUENTE, fontWeight: 800, fontSize: 124, letterSpacing: -3, color: C.texto, textShadow: '0 8px 40px rgba(0,0,0,0.6)'}}>{uno}</div>
+      <div style={{display: 'inline-block', fontFamily: FUENTE, fontWeight: 800, fontSize: 250, lineHeight: 1, letterSpacing: -8, color: C.texto, marginTop: 6, padding: '0 34px', backgroundImage: `linear-gradient(transparent 50%, ${C.acento2} 50%, ${C.acento2} 94%, transparent 94%)`, backgroundRepeat: 'no-repeat', backgroundSize: `${barra}% 100%`, textShadow: '0 8px 40px rgba(0,0,0,0.55)', transform: 'rotate(-2deg)'}}>
+        {dos}
+      </div>
     </div>
   );
 };
@@ -60,7 +105,8 @@ export const Vertical: React.FC<{ed: Edicion}> = ({ed}) => {
   const fr = (t: number) => Math.round(t * fps);
   const claves = ed.escenas.filter((e): e is Clave => e.tipo === 'claveDetras');
   const claveActiva = claves.some((e) => frame >= fr(e.t0) && frame <= fr(e.t1));
-  const oscuro = claves.reduce((m, e) => Math.max(m, entra(frame, fr(e.t0), 6) * sale(frame, fr(e.t1), 6) * (frame >= fr(e.t0) && frame <= fr(e.t1) ? 1 : 0)), 0);
+  const todasClaves = ed.escenas.filter((e) => e.tipo === 'claveDetras' || e.tipo === 'claveFrente');
+  const oscuro = todasClaves.reduce((m, e) => Math.max(m, entra(frame, fr(e.t0), 6) * sale(frame, fr(e.t1), 6) * (frame >= fr(e.t0) && frame <= fr(e.t1) ? 1 : 0)), 0);
 
   return (
     <AbsoluteFill style={{background: C.fondo}}>
@@ -96,6 +142,7 @@ export const Vertical: React.FC<{ed: Edicion}> = ({ed}) => {
         if (e.tipo === 'periodico') nodo = <Periodico e={e} {...comun} />;
         if (e.tipo === 'broll') nodo = <Broll e={e} {...comun} />;
         if (e.tipo === 'cta') nodo = <Cta e={e} {...comun} />;
+        if (e.tipo === 'claveFrente') nodo = <ClaveMarcador e={e} f0={f0} dur={dur} />;
         return nodo ? (
           <Sequence key={i} from={f0} durationInFrames={dur + 1}>
             {nodo}
@@ -105,15 +152,8 @@ export const Vertical: React.FC<{ed: Edicion}> = ({ed}) => {
 
       <Subs chunks={ed.chunks} />
 
-      {/* efectos de sonido */}
-      {ed.sfx.map((s, i) => {
-        const d = Math.max(2, Math.ceil(s.dur * fps));
-        return (
-          <Sequence key={`s${i}`} from={fr(s.t)} durationInFrames={d}>
-            <Audio src={staticFile(`_shared/${s.archivo}`)} volume={(f) => s.vol * interpolate(f, [d - 5, d], [1, 0], clamp)} />
-          </Sequence>
-        );
-      })}
+      {/* efectos de sonido: pista única mezclada con precisión de muestra (pipeline/08_sfx_bed.py) */}
+      <Audio src={staticFile(`${ed.id}/sfx_bed.wav`)} />
     </AbsoluteFill>
   );
 };

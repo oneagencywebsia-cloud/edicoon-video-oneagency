@@ -55,11 +55,26 @@ for c in chunks:
         fin.append(c)
 chunks = [{"t0": c[0]["t0"], "t1": c[-1]["t1"], "palabras": c} for c in fin]
 
-# 3) efectos con duración
+# 3) efectos: cada uno se alinea por su TRANSITORIO con el instante `en` del evento visual
+#    ancla "inicio" (golpes, clics) | "pico" (whoosh) | "fin" (risers: el clímax cae en `en`; `largo` = segundos de subida)
 sfx = []
 for s in G["sfx"]:
     info = SFX[s["f"]]
-    sfx.append({"t": s["t"], "archivo": info["archivo"], "vol": s["vol"], "dur": round(min(s.get("dur", info["duracion"]), info["duracion"]), 2)})
+    desde = s.get("desde", 0.0)
+    ancla = s.get("ancla", "inicio")
+    if ancla == "fin":  # riser: tramo de `largo` s que acaba en el clímax de la fuente
+        largo = min(s["largo"], info["pico_t"])
+        desde = max(info["pico_t"] - largo, 0.0)
+        dur, ini = largo + 0.03, s["en"] - largo
+        fade_in, fade_out = largo * 0.7, 0.03
+    else:
+        ref = max((info["pico_t"] if ancla == "pico" else info["inicio_t"]) - desde, 0.0)
+        ini = s["en"] - ref
+        dur = min(s.get("dur", info["duracion"] - desde), info["duracion"] - desde)
+        fade_in, fade_out = s.get("fade_in", 0.003), s.get("fade_out", 0.04)
+    sfx.append({"f": s["f"], "ini": round(ini, 4), "archivo": info["archivo"], "vol": s["vol"], "desde": round(desde, 4),
+                "dur": round(dur, 4), "fade_in": round(fade_in, 3), "fade_out": round(fade_out, 3), "en": s["en"], "ancla": ancla})
+sfx.sort(key=lambda z: z["ini"])
 
 ed = {"id": G["id"], "fps": fps, "frames": frames, "camara": G["camara"], "chunks": chunks,
       "escenas": G["escenas"], "sfx": sfx, "zooms": G["zooms"]}

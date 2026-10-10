@@ -2,7 +2,7 @@
  "id": "video1",
  "fps": 30,
  "frames": 1124,
- "camara": "video1/corte.mp4",
+ "camara": "video1/corte_voz.mp4",
  "chunks": [
   {
    "t0": 0.0,
@@ -776,7 +776,8 @@
   },
   {
    "tipo": "claveDetras",
-   "t0": 3.6,
+   "estilo": "centro",
+   "t0": 3.65,
    "t1": 4.95,
    "lineas": [
     "ESCUCHA",
@@ -785,7 +786,8 @@
   },
   {
    "tipo": "claveDetras",
-   "t0": 10.0,
+   "estilo": "diagonal",
+   "t0": 10.25,
    "t1": 11.15,
    "lineas": [
     "SEGUNDO",
@@ -817,7 +819,8 @@
   },
   {
    "tipo": "claveDetras",
-   "t0": 17.2,
+   "estilo": "gigante",
+   "t0": 17.35,
    "t1": 18.35,
    "lineas": [
     "REALMENTE",
@@ -832,13 +835,16 @@
    "destino": "Hoja de cálculo"
   },
   {
-   "tipo": "claveDetras",
-   "t0": 22.9,
+   "tipo": "claveFrente",
+   "estilo": "marcador",
+   "t0": 22.85,
    "t1": 24.25,
    "lineas": [
     "UNA FORMA",
     "MEJOR"
-   ]
+   ],
+   "resaltar": "MEJOR",
+   "resaltarT": 23.2
   },
   {
    "tipo": "periodico",
@@ -879,136 +885,508 @@
  ],
  "sfx": [
   {
-   "t": 0.35,
+   "f": "whoosh_aire",
+   "ini": -0.09,
    "archivo": "sfx/whoosh_aire.wav",
+   "vol": 0.26,
+   "desde": 0.0,
+   "dur": 1.657,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 0.55,
+   "ancla": "pico"
+  },
+  {
+   "f": "riser_suspense",
+   "ini": 2.15,
+   "archivo": "sfx/riser_suspense.wav",
+   "vol": 0.34,
+   "desde": 2.21,
+   "dur": 1.53,
+   "fade_in": 1.05,
+   "fade_out": 0.03,
+   "en": 3.65,
+   "ancla": "fin"
+  },
+  {
+   "f": "riser_trailer",
+   "ini": 2.15,
+   "archivo": "sfx/riser_trailer.wav",
    "vol": 0.28,
-   "dur": 2.26
+   "desde": 0.37,
+   "dur": 1.53,
+   "fade_in": 1.05,
+   "fade_out": 0.03,
+   "en": 3.65,
+   "ancla": "fin"
   },
   {
-   "t": 2.2,
+   "f": "reloj_tictac",
+   "ini": 2.18,
    "archivo": "sfx/reloj_tictac.wav",
-   "vol": 0.22,
-   "dur": 1.4
+   "vol": 0.18,
+   "desde": 0.0,
+   "dur": 1.35,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 2.2,
+   "ancla": "inicio"
   },
   {
-   "t": 3.5,
+   "f": "whoosh_swoosh",
+   "ini": 3.57,
    "archivo": "sfx/whoosh_swoosh.wav",
-   "vol": 0.3,
-   "dur": 0.53
+   "vol": 0.26,
+   "desde": 0.0,
+   "dur": 0.276,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 3.63,
+   "ancla": "pico"
   },
   {
-   "t": 3.62,
+   "f": "golpe_grave",
+   "ini": 3.63,
    "archivo": "sfx/golpe_grave.wav",
-   "vol": 0.55,
-   "dur": 1.06
+   "vol": 0.42,
+   "desde": 0.0,
+   "dur": 0.5,
+   "fade_in": 0.003,
+   "fade_out": 0.18,
+   "en": 3.65,
+   "ancla": "inicio"
   },
   {
-   "t": 9.95,
-   "archivo": "sfx/golpe_sub.wav",
-   "vol": 0.4,
-   "dur": 1.4
+   "f": "latido_impacto",
+   "ini": 10.21,
+   "archivo": "sfx/latido_impacto.wav",
+   "vol": 0.42,
+   "desde": 0.0,
+   "dur": 1.7,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 10.25,
+   "ancla": "inicio"
   },
   {
-   "t": 11.2,
+   "f": "papel_desliza",
+   "ini": 11.03,
    "archivo": "sfx/papel_desliza.wav",
    "vol": 0.4,
-   "dur": 1.09
+   "desde": 0.0,
+   "dur": 0.484,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 11.37,
+   "ancla": "pico"
   },
   {
-   "t": 11.9,
-   "archivo": "sfx/papel_movimiento.wav",
-   "vol": 0.4,
-   "dur": 0.81
-  },
-  {
-   "t": 12.5,
-   "archivo": "sfx/papel_desliza.wav",
-   "vol": 0.4,
-   "dur": 1.09
-  },
-  {
-   "t": 13.4,
-   "archivo": "sfx/papel_movimiento.wav",
-   "vol": 0.4,
-   "dur": 0.81
-  },
-  {
-   "t": 17.2,
-   "archivo": "sfx/golpe_grave.wav",
-   "vol": 0.5,
-   "dur": 1.06
-  },
-  {
-   "t": 18.4,
-   "archivo": "sfx/teclado_rapido.wav",
+   "f": "grapadora",
+   "ini": 11.96,
+   "archivo": "sfx/grapadora.wav",
    "vol": 0.3,
-   "dur": 1.5
+   "desde": 0.0,
+   "dur": 0.201,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 12.07,
+   "ancla": "pico"
   },
   {
-   "t": 19.7,
-   "archivo": "sfx/click_raton.wav",
+   "f": "lapiz_escribe",
+   "ini": 12.54,
+   "archivo": "sfx/lapiz_escribe.wav",
    "vol": 0.4,
-   "dur": 0.5
+   "desde": 0.0,
+   "dur": 0.9,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 12.55,
+   "ancla": "inicio"
   },
   {
-   "t": 20.9,
-   "archivo": "sfx/click_cerca.wav",
-   "vol": 0.4,
-   "dur": 0.6
-  },
-  {
-   "t": 22.85,
-   "archivo": "sfx/whoosh_swoosh.wav",
-   "vol": 0.25,
-   "dur": 0.53
-  },
-  {
-   "t": 22.95,
-   "archivo": "sfx/golpe_sub.wav",
+   "f": "mensaje_alerta",
+   "ini": 13.47,
+   "archivo": "sfx/mensaje_alerta.wav",
    "vol": 0.35,
-   "dur": 1.2
+   "desde": 0.0,
+   "dur": 0.089,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 13.48,
+   "ancla": "pico"
   },
   {
-   "t": 24.25,
-   "archivo": "sfx/papel_periodico.wav",
-   "vol": 0.4,
-   "dur": 1.4
+   "f": "riser_suspense",
+   "ini": 15.95,
+   "archivo": "sfx/riser_suspense.wav",
+   "vol": 0.32,
+   "desde": 2.31,
+   "dur": 1.43,
+   "fade_in": 0.98,
+   "fade_out": 0.03,
+   "en": 17.35,
+   "ancla": "fin"
   },
   {
-   "t": 26.45,
+   "f": "riser_trailer",
+   "ini": 15.95,
+   "archivo": "sfx/riser_trailer.wav",
+   "vol": 0.26,
+   "desde": 0.47,
+   "dur": 1.43,
+   "fade_in": 0.98,
+   "fade_out": 0.03,
+   "en": 17.35,
+   "ancla": "fin"
+  },
+  {
+   "f": "golpe_sub",
+   "ini": 17.23,
+   "archivo": "sfx/golpe_sub.wav",
+   "vol": 0.2,
+   "desde": 0.95,
+   "dur": 1.3,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 17.35,
+   "ancla": "inicio"
+  },
+  {
+   "f": "golpe_grave",
+   "ini": 17.33,
+   "archivo": "sfx/golpe_grave.wav",
+   "vol": 0.42,
+   "desde": 0.0,
+   "dur": 0.5,
+   "fade_in": 0.003,
+   "fade_out": 0.18,
+   "en": 17.35,
+   "ancla": "inicio"
+  },
+  {
+   "f": "tecla_1",
+   "ini": 18.83,
+   "archivo": "sfx/tecla_1.wav",
+   "vol": 0.5,
+   "desde": 0.0,
+   "dur": 0.12,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 18.83,
+   "ancla": "inicio"
+  },
+  {
+   "f": "tecla_2",
+   "ini": 18.9,
+   "archivo": "sfx/tecla_2.wav",
+   "vol": 0.5,
+   "desde": 0.0,
+   "dur": 0.12,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 18.9,
+   "ancla": "inicio"
+  },
+  {
+   "f": "click_burbuja",
+   "ini": 19.02,
+   "archivo": "sfx/click_burbuja.wav",
+   "vol": 0.3,
+   "desde": 0.0,
+   "dur": 0.081,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 19.03,
+   "ancla": "inicio"
+  },
+  {
+   "f": "click_select",
+   "ini": 19.52,
    "archivo": "sfx/click_select.wav",
    "vol": 0.35,
-   "dur": 1.1
+   "desde": 0.0,
+   "dur": 0.322,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 19.58,
+   "ancla": "pico"
   },
   {
-   "t": 27.85,
-   "archivo": "sfx/whoosh_rapido.wav",
-   "vol": 0.28,
-   "dur": 1.0
-  },
-  {
-   "t": 32.45,
-   "archivo": "sfx/whoosh_viento.wav",
-   "vol": 0.2,
-   "dur": 1.0
-  },
-  {
-   "t": 33.55,
-   "archivo": "sfx/whoosh_rapido.wav",
-   "vol": 0.28,
-   "dur": 1.0
-  },
-  {
-   "t": 36.55,
-   "archivo": "sfx/click_raton.wav",
+   "f": "tecla_3",
+   "ini": 19.57,
+   "archivo": "sfx/tecla_3.wav",
    "vol": 0.5,
-   "dur": 0.5
+   "desde": 0.0,
+   "dur": 0.12,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 19.57,
+   "ancla": "inicio"
   },
   {
-   "t": 36.7,
+   "f": "tecla_4",
+   "ini": 19.64,
+   "archivo": "sfx/tecla_4.wav",
+   "vol": 0.5,
+   "desde": 0.0,
+   "dur": 0.12,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 19.64,
+   "ancla": "inicio"
+  },
+  {
+   "f": "tecla_1",
+   "ini": 20.363,
+   "archivo": "sfx/tecla_1.wav",
+   "vol": 0.5,
+   "desde": 0.0,
+   "dur": 0.12,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 20.363,
+   "ancla": "inicio"
+  },
+  {
+   "f": "tecla_2",
+   "ini": 20.433,
+   "archivo": "sfx/tecla_2.wav",
+   "vol": 0.5,
+   "desde": 0.0,
+   "dur": 0.12,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 20.433,
+   "ancla": "inicio"
+  },
+  {
+   "f": "click_burbuja",
+   "ini": 20.553,
+   "archivo": "sfx/click_burbuja.wav",
+   "vol": 0.3,
+   "desde": 0.0,
+   "dur": 0.081,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 20.563,
+   "ancla": "inicio"
+  },
+  {
+   "f": "click_select",
+   "ini": 21.053,
+   "archivo": "sfx/click_select.wav",
+   "vol": 0.35,
+   "desde": 0.0,
+   "dur": 0.322,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 21.113,
+   "ancla": "pico"
+  },
+  {
+   "f": "tecla_3",
+   "ini": 21.103,
+   "archivo": "sfx/tecla_3.wav",
+   "vol": 0.5,
+   "desde": 0.0,
+   "dur": 0.12,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 21.103,
+   "ancla": "inicio"
+  },
+  {
+   "f": "tecla_4",
+   "ini": 21.173,
+   "archivo": "sfx/tecla_4.wav",
+   "vol": 0.5,
+   "desde": 0.0,
+   "dur": 0.12,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 21.173,
+   "ancla": "inicio"
+  },
+  {
+   "f": "whoosh_aire",
+   "ini": 22.31,
+   "archivo": "sfx/whoosh_aire.wav",
+   "vol": 0.2,
+   "desde": 0.0,
+   "dur": 1.657,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 22.95,
+   "ancla": "pico"
+  },
+  {
+   "f": "interruptor_luz",
+   "ini": 22.85,
+   "archivo": "sfx/interruptor_luz.wav",
+   "vol": 0.55,
+   "desde": 0.0,
+   "dur": 0.125,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 22.85,
+   "ancla": "inicio"
+  },
+  {
+   "f": "rotulador",
+   "ini": 23.19,
+   "archivo": "sfx/rotulador.wav",
+   "vol": 0.5,
+   "desde": 0.0,
+   "dur": 0.352,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 23.2,
+   "ancla": "inicio"
+  },
+  {
+   "f": "papel_periodico",
+   "ini": 24.23,
+   "archivo": "sfx/papel_periodico.wav",
+   "vol": 0.45,
+   "desde": 0.45,
+   "dur": 1.2,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 24.32,
+   "ancla": "inicio"
+  },
+  {
+   "f": "rotulador",
+   "ini": 26.39,
+   "archivo": "sfx/rotulador.wav",
+   "vol": 0.5,
+   "desde": 0.0,
+   "dur": 0.352,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 26.4,
+   "ancla": "inicio"
+  },
+  {
+   "f": "whoosh_rapido",
+   "ini": 27.28,
+   "archivo": "sfx/whoosh_rapido.wav",
+   "vol": 0.14,
+   "desde": 0.0,
+   "dur": 0.807,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 28.0,
+   "ancla": "pico"
+  },
+  {
+   "f": "periodico_cae",
+   "ini": 27.42,
+   "archivo": "sfx/periodico_cae.wav",
+   "vol": 0.35,
+   "desde": 0.0,
+   "dur": 0.476,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 27.6,
+   "ancla": "pico"
+  },
+  {
+   "f": "interfaz_abre",
+   "ini": 27.91,
+   "archivo": "sfx/interfaz_abre.wav",
+   "vol": 0.28,
+   "desde": 0.0,
+   "dur": 0.351,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 27.92,
+   "ancla": "inicio"
+  },
+  {
+   "f": "interfaz_cierra",
+   "ini": 32.45,
+   "archivo": "sfx/interfaz_cierra.wav",
+   "vol": 0.3,
+   "desde": 0.0,
+   "dur": 0.9,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 32.45,
+   "ancla": "inicio"
+  },
+  {
+   "f": "whoosh_rapido",
+   "ini": 32.98,
+   "archivo": "sfx/whoosh_rapido.wav",
+   "vol": 0.14,
+   "desde": 0.0,
+   "dur": 0.807,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 33.7,
+   "ancla": "pico"
+  },
+  {
+   "f": "interfaz_abre",
+   "ini": 33.61,
+   "archivo": "sfx/interfaz_abre.wav",
+   "vol": 0.28,
+   "desde": 0.0,
+   "dur": 0.351,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 33.62,
+   "ancla": "inicio"
+  },
+  {
+   "f": "riser_suspense",
+   "ini": 34.65,
+   "archivo": "sfx/riser_suspense.wav",
+   "vol": 0.35,
+   "desde": 1.81,
+   "dur": 1.93,
+   "fade_in": 1.33,
+   "fade_out": 0.03,
+   "en": 36.55,
+   "ancla": "fin"
+  },
+  {
+   "f": "riser_trailer",
+   "ini": 34.95,
+   "archivo": "sfx/riser_trailer.wav",
+   "vol": 0.28,
+   "desde": 0.27,
+   "dur": 1.63,
+   "fade_in": 1.12,
+   "fade_out": 0.03,
+   "en": 36.55,
+   "ancla": "fin"
+  },
+  {
+   "f": "click_raton",
+   "ini": 36.55,
+   "archivo": "sfx/click_raton.wav",
+   "vol": 0.55,
+   "desde": 0.0,
+   "dur": 0.271,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 36.55,
+   "ancla": "inicio"
+  },
+  {
+   "f": "tono_confirmacion",
+   "ini": 36.6,
    "archivo": "sfx/tono_confirmacion.wav",
    "vol": 0.3,
-   "dur": 1.3
+   "desde": 0.0,
+   "dur": 1.0,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 36.6,
+   "ancla": "inicio"
   }
  ],
  "zooms": [

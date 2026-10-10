@@ -21,7 +21,7 @@ export const Subs: React.FC<{chunks: Chunk[]}> = ({chunks}) => {
           const sig = c.palabras[k + 1];
           const activa = t >= w.t0 - 0.02 && (!sig || t < sig.t0 - 0.02);
           return (
-            <span key={k} style={{color: activa ? C.acento2 : C.texto, textShadow: '0 5px 26px rgba(0,0,0,0.7), 0 2px 4px rgba(0,0,0,0.7)', display: 'inline-block', margin: '0 11px', transform: activa ? 'scale(1.07)' : 'none'}}>
+            <span key={k} style={{color: activa ? C.acento2 : C.texto, textShadow: '0 5px 26px rgba(0,0,0,0.7), 0 2px 4px rgba(0,0,0,0.7)', display: 'inline-block', margin: '0 16px', transform: activa ? 'scale(1.05)' : 'none'}}>
               {w.w}
             </span>
           );
