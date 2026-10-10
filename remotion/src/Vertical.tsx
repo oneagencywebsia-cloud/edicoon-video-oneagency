@@ -12,6 +12,7 @@ type ClaveE = Extract<Escena, {tipo: 'clave'}>;
 /* Zoom por tramos (punch-in alterno) + deriva lenta */
 const useZoom = (ed: Edicion) => {
   const frame = useCurrentFrame();
+  if (ed.zoomCurva) return ed.zoomCurva[Math.min(frame, ed.zoomCurva.length - 1)];
   const {fps} = useVideoConfig();
   const t = frame / fps;
   let k = 0;

@@ -129,3 +129,4 @@ Después de los pasos 1-5 de cámara:
 - Automático en cada escena `clave` (alterna `in`/`out`, escala 0,09) + `enfasis` manual en guion.json: `[{"t0","t1","modo":"in|out","escala"}]` para frases importantes sin rótulo.
 - `06_edicion.py` añade el efecto de sonido de cada zoom (`sfx_zoom`), sincronizado por el pico del whoosh. Zoom total limitado a 1,16.
 - Subtítulos durante un rótulo clave: se ocultan las palabras ya mostradas por el preset (`ocultar` en `Subs.tsx`, calculado desde las escenas `clave`).
+- Zoom: `06_edicion.py` calcula `zoomCurva` (un valor por fotograma): in 12 fotogramas, out 18, amplitud mín. 0,11/0,10, escalones base suaves y fuera de los énfasis, tope 1,18. Comprobar que `paso máx. < 0,02` en la salida del script. Remotion solo lee la curva.

@@ -28,6 +28,7 @@ export type Edicion = {
   sfx: Sfx[];
   zooms: [number, number][];
   vozFx?: {t0: number; t1: number; fx: string}[];
+  zoomCurva?: number[];
   enfasis?: {t0: number; t1: number; modo: 'in' | 'out'; escala: number}[];
 };
 
