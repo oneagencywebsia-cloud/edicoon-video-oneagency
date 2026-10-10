@@ -48,3 +48,20 @@ Tono: cercano, tuteo, sin jerga, honesto con los límites de la IA.
 - Drive: `python pipeline/drive_api.py info|ls|get <id|enlace> [--dest raw/<id>]` (solo lectura, reanudable, comprueba tamaño y ffprobe).
   El conector de Drive de la sesión NO sirve; usar la API con las variables GOOGLE_* (nunca imprimirlas).
 - Transcripción: `python pipeline/02_transcribe.py <vídeo> videos/<id>/transcripcion.json` (CPU turbo: ~2,5 min para 77 s la primera vez por la descarga del modelo, ~20 s de cálculo).
+
+## Procedimiento de cámara (probado en video1)
+1. `python pipeline/drive_api.py get <id> --dest raw/<video>`
+2. `python pipeline/02b_islas.py raw/<video>/<bruto>.MOV videos/<video>/islas.json` (transcripción por islas de voz; ~90 s por 77 s de vídeo en CPU)
+3. `python pipeline/03_tomas.py videos/<video>/islas.json videos/<video>/palabras.json --quitadas videos/<video>/quitadas.json [--prep tomas.prep.json]`
+   - Revisar lo que imprime. Se queda la ÚLTIMA versión de cada frase.
+4. `python pipeline/01_cut_silences.py raw/<video>/<bruto>.MOV videos/<video>/corte.mp4 --words videos/<video>/palabras.json`
+   - Verifica solo: transcribe el corte y recorta voz de más. Deja `corte.mp4.cuts.json` (mapa origen->corte).
+5. `python pipeline/02_transcribe.py videos/<video>/corte.mp4 videos/<video>/corte.trans.json` -> palabras en tiempos del corte (texto de los subtítulos y anclas).
+## Reglas técnicas añadidas (video1)
+- Whisper estira palabras sobre tomas fallidas que no transcribe. Usar islas de voz (02b) para decidir tomas y recortes.
+- Nunca cortar solo por tiempos de palabra: hay respiros DENTRO de las islas. El corte recorta cada tramo a su extensión vocal real
+  (voz-22 dB, márgenes 60 ms antes y 80/120 ms después) y quita silencios internos >= 0,12 s (voz-17 dB).
+- Un cortador con ffmpeg `trim`+`concat` sobre un 4K en un solo filtro agota la memoria: cortar por tramos y unir con concat demuxer (copy).
+- Umbrales demasiado agresivos recortan inicios/finales suaves («a otro» -> «u otro»): comprobar siempre transcribiendo el corte.
+- El suelo de ruido de la sala de Ángel es ~-77 dB; la voz ~-31 dB (p90).
+- Nombres propios: Whisper escribe «one -agency .es»/«guangianagency»: corregir con glosario en los subtítulos.
