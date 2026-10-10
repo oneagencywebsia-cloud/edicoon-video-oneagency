@@ -1,7 +1,7 @@
 """04c_voz_fx.py <entrada.mp4> <salida.mp4> --guion videos/<v>/guion.json
 
 Efectos de VOZ por tramos para apartes / paréntesis / ideas «que se dan por hechas» (guion.json -> "voz_fx": [{"t0","t1","fx"}]).
-  eco       : repeticiones a 180/360 ms (como pensar en voz alta o decirlo «de pasada»)   <- el que pidió Ángel
+  eco       : UN rebote suave a 210 ms, decay 0,26 (decirlo «de pasada»). Ángel: la versión fuerte (2 rebotes) era molesta
   reverb    : sala/hall corto (cercano a un recuerdo o a algo enorme)
   telefono  : banda 400-3200 Hz (voz de llamada o de «lo que dicen»)
 Mezcla seco/húmedo con fundidos (entrada 60 ms, salida 250 ms para que la cola del eco suene). El vídeo no se recodifica.
@@ -15,11 +15,11 @@ import numpy as np
 
 SR = 48000
 FX = {
-    "eco": "aecho=0.85:0.9:180|360:0.45|0.28,lowpass=f=7000",
+    "eco": "aecho=0.9:0.9:210:0.26,lowpass=f=5000",  # sutil: UN rebote bajo a 210 ms (la versión de 2 rebotes a 0,45 resultaba molesta)
     "reverb": "aecho=0.8:0.88:40|70|110|170:0.35|0.3|0.25|0.2,highpass=f=140",
     "telefono": "highpass=f=420,lowpass=f=3200,acompressor=threshold=0.1:ratio=3:makeup=2",
 }
-GANANCIA_HUMEDO = {"eco": 1.12, "reverb": 1.1, "telefono": 1.1}
+GANANCIA_HUMEDO = {"eco": 1.0, "reverb": 1.0, "telefono": 1.1}
 
 ap = argparse.ArgumentParser()
 ap.add_argument("entrada")
@@ -49,7 +49,7 @@ for v in ventanas:
     m = np.zeros(n)
     i0, i1 = int((v["t0"] - 0.06) * SR), int(v["t1"] * SR)
     m[i0:i1] = 1
-    fin = int(0.25 * SR)
+    fin = int(0.18 * SR)
     m[i1: i1 + fin] = np.linspace(1, 0, min(fin, n - i1))[: max(n - i1, 0)] if i1 < n else 0
     ent = int(0.06 * SR)
     m[i0: i0 + ent] = np.linspace(0, 1, ent)

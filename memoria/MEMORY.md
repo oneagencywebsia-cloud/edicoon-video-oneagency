@@ -2,6 +2,8 @@
 - [[user_angel_carrillo]] — quién es Ángel, su público (pymes poco técnicas) y su objetivo (vender + concienciar + conectar)
 - [[project_marca_oneagency]] — marca, colores, tipografía, servicios (todo sale de marca/*.json)
 - [[project_formato_y_flujo]] — vertical 1080×1920, 20-60 s, Drive, entregables, flujo semi-automático
+- [[project_estrategia_contenido]] — para qué sirven los vídeos, estructura, conexión con el cliente ideal, descripción
+- [[reference_video1_plantilla]] — el vídeo 1 como ejemplo de referencia (qué copiar, qué no)
 - [[feedback_estilo_visual]] — variedad, presets de rótulo con luz, animaciones que conectan, sin todo naranja
 - [[feedback_sonido]] — SFX reales y audibles, risers, clics en rótulos, sincronía, eco en apartes
 - [[feedback_cortes_y_edicion]] — cortes secos, última toma, verificar transcribiendo
