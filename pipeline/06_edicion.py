@@ -80,8 +80,23 @@ for s in G["sfx"]:
                 "dur": round(dur, 4), "fade_in": round(fade_in, 3), "fade_out": round(fade_out, 3), "en": s["en"], "ancla": ancla})
 sfx.sort(key=lambda z: z["ini"])
 
+# 3b) zoom de ÉNFASIS: en cada rótulo clave (y en los `enfasis` del guion). Alterna zoom-in (golpe y vuelta) y zoom-out (arranca cerca y se abre)
+enfasis = [dict(e) for e in G.get("enfasis", [])]
+for k, e in enumerate([x for x in G["escenas"] if x.get("tipo") == "clave"]):
+    enfasis.append({"t0": round(e["t0"] - 0.03, 3), "t1": round(e["t1"] - 0.1, 3), "modo": "in" if k % 2 == 0 else "out", "escala": 0.09})
+enfasis.sort(key=lambda z: z["t0"])
+if G.get("sfx_zoom", True):
+    for z in enfasis:  # efecto de sonido sincronizado al fotograma del zoom (el pico del whoosh cae a mitad de la rampa)
+        f = "p/loud_whip" if z["modo"] == "in" else "p/vs_short_whoosh_6"
+        info = SFX.get(f)
+        if info:
+            ini = z["t0"] + 0.08 - info["pico_t"]
+            sfx.append({"f": f, "ini": round(ini, 4), "archivo": info["archivo"], "vol": 0.32, "desde": 0.0, "dur": round(info["duracion"], 4),
+                        "fade_in": 0.003, "fade_out": 0.05, "en": z["t0"] + 0.08, "ancla": "pico"})
+    sfx.sort(key=lambda z: z["ini"])
+
 ed = {"id": G["id"], "fps": fps, "frames": frames, "camara": G["camara"], "chunks": chunks,
-      "escenas": G["escenas"], "sfx": sfx, "sfx_gain": G.get("sfx_gain", 1.0), "vozFx": G.get("voz_fx", []), "zooms": G["zooms"]}
+      "escenas": G["escenas"], "sfx": sfx, "sfx_gain": G.get("sfx_gain", 1.0), "vozFx": G.get("voz_fx", []), "enfasis": enfasis, "zooms": G["zooms"]}
 json.dump(ed, open(f"{base}/edicion.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print(f"{len(chunks)} bloques de subtítulos, {len(G['escenas'])} escenas, {len(sfx)} efectos, {frames} fotogramas a {fps} fps")
 print("Subtítulos:", " / ".join(" ".join(p["w"] for p in c["palabras"]) for c in chunks))

@@ -1130,6 +1130,18 @@
    "ancla": "pico"
   },
   {
+   "f": "p/loud_whip",
+   "ini": 3.59,
+   "archivo": "sfx/pack/loud_whip.wav",
+   "vol": 0.32,
+   "desde": 0.0,
+   "dur": 0.439,
+   "fade_in": 0.003,
+   "fade_out": 0.05,
+   "en": 3.7,
+   "ancla": "pico"
+  },
+  {
    "f": "p/deep_bass_hit_1",
    "ini": 3.61,
    "archivo": "sfx/pack/deep_bass_hit_1.wav",
@@ -1262,6 +1274,18 @@
    "ancla": "pico"
   },
   {
+   "f": "p/vs_short_whoosh_6",
+   "ini": 10.03,
+   "archivo": "sfx/pack/vs_short_whoosh_6.wav",
+   "vol": 0.32,
+   "desde": 0.0,
+   "dur": 0.757,
+   "fade_in": 0.003,
+   "fade_out": 0.05,
+   "en": 10.3,
+   "ancla": "pico"
+  },
+  {
    "f": "p/deep_throbbing_slow_energy_pulse",
    "ini": 10.19,
    "archivo": "sfx/pack/deep_throbbing_slow_energy_pulse.wav",
@@ -1334,6 +1358,18 @@
    "ancla": "pico"
   },
   {
+   "f": "p/loud_whip",
+   "ini": 14.92,
+   "archivo": "sfx/pack/loud_whip.wav",
+   "vol": 0.32,
+   "desde": 0.0,
+   "dur": 0.439,
+   "fade_in": 0.003,
+   "fade_out": 0.05,
+   "en": 15.03,
+   "ancla": "pico"
+  },
+  {
    "f": "p/106_counter_9",
    "ini": 14.99,
    "archivo": "sfx/pack/106_counter_9.wav",
@@ -1380,6 +1416,18 @@
    "fade_out": 0.04,
    "en": 16.0,
    "ancla": "inicio"
+  },
+  {
+   "f": "p/loud_whip",
+   "ini": 17.29,
+   "archivo": "sfx/pack/loud_whip.wav",
+   "vol": 0.32,
+   "desde": 0.0,
+   "dur": 0.439,
+   "fade_in": 0.003,
+   "fade_out": 0.05,
+   "en": 17.4,
+   "ancla": "pico"
   },
   {
    "f": "p/cinematic_bass_3",
@@ -1574,6 +1622,18 @@
    "ancla": "pico"
   },
   {
+   "f": "p/vs_short_whoosh_6",
+   "ini": 22.63,
+   "archivo": "sfx/pack/vs_short_whoosh_6.wav",
+   "vol": 0.32,
+   "desde": 0.0,
+   "dur": 0.757,
+   "fade_in": 0.003,
+   "fade_out": 0.05,
+   "en": 22.9,
+   "ancla": "pico"
+  },
+  {
    "f": "interruptor_luz",
    "ini": 22.85,
    "archivo": "sfx/interruptor_luz.wav",
@@ -1646,6 +1706,18 @@
    "ancla": "inicio"
   },
   {
+   "f": "p/loud_whip",
+   "ini": 26.37,
+   "archivo": "sfx/pack/loud_whip.wav",
+   "vol": 0.32,
+   "desde": 0.0,
+   "dur": 0.439,
+   "fade_in": 0.003,
+   "fade_out": 0.05,
+   "en": 26.479999999999997,
+   "ancla": "pico"
+  },
+  {
    "f": "periodico_cae",
    "ini": 27.42,
    "archivo": "sfx/periodico_cae.wav",
@@ -1716,6 +1788,18 @@
    "fade_out": 0.04,
    "en": 32.2,
    "ancla": "inicio"
+  },
+  {
+   "f": "p/loud_whip",
+   "ini": 32.39,
+   "archivo": "sfx/pack/loud_whip.wav",
+   "vol": 0.32,
+   "desde": 0.0,
+   "dur": 0.439,
+   "fade_in": 0.003,
+   "fade_out": 0.05,
+   "en": 32.5,
+   "ancla": "pico"
   },
   {
    "f": "p/sub_bass_hit",
@@ -1802,6 +1886,18 @@
    "ancla": "inicio"
   },
   {
+   "f": "p/loud_whip",
+   "ini": 36.72,
+   "archivo": "sfx/pack/loud_whip.wav",
+   "vol": 0.32,
+   "desde": 0.0,
+   "dur": 0.439,
+   "fade_in": 0.003,
+   "fade_out": 0.05,
+   "en": 36.83,
+   "ancla": "pico"
+  },
+  {
    "f": "p/deep_bass_hit_1",
    "ini": 36.81,
    "archivo": "sfx/pack/deep_bass_hit_1.wav",
@@ -1832,6 +1928,56 @@
    "t0": 24.05,
    "t1": 27.15,
    "fx": "eco"
+  }
+ ],
+ "enfasis": [
+  {
+   "t0": 3.62,
+   "t1": 4.85,
+   "modo": "in",
+   "escala": 0.09
+  },
+  {
+   "t0": 10.22,
+   "t1": 11.05,
+   "modo": "out",
+   "escala": 0.09
+  },
+  {
+   "t0": 14.95,
+   "t1": 15.5,
+   "modo": "in",
+   "escala": 0.07
+  },
+  {
+   "t0": 17.32,
+   "t1": 18.25,
+   "modo": "in",
+   "escala": 0.09
+  },
+  {
+   "t0": 22.82,
+   "t1": 24.15,
+   "modo": "out",
+   "escala": 0.09
+  },
+  {
+   "t0": 26.4,
+   "t1": 27.0,
+   "modo": "in",
+   "escala": 0.08
+  },
+  {
+   "t0": 32.42,
+   "t1": 33.45,
+   "modo": "in",
+   "escala": 0.09
+  },
+  {
+   "t0": 36.75,
+   "t1": 37.2,
+   "modo": "in",
+   "escala": 0.08
   }
  ],
  "zooms": [

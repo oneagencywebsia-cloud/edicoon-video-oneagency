@@ -10,6 +10,7 @@ metadata:
 - **Las animaciones deben CONECTAR con el cliente ideal y la estrategia** (sector, papeleo, noche, clientes sin contestar). Sin cifras inventadas.
 - Subtítulos: palabra a palabra abajo; palabra activa en píldora que alterna azul/blanco/naranja. Zoom suave alterno ≤ 7-9 %. Negar/descartar = desvanecer (gris/desenfoque), nunca tachones rojos.
 - **Sombras en TODOS los presets** (sombra larga proyectada que se desvanece + extrusión + sombra de contacto, luz arriba-izquierda; preset extra `sombra`). **El fondo NO cambia de color/brillo cuando sale un rótulo o escena**: nada de oscurecer, teñir, resplandores de fondo ni tinte de «noche» (Ángel, 2026-10-10). Los brillos van solo en las letras.
+- **Zoom de énfasis** (Ángel, 2026-10-10): cuando sale un rótulo clave o se dice algo importante, la cámara hace zoom in (golpe rápido y vuelta suave) o zoom out (arranca cerca y se abre), alternando, ~7-9 %, SIEMPRE acompañado de un efecto de sonido (whip / whoosh) sincronizado al fotograma del zoom. Es automático en cada `clave` y se añade a mano con `enfasis` en el guion.
 - Color: LUT «Oceano_oscuro» a 0,55 (el resto ensucia la piel). Estilo 3D minimalista y limpio.
 **Why:** quiere que no se note «plantilla de IA» y que conecte con el espectador.
 **How to apply:** catálogo en CLAUDE.md («Presets de rótulo clave» y escenas); elegir preset/escena distintos en cada momento.

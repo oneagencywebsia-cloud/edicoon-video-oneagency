@@ -1,11 +1,11 @@
-import {AbsoluteFill, Audio, Img, OffthreadVideo, Sequence, interpolate, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
+import {AbsoluteFill, Audio, Easing, Img, OffthreadVideo, Sequence, interpolate, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import './fuentes';
 import type {Edicion, Escena} from './types';
 import {Subs} from './Subs';
 import {Broll, Copiar, Cta, LowerThird, Notas, Periodico, Reloj} from './escenas';
 import {Donut, Movil, Noche, Sectores, Sello} from './escenas2';
 import {Linea} from './presets';
-import {C, clamp, entra, sale} from './util';
+import {C, clamp, entra, out5, sale} from './util';
 
 type ClaveE = Extract<Escena, {tipo: 'clave'}>;
 
@@ -20,7 +20,18 @@ const useZoom = (ed: Edicion) => {
   });
   const [t0, esc] = ed.zooms[k];
   const t1 = ed.zooms[k + 1]?.[0] ?? ed.frames / fps;
-  return esc + interpolate(t, [t0, t1], [0, 0.025], clamp);
+  // zoom de énfasis: in = golpe rápido y vuelta suave; out = arranca cerca y se abre
+  let extra = 0;
+  (ed.enfasis ?? []).forEach((e) => {
+    const f0 = Math.round(e.t0 * fps);
+    const f1 = Math.round(e.t1 * fps);
+    let v: number;
+    if (e.modo === 'out') v = interpolate(frame, [f0, f0 + 4, f0 + 20], [0, 1, 0], {...clamp, easing: Easing.out(Easing.cubic)});
+    else if (frame < f1) v = interpolate(frame, [f0, f0 + 5], [0, 1], {...clamp, easing: out5});
+    else v = interpolate(frame, [f1, f1 + 10], [1, 0], {...clamp, easing: Easing.inOut(Easing.cubic)});
+    extra += e.escala * v;
+  });
+  return Math.min(esc + interpolate(t, [t0, t1], [0, 0.025], clamp) + extra, 1.16);
 };
 
 const Camara: React.FC<{ed: Edicion; zoom: number; mascara?: string}> = ({ed, zoom, mascara}) => (

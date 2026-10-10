@@ -124,3 +124,7 @@ Después de los pasos 1-5 de cámara:
 - `python pipeline/03c_apartes.py videos/<v>/corte.trans.json` propone tramos (frases tipo «y no necesitas…», «por cierto», «obviamente»).
 - `python pipeline/04c_voz_fx.py videos/<v>/corte_voz.mp4 videos/<v>/corte_vozfx.mp4 --guion videos/<v>/guion.json` (eco | reverb | telefono) y DESPUÉS `04b_color.py corte_vozfx.mp4 corte_color.mp4`.
 - Orden de voz/color: corte -> 04_voz (EQ) -> 04c_voz_fx -> 04b_color. Los subtítulos dejan un rastro visual de eco durante el tramo (`vozFx` en edicion.json).
+
+## Zoom de énfasis (remotion/src/Vertical.tsx, `enfasis` en edicion.json)
+- Automático en cada escena `clave` (alterna `in`/`out`, escala 0,09) + `enfasis` manual en guion.json: `[{"t0","t1","modo":"in|out","escala"}]` para frases importantes sin rótulo.
+- `06_edicion.py` añade el efecto de sonido de cada zoom (`sfx_zoom`), sincronizado por el pico del whoosh. Zoom total limitado a 1,16.
