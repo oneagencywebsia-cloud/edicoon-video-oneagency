@@ -81,7 +81,7 @@ for s in G["sfx"]:
 sfx.sort(key=lambda z: z["ini"])
 
 ed = {"id": G["id"], "fps": fps, "frames": frames, "camara": G["camara"], "chunks": chunks,
-      "escenas": G["escenas"], "sfx": sfx, "zooms": G["zooms"]}
+      "escenas": G["escenas"], "sfx": sfx, "sfx_gain": G.get("sfx_gain", 1.0), "zooms": G["zooms"]}
 json.dump(ed, open(f"{base}/edicion.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print(f"{len(chunks)} bloques de subtítulos, {len(G['escenas'])} escenas, {len(sfx)} efectos, {frames} fotogramas a {fps} fps")
 print("Subtítulos:", " / ".join(" ".join(p["w"] for p in c["palabras"]) for c in chunks))

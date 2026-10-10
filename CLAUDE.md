@@ -100,3 +100,19 @@ Después de los pasos 1-5 de cámara:
 - Risers reales del pack: `p/02_riser` (3,9 s, pico 3,19), `p/01_riser` (5,8 s, pico 5,38), `p/riser_1`, `p/riser` (1,8 s). `p/reloj` = tic cada 0,2 s; `p/106_counter_9` = contador de dígitos.
 - Descartados: «among us», «Windows_error», «CENSORED», música.
 - Se mide el enmascarado en la BANDA DEL HABLA (300-3500 Hz): los graves (sub drops) casi no tapan; los golpes/risers deben quedar >= 8 dB bajo la voz salvo el transitorio del arranque.
+
+## Presets de rótulo clave (remotion/src/presets.tsx) — iluminación, sombras y animación por letras
+- `preset`: `neon` (tubo azul con parpadeo y bloom), `cromo` (metal con extrusión azul y barrido de luz), `ambar` (oro/fuego con extrusión),
+  `cristal` (letras de vidrio con borde y reflejo), `foco` (blanco cálido con haz de luz), `hielo` (azul helado). No usar siempre el mismo ni todo naranja.
+- Escena `clave`: `plano: detras|frente`, `layout: centro|diagonal|gigante`, `preset`, `lineas`. Detrás de la persona requiere matte de esa ventana (05_matte.py).
+- Subtítulos normales: palabra activa en píldora que alterna azul / blanco / naranja.
+- Escenas que conectan con el cliente ideal (pymes): `sectores` (comercio, clínica, despacho, obra, transporte), `movil` (avisos sin contestar),
+  `noche` (oscurece y enfría = «segundo turno»), `donut` (lo que solo tú puedes hacer vs. lo que se repite; SIN cifras inventadas),
+  `sello` (pegatina «GRATIS»), más `notas`, `copiar`, `periodico`, `broll`, `cta`. Las tarjetas de cristal son OSCURAS (contraste con la pared clara).
+## Sonido audible (ajustes tras el feedback de Ángel)
+- Riser DESDE EL INICIO del hook (acaba en el golpe de la 1.ª palabra clave), clic + golpe en cada rótulo clave, efecto por cada acción.
+- `sfx_gain` 1.7 en el guion, ducking suave y limitador a -6 dBFS en la pista de efectos. Objetivo: pista de efectos ~7 dB (LUFS) por debajo de la voz.
+## Color y b-roll del pack de Ángel
+- LUT: `python pipeline/04b_color.py corte_voz.mp4 corte_color.mp4` (Oceano_oscuro a 0,55). Los otros 11 LUTs ensucian la piel.
+- De 175 b-rolls solo encajan 2-3 (131 = casa/papeles/velas día->noche; 7 = estadio vacío de noche, parece de PELÍCULA: licencia dudosa). Es stock de estilo de vida/viajes.
+- OVERLAY 4.mp4 es un croma verde (inservible).

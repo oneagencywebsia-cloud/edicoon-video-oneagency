@@ -14,7 +14,7 @@ import wave
 import numpy as np
 
 SR = 48000
-DUCK_DB = {"riser": 7, "whoosh": 6, "papel": 4, "interfaz": 4, "reloj": 6, "golpe": 3, "boom": 3, "sub_drop": 3, "click": 0, "tecla": 0, "teclado": 2, "camara": 1, "marcador": 3, "pop": 1, "escribir": 3, "ambiente": 6}
+DUCK_DB = {"riser": 4, "whoosh": 3, "papel": 3, "interfaz": 3, "reloj": 3, "golpe": 2, "boom": 2, "sub_drop": 2, "click": 0, "tecla": 0, "teclado": 1, "camara": 0, "marcador": 2, "pop": 0, "escribir": 2, "ambiente": 3}
 v = sys.argv[1]
 ed = json.load(open(f"videos/{v}/edicion.json", encoding="utf-8"))
 total = int(round(ed["frames"] / ed["fps"] * SR))
@@ -48,7 +48,7 @@ for s in ed["sfx"]:
     with wave.open(f"videos/_shared/{s['archivo']}") as w:
         x = np.frombuffer(w.readframes(w.getnframes()), dtype="<i2").astype(np.float64) / 32768
     a, b = int(round(s["desde"] * SR)), int(round((s["desde"] + s["dur"]) * SR))
-    seg = x[a:b].copy() * s["vol"]
+    seg = x[a:b].copy() * s["vol"] * ed.get("sfx_gain", 1.0)
     n = len(seg)
     fi, fo = min(int(s["fade_in"] * SR), n), min(int(s["fade_out"] * SR), n)
     if fi:
@@ -65,11 +65,22 @@ for s in ed["sfx"]:
         seg = seg * (1 - (1 - 10 ** (-d / 20)) * VOZ[i0:i1])
     bed[i0:i1] += seg
 pico = np.abs(bed).max()
-if pico > 0.95:
-    bed *= 0.95 / pico
+if pico > 0.9:
+    bed *= 0.9 / pico
+# limitador suave a -6 dBFS: presencia sin saturar al sumarse a la voz
+import subprocess
+tmp = f"videos/{v}/_bed_crudo.wav"
+with wave.open(tmp, "wb") as w:
+    w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR)
+    w.writeframes((np.clip(bed, -1, 1) * 32767).astype("<i2").tobytes())
+subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", tmp, "-af", "alimiter=limit=0.5:attack=3:release=90:level=disabled", "-ar", str(SR), "-ac", "1", f"videos/{v}/_bed_lim.wav"], check=True)
+with wave.open(f"videos/{v}/_bed_lim.wav") as w2:
+    bed = np.frombuffer(w2.readframes(w2.getnframes()), dtype="<i2").astype(np.float64) / 32768
+import os
+os.remove(tmp); os.remove(f"videos/{v}/_bed_lim.wav")
 with wave.open(f"videos/{v}/sfx_bed.wav", "wb") as w:
     w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR)
     w.writeframes((np.clip(bed, -1, 1) * 32767).astype("<i2").tobytes())
-print(f"{len(ed['sfx'])} efectos mezclados, {total / SR:.2f}s, pico {20 * np.log10(max(pico, 1e-9)):.1f} dBFS")
+print(f"{len(ed['sfx'])} efectos mezclados, {total / SR:.2f}s, pico tras limitar {20 * np.log10(max(np.abs(bed).max(), 1e-9)):.1f} dBFS")
 for s in ed["sfx"]:
     print(f"  {s['en']:6.2f}s  {s['f']:18s} ancla={s['ancla']:6s} vol={s['vol']:.2f}  inicio de archivo en {s['ini']:.3f}s")

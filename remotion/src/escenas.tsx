@@ -163,13 +163,22 @@ export const Broll: React.FC<P<'broll'>> = ({e, f0, dur}) => {
   const {fps} = useVideoConfig();
   const a = vis(frame, 0, dur, 10, 8);
   const p = entra(frame, 0, 14);
-  const W = 980, H = 620, s = W / 1080, yOff = 0.365 * 1920;
+  const W = 980, H = 620, s = W / 1080;
+  const yOff = e.yc != null ? Math.min(Math.max(e.yc * 1920 - H / s / 2, 0), 1920 - H / s) : 0.365 * 1920;
+  const mm = e.reloj ? Math.round(minutos(e.reloj.desde) + (minutos(e.reloj.hasta) - minutos(e.reloj.desde)) * interpolate(frame, [4, dur - 6], [0, 1], {...clamp, easing: Easing.inOut(Easing.cubic)})) : 0;
   return (
     <div style={{position: 'absolute', left: 50, top: 110, width: W, height: H, opacity: a, transform: `perspective(1600px) rotateX(${(1 - p) * 10}deg) translateY(${(1 - p) * 60}px) scale(${0.94 + 0.06 * p}) rotate(${-1.2 * p}deg)`, borderRadius: 38, overflow: 'hidden', border: '3px solid rgba(255,255,255,0.45)', boxShadow: `0 40px 100px rgba(0,0,0,0.55), 0 0 60px ${C.acento}55`, background: '#0d0d1a'}}>
       <div style={{position: 'absolute', left: 0, top: -yOff * s, width: 1080, height: 1920, transform: `scale(${s})`, transformOrigin: 'top left'}}>
         <OffthreadVideo src={staticFile(e.src)} startFrom={Math.round(e.desde * fps)} muted style={{width: 1080, height: 1920}} />
       </div>
       <div style={{position: 'absolute', inset: 0, background: 'linear-gradient(180deg,rgba(13,13,26,0) 70%,rgba(13,13,26,0.55))'}} />
+      {e.reloj && (
+        <div style={{position: 'absolute', right: 26, bottom: 24, padding: '8px 28px', borderRadius: 30, background: 'rgba(13,13,26,0.72)', border: '2px solid rgba(255,255,255,0.35)', fontFamily: FUENTE, fontWeight: 800, fontSize: 64, color: '#fff', fontVariantNumeric: 'tabular-nums', textShadow: `0 0 24px ${C.acento}`}}>
+          {String(Math.floor(mm / 60)).padStart(2, '0')}
+          <span style={{opacity: frame % 20 < 12 ? 1 : 0.3}}>:</span>
+          {String(mm % 60).padStart(2, '0')}
+        </div>
+      )}
       {e.etiqueta && (
         <div style={{position: 'absolute', left: 26, bottom: 24, padding: '10px 22px', borderRadius: 999, background: 'rgba(13,13,26,0.7)', border: `2px solid ${C.acento}`, fontFamily: FUENTE, fontWeight: 700, fontSize: 28, color: '#fff'}}>{e.etiqueta}</div>
       )}

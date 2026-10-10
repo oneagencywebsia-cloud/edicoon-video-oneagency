@@ -6,12 +6,16 @@ type Base = {t0: number; t1: number};
 export type Escena =
   | (Base & {tipo: 'lowerThird'; nombre: string; cargo: string})
   | (Base & {tipo: 'reloj'; desde: string; hasta: string; etiqueta: string})
-  | (Base & {tipo: 'claveDetras'; estilo?: 'centro' | 'diagonal' | 'gigante'; lineas: string[]})
-  | (Base & {tipo: 'claveFrente'; estilo: 'marcador'; lineas: string[]; resaltar: string; resaltarT: number})
+  | (Base & {tipo: 'clave'; plano: 'detras' | 'frente'; layout: 'centro' | 'diagonal' | 'gigante'; preset: 'neon' | 'cromo' | 'ambar' | 'cristal' | 'foco' | 'hielo'; lineas: string[]})
+  | (Base & {tipo: 'sectores'; items: {texto: string; icono: string; t: number}[]})
+  | (Base & {tipo: 'movil'; avisos: {app: string; titulo: string; texto: string; tipo: 'chat' | 'obra' | 'tel'; t: number}[]})
+  | (Base & {tipo: 'noche'})
+  | (Base & {tipo: 'donut'; partirT: number; soloTu: number})
+  | (Base & {tipo: 'sello'; texto: string; x: number; y: number; giro: number})
   | (Base & {tipo: 'notas'; items: {texto: string; t: number}[]})
   | (Base & {tipo: 'copiar'; origen: string; destino: string})
   | (Base & {tipo: 'periodico'; cabecera: string; titular: string[]; resaltar: string; resaltarT: number})
-  | (Base & {tipo: 'broll'; src: string; desde: number; etiqueta?: string})
+  | (Base & {tipo: 'broll'; src: string; desde: number; etiqueta?: string; yc?: number; reloj?: {desde: string; hasta: string}})
   | (Base & {tipo: 'cta'; boton: string; clicT: number});
 
 export type Edicion = {

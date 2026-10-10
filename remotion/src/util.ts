@@ -14,9 +14,9 @@ export const vis = (f: number, ini: number, fin: number, din = 10, dout = 6) => 
 
 export const sombraTexto = '0 4px 28px rgba(0,0,0,0.55), 0 1px 3px rgba(0,0,0,0.6)';
 export const cristal: React.CSSProperties = {
-  background: 'rgba(255,255,255,0.13)',
+  background: 'rgba(14,20,50,0.55)',
   backdropFilter: 'blur(26px) saturate(140%)',
   WebkitBackdropFilter: 'blur(26px) saturate(140%)',
-  border: '2px solid rgba(255,255,255,0.28)',
+  border: '2px solid rgba(255,255,255,0.30)',
   boxShadow: '0 30px 80px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.35)',
 };
