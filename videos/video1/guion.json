@@ -190,51 +190,67 @@
  "sfx": [
   {
    "en": 0.55,
-   "f": "whoosh_aire",
-   "vol": 0.26,
+   "f": "p/swoosh_01_05",
+   "vol": 0.38,
    "ancla": "pico"
   },
   {
    "en": 2.2,
-   "f": "reloj_tictac",
-   "vol": 0.18,
+   "f": "p/reloj",
+   "vol": 0.26,
    "ancla": "inicio",
    "dur": 1.35
   },
   {
+   "en": 2.2,
+   "f": "p/106_counter_9",
+   "vol": 0.22,
+   "ancla": "inicio",
+   "dur": 1.3
+  },
+  {
    "en": 3.65,
-   "f": "riser_suspense",
+   "f": "p/02_riser",
+   "vol": 0.5,
+   "ancla": "fin",
+   "largo": 1.6
+  },
+  {
+   "en": 3.65,
+   "f": "p/riser_1",
    "vol": 0.34,
    "ancla": "fin",
    "largo": 1.5
   },
   {
    "en": 3.65,
-   "f": "riser_trailer",
-   "vol": 0.28,
-   "ancla": "fin",
-   "largo": 1.5
-  },
-  {
-   "en": 3.65,
-   "f": "golpe_grave",
-   "vol": 0.42,
+   "f": "p/deep_bass_hit_1",
+   "vol": 0.55,
    "ancla": "inicio",
-   "dur": 0.5,
-   "fade_out": 0.18
+   "dur": 0.9,
+   "fade_out": 0.25
   },
   {
-   "en": 3.63,
-   "f": "whoosh_swoosh",
-   "vol": 0.26,
+   "en": 3.66,
+   "f": "p/sub_bass_drop_4",
+   "vol": 0.3,
+   "ancla": "inicio",
+   "dur": 1.3,
+   "fade_out": 0.4
+  },
+  {
+   "en": 3.62,
+   "f": "p/woosh_effect_12",
+   "vol": 0.3,
    "ancla": "pico"
   },
   {
    "en": 10.25,
-   "f": "latido_impacto",
-   "vol": 0.42,
+   "f": "p/deep_throbbing_slow_energy_pulse",
+   "vol": 0.3,
    "ancla": "inicio",
-   "dur": 1.7
+   "dur": 1.15,
+   "fade_out": 0.3
   },
   {
    "en": 11.37,
@@ -258,110 +274,110 @@
   {
    "en": 13.48,
    "f": "mensaje_alerta",
-   "vol": 0.35,
+   "vol": 0.24,
    "ancla": "pico"
   },
   {
    "en": 17.35,
-   "f": "riser_suspense",
-   "vol": 0.32,
+   "f": "p/02_riser",
+   "vol": 0.45,
    "ancla": "fin",
    "largo": 1.4
   },
   {
    "en": 17.35,
-   "f": "riser_trailer",
+   "f": "p/riser",
+   "vol": 0.3,
+   "ancla": "fin",
+   "largo": 1.4
+  },
+  {
+   "en": 17.35,
+   "f": "p/cinematic_bass_3",
+   "vol": 0.45,
+   "ancla": "inicio",
+   "dur": 1.0,
+   "fade_out": 0.3
+  },
+  {
+   "en": 17.36,
+   "f": "p/sub_bass_drop_2",
    "vol": 0.26,
-   "ancla": "fin",
-   "largo": 1.4
-  },
-  {
-   "en": 17.35,
-   "f": "golpe_grave",
-   "vol": 0.42,
    "ancla": "inicio",
-   "dur": 0.5,
-   "fade_out": 0.18
-  },
-  {
-   "en": 17.35,
-   "f": "golpe_sub",
-   "vol": 0.2,
-   "ancla": "inicio",
-   "desde": 0.95,
-   "dur": 1.3
+   "dur": 1.3,
+   "fade_out": 0.4
   },
   {
    "en": 18.83,
-   "f": "tecla_1",
+   "f": "p/mechanical_keyboard_click_05",
    "vol": 0.5,
    "ancla": "inicio"
   },
   {
    "en": 18.9,
-   "f": "tecla_2",
+   "f": "p/mechanical_keyboard_click_19",
    "vol": 0.5,
    "ancla": "inicio"
   },
   {
    "en": 19.03,
-   "f": "click_burbuja",
-   "vol": 0.3,
+   "f": "p/mouse_click_03",
+   "vol": 0.35,
    "ancla": "inicio"
   },
   {
    "en": 19.57,
-   "f": "tecla_3",
+   "f": "p/mechanical_keyboard_click_07",
    "vol": 0.5,
    "ancla": "inicio"
   },
   {
    "en": 19.64,
-   "f": "tecla_4",
+   "f": "p/mechanical_keyboard_click_19",
    "vol": 0.5,
    "ancla": "inicio"
   },
   {
    "en": 19.58,
-   "f": "click_select",
-   "vol": 0.35,
-   "ancla": "pico"
+   "f": "p/mouse_click_04",
+   "vol": 0.4,
+   "ancla": "inicio"
   },
   {
    "en": 20.363,
-   "f": "tecla_1",
+   "f": "p/mechanical_keyboard_click_05",
    "vol": 0.5,
    "ancla": "inicio"
   },
   {
    "en": 20.433,
-   "f": "tecla_2",
+   "f": "p/mechanical_keyboard_click_19",
    "vol": 0.5,
    "ancla": "inicio"
   },
   {
    "en": 20.563,
-   "f": "click_burbuja",
-   "vol": 0.3,
+   "f": "p/mouse_click_03",
+   "vol": 0.35,
    "ancla": "inicio"
   },
   {
    "en": 21.103,
-   "f": "tecla_3",
+   "f": "p/mechanical_keyboard_click_07",
    "vol": 0.5,
    "ancla": "inicio"
   },
   {
    "en": 21.173,
-   "f": "tecla_4",
+   "f": "p/mechanical_keyboard_click_19",
    "vol": 0.5,
    "ancla": "inicio"
   },
   {
    "en": 21.113,
-   "f": "click_select",
-   "vol": 0.35,
-   "ancla": "pico"
+   "f": "p/mouse_click_04",
+   "vol": 0.4,
+   "ancla": "inicio"
   },
   {
    "en": 22.85,
@@ -371,29 +387,39 @@
   },
   {
    "en": 22.95,
-   "f": "whoosh_aire",
-   "vol": 0.2,
+   "f": "p/swhoosh",
+   "vol": 0.28,
    "ancla": "pico"
   },
   {
    "en": 23.2,
-   "f": "rotulador",
+   "f": "p/resaltador_highlighter_sound_effect",
    "vol": 0.5,
+   "ancla": "inicio",
+   "dur": 0.5,
+   "fade_out": 0.1
+  },
+  {
+   "en": 24.3,
+   "f": "p/camera_shutter",
+   "vol": 0.35,
    "ancla": "inicio"
   },
   {
    "en": 24.32,
    "f": "papel_periodico",
-   "vol": 0.45,
+   "vol": 0.4,
    "ancla": "inicio",
    "desde": 0.45,
    "dur": 1.2
   },
   {
    "en": 26.4,
-   "f": "rotulador",
-   "vol": 0.5,
-   "ancla": "inicio"
+   "f": "p/06572_marker_drawing_on_paper_full",
+   "vol": 0.45,
+   "ancla": "inicio",
+   "dur": 0.4,
+   "fade_out": 0.08
   },
   {
    "en": 27.6,
@@ -409,8 +435,8 @@
   },
   {
    "en": 28.0,
-   "f": "whoosh_rapido",
-   "vol": 0.14,
+   "f": "p/vs_short_whoosh_5",
+   "vol": 0.2,
    "ancla": "pico"
   },
   {
@@ -428,34 +454,34 @@
   },
   {
    "en": 33.7,
-   "f": "whoosh_rapido",
-   "vol": 0.14,
+   "f": "p/woosh_effect_12",
+   "vol": 0.2,
    "ancla": "pico"
   },
   {
    "en": 36.55,
-   "f": "riser_suspense",
-   "vol": 0.35,
+   "f": "p/02_riser",
+   "vol": 0.36,
    "ancla": "fin",
    "largo": 1.9
   },
   {
    "en": 36.55,
-   "f": "riser_trailer",
-   "vol": 0.28,
+   "f": "p/01_riser",
+   "vol": 0.24,
    "ancla": "fin",
-   "largo": 1.6
+   "largo": 1.9
   },
   {
    "en": 36.55,
-   "f": "click_raton",
-   "vol": 0.55,
+   "f": "p/mouse_click_04",
+   "vol": 0.6,
    "ancla": "inicio"
   },
   {
    "en": 36.6,
    "f": "tono_confirmacion",
-   "vol": 0.3,
+   "vol": 0.2,
    "ancla": "inicio",
    "dur": 1.0
   }

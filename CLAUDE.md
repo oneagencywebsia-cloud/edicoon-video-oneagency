@@ -90,3 +90,13 @@ Después de los pasos 1-5 de cámara:
 - Risers antes de los momentos clave (gancho, pregunta, CTA); golpe en el inicio de la palabra clave; efecto específico por acción
   (grapadora, lápiz, rotulador, notificación de mensaje, interruptor de luz, abrir/cerrar interfaz, teclas sueltas en copiar-pegar).
 - Ducking en `08_sfx_bed.py`; comprobar con la medición «efecto a menos de 6 dB de la voz» que solo quedan golpes en el arranque de palabras.
+
+## Librería PROPIA de Ángel (PACKS FOR EDITORS.zip, 2,1 GB, en Drive)
+- Id de Drive: 1cpTu1-qJYjlcqQAE_ZbxURD8vNxiLV6d. Se baja con `drive_api.py get` a `raw/sfx_pack/` y se descomprime en `raw/sfx_pack/x/` (carpeta aislada).
+- Contenido: SOUND EFFECTS (122 archivos), BROLL CINEMÁTICO (175 clips 720x1280, 24 fps, sin nombres), LUTS (12 .cube), CINEMATIC OVERLAYS (1),
+  MÚSICA (5, de artistas comerciales: NO usar sin permiso), presets de CapCut/Premiere/DaVinci (no sirven con Remotion), BRUTOS PARA PRACTICAR.
+- `python pipeline/00_sfx_pack.py "raw/sfx_pack/x/PACKS/SOUND EFFECTS"` -> `videos/_shared/sfx/pack/*.wav` + `pack_index.json` (95 sonidos con tipo, pico, inicio y subida).
+  En el guion se usan con prefijo `p/` (ej. `p/02_riser`). NO se sube a git (licencia sin verificar).
+- Risers reales del pack: `p/02_riser` (3,9 s, pico 3,19), `p/01_riser` (5,8 s, pico 5,38), `p/riser_1`, `p/riser` (1,8 s). `p/reloj` = tic cada 0,2 s; `p/106_counter_9` = contador de dígitos.
+- Descartados: «among us», «Windows_error», «CENSORED», música.
+- Se mide el enmascarado en la BANDA DEL HABLA (300-3500 Hz): los graves (sub drops) casi no tapan; los golpes/risers deben quedar >= 8 dB bajo la voz salvo el transitorio del arranque.

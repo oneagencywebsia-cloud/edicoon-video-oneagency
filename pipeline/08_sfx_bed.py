@@ -14,11 +14,15 @@ import wave
 import numpy as np
 
 SR = 48000
-DUCK_DB = {"riser": 7, "whoosh": 6, "papel": 4, "interfaz": 4, "reloj": 6, "golpe": 3, "click": 0, "tecla": 0, "teclado": 2}
+DUCK_DB = {"riser": 7, "whoosh": 6, "papel": 4, "interfaz": 4, "reloj": 6, "golpe": 3, "boom": 3, "sub_drop": 3, "click": 0, "tecla": 0, "teclado": 2, "camara": 1, "marcador": 3, "pop": 1, "escribir": 3, "ambiente": 6}
 v = sys.argv[1]
 ed = json.load(open(f"videos/{v}/edicion.json", encoding="utf-8"))
 total = int(round(ed["frames"] / ed["fps"] * SR))
 INFO = json.load(open("videos/_shared/sfx/index.json", encoding="utf-8"))["efectos"]
+try:
+    INFO.update({"p/" + k: v for k, v in json.load(open("videos/_shared/sfx/pack_index.json", encoding="utf-8"))["efectos"].items()})
+except FileNotFoundError:
+    pass
 
 
 def actividad_voz():

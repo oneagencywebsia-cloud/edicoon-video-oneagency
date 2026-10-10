@@ -13,6 +13,10 @@ G = json.load(open(f"{base}/guion.json", encoding="utf-8"))
 T = json.load(open(f"{base}/corte.trans.json", encoding="utf-8"))["palabras"]
 C = json.load(open(f"{base}/corte.mp4.cuts.json", encoding="utf-8"))
 SFX = json.load(open("videos/_shared/sfx/index.json", encoding="utf-8"))["efectos"]
+try:  # librería propia de Ángel (prefijo p/): python pipeline/00_sfx_pack.py <carpeta SOUND EFFECTS>
+    SFX.update({"p/" + k: v for k, v in json.load(open("videos/_shared/sfx/pack_index.json", encoding="utf-8"))["efectos"].items()})
+except FileNotFoundError:
+    pass
 fps = C["fps"]
 frames = round(C["duracion"] * fps)
 
