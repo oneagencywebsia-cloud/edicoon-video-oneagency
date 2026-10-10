@@ -10,3 +10,4 @@ __pycache__/
 *.mov
 *.wav
 client_secret*.json
+!videos/_shared/sfx/*.wav

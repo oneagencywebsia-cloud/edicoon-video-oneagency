@@ -1,0 +1,181 @@
+{
+ "licencia": "Mixkit License (https://mixkit.co/license/#sfxFree): uso libre en vídeo, sin atribución",
+ "efectos": {
+  "whoosh_aire": {
+   "archivo": "sfx/whoosh_aire.wav",
+   "titulo_original": "Air woosh",
+   "id_mixkit": "1489",
+   "uso": "entrada suave de rótulos",
+   "duracion": 2.26,
+   "pico_db": -3
+  },
+  "whoosh_rapido": {
+   "archivo": "sfx/whoosh_rapido.wav",
+   "titulo_original": "Fast whoosh transition",
+   "id_mixkit": "1490",
+   "uso": "transiciones rápidas",
+   "duracion": 1.76,
+   "pico_db": -3
+  },
+  "whoosh_swoosh": {
+   "archivo": "sfx/whoosh_swoosh.wav",
+   "titulo_original": "Fast transitions swoosh",
+   "id_mixkit": "3115",
+   "uso": "cambios de escena",
+   "duracion": 0.53,
+   "pico_db": -3
+  },
+  "whoosh_viento": {
+   "archivo": "sfx/whoosh_viento.wav",
+   "titulo_original": "Transition windy swoosh",
+   "id_mixkit": "1474",
+   "uso": "salidas",
+   "duracion": 3.0,
+   "pico_db": -3
+  },
+  "golpe_grave": {
+   "archivo": "sfx/golpe_grave.wav",
+   "titulo_original": "Short bass hit",
+   "id_mixkit": "2299",
+   "uso": "palabra clave (sub-hit)",
+   "duracion": 1.06,
+   "pico_db": -3
+  },
+  "golpe_sub": {
+   "archivo": "sfx/golpe_sub.wav",
+   "titulo_original": "Knocking sub bass",
+   "id_mixkit": "2300",
+   "uso": "palabra clave fuerte",
+   "duracion": 3.0,
+   "pico_db": -3
+  },
+  "golpe_seco": {
+   "archivo": "sfx/golpe_seco.wav",
+   "titulo_original": "Small hit in a game",
+   "id_mixkit": "2072",
+   "uso": "impacto pequeño",
+   "duracion": 1.11,
+   "pico_db": -3
+  },
+  "click_raton": {
+   "archivo": "sfx/click_raton.wav",
+   "titulo_original": "Clear mouse clicks",
+   "id_mixkit": "2997",
+   "uso": "clics de interfaz",
+   "duracion": 1.05,
+   "pico_db": -3
+  },
+  "click_cerca": {
+   "archivo": "sfx/click_cerca.wav",
+   "titulo_original": "Mouse click close",
+   "id_mixkit": "1113",
+   "uso": "clic cercano",
+   "duracion": 1.38,
+   "pico_db": -3
+  },
+  "click_select": {
+   "archivo": "sfx/click_select.wav",
+   "titulo_original": "Select click",
+   "id_mixkit": "1109",
+   "uso": "selección",
+   "duracion": 1.1,
+   "pico_db": -3
+  },
+  "click_dispositivo": {
+   "archivo": "sfx/click_dispositivo.wav",
+   "titulo_original": "Interface device click",
+   "id_mixkit": "2577",
+   "uso": "interfaz",
+   "duracion": 1.05,
+   "pico_db": -3
+  },
+  "click_burbuja": {
+   "archivo": "sfx/click_burbuja.wav",
+   "titulo_original": "Plastic bubble click",
+   "id_mixkit": "1124",
+   "uso": "clic suave",
+   "duracion": 0.12,
+   "pico_db": -3
+  },
+  "teclado_portatil": {
+   "archivo": "sfx/teclado_portatil.wav",
+   "titulo_original": "Typing on a laptop keyboard",
+   "id_mixkit": "2531",
+   "uso": "escribir (19 s)",
+   "duracion": 19.63,
+   "pico_db": -3
+  },
+  "teclado_duro": {
+   "archivo": "sfx/teclado_duro.wav",
+   "titulo_original": "Hard laptop keyboard typing",
+   "id_mixkit": "2538",
+   "uso": "teclas duras",
+   "duracion": 10.34,
+   "pico_db": -3
+  },
+  "teclado_rapido": {
+   "archivo": "sfx/teclado_rapido.wav",
+   "titulo_original": "Fast laptop keyboard typing",
+   "id_mixkit": "1392",
+   "uso": "tecleo rápido",
+   "duracion": 19.59,
+   "pico_db": -3
+  },
+  "papel_desliza": {
+   "archivo": "sfx/papel_desliza.wav",
+   "titulo_original": "Paper slide",
+   "id_mixkit": "1530",
+   "uso": "recortes de papel",
+   "duracion": 1.09,
+   "pico_db": -3
+  },
+  "papel_periodico": {
+   "archivo": "sfx/papel_periodico.wav",
+   "titulo_original": "Turning the newspaper big page",
+   "id_mixkit": "1097",
+   "uso": "periódico: pasar página",
+   "duracion": 9.27,
+   "pico_db": -3
+  },
+  "papel_movimiento": {
+   "archivo": "sfx/papel_movimiento.wav",
+   "titulo_original": "Paper quick movement",
+   "id_mixkit": "2380",
+   "uso": "papel rápido",
+   "duracion": 0.81,
+   "pico_db": -3
+  },
+  "papel_arruga": {
+   "archivo": "sfx/papel_arruga.wav",
+   "titulo_original": "Paper crinkle",
+   "id_mixkit": "2385",
+   "uso": "papel arrugado",
+   "duracion": 2.78,
+   "pico_db": -3
+  },
+  "reloj_tictac": {
+   "archivo": "sfx/reloj_tictac.wav",
+   "titulo_original": "Tick tock clock close up",
+   "id_mixkit": "1059",
+   "uso": "reloj",
+   "duracion": 11.62,
+   "pico_db": -3
+  },
+  "tono_confirmacion": {
+   "archivo": "sfx/tono_confirmacion.wav",
+   "titulo_original": "Confirmation tone",
+   "id_mixkit": "2867",
+   "uso": "éxito/cierre",
+   "duracion": 1.3,
+   "pico_db": -3
+  },
+  "interfaz_abre": {
+   "archivo": "sfx/interfaz_abre.wav",
+   "titulo_original": "Opening software interface",
+   "id_mixkit": "2578",
+   "uso": "abrir interfaz",
+   "duracion": 1.13,
+   "pico_db": -3
+  }
+ }
+}

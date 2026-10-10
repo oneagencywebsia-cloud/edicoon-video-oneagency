@@ -1,0 +1,47 @@
+{
+  "id": "video1",
+  "camara": "video1/corte.mp4",
+  "correcciones": [
+    {"match": ["atiende", "al", "cliente,"], "a": ["atiendes", "clientes,"]},
+    {"match": ["trabajos,"], "a": ["trabajo,"]},
+    {"match": ["one", "-agency", ".es"], "a": ["one-agency.es"]}
+  ],
+  "zooms": [[0, 1.0], [4.6, 1.06], [14.9, 1.0], [18.3, 1.07], [24.1, 1.0], [27.9, 1.05], [33.7, 1.0]],
+  "escenas": [
+    {"tipo": "lowerThird", "t0": 0.35, "t1": 2.15, "nombre": "Ángel Carrillo", "cargo": "CEO & FOUNDER"},
+    {"tipo": "reloj", "t0": 2.2, "t1": 3.55, "desde": "18:00", "hasta": "22:47", "etiqueta": "y tú sigues aquí"},
+    {"tipo": "claveDetras", "t0": 3.6, "t1": 4.95, "lineas": ["ESCUCHA", "ESTO"]},
+    {"tipo": "claveDetras", "t0": 10.0, "t1": 11.15, "lineas": ["SEGUNDO", "TURNO"]},
+    {"tipo": "notas", "t0": 11.2, "t1": 14.6, "items": [
+      {"texto": "Presupuesto", "t": 11.2}, {"texto": "Factura", "t": 11.9},
+      {"texto": "Parte de trabajo", "t": 12.5}, {"texto": "Mensajes pendientes", "t": 13.4}]},
+    {"tipo": "claveDetras", "t0": 17.2, "t1": 18.35, "lineas": ["REALMENTE", "TÚ"]},
+    {"tipo": "copiar", "t0": 18.3, "t1": 21.6, "origen": "Correo", "destino": "Hoja de cálculo"},
+    {"tipo": "claveDetras", "t0": 22.9, "t1": 24.25, "lineas": ["UNA FORMA", "MEJOR"]},
+    {"tipo": "periodico", "t0": 24.3, "t1": 27.7, "cabecera": "LA GACETA DE LA PYME",
+     "titular": ["NO NECESITAS", "CONVERTIR TU EMPRESA", "EN UNA MULTINACIONAL"], "resaltar": "MULTINACIONAL", "resaltarT": 26.4},
+    {"tipo": "broll", "t0": 27.9, "t1": 32.7, "src": "video1/broll1.mp4", "desde": 7.0, "etiqueta": "one-agency.es"},
+    {"tipo": "broll", "t0": 33.6, "t1": 37.47, "src": "video1/broll1.mp4", "desde": 0.0, "etiqueta": "one-agency.es"},
+    {"tipo": "cta", "t0": 35.7, "t1": 37.47, "boton": "Diagnóstico gratuito", "clicT": 36.55}
+  ],
+  "sfx": [
+    {"t": 0.35, "f": "whoosh_aire", "vol": 0.28},
+    {"t": 2.2, "f": "reloj_tictac", "vol": 0.22, "dur": 1.4},
+    {"t": 3.5, "f": "whoosh_swoosh", "vol": 0.3},
+    {"t": 3.62, "f": "golpe_grave", "vol": 0.55},
+    {"t": 9.95, "f": "golpe_sub", "vol": 0.4, "dur": 1.4},
+    {"t": 11.2, "f": "papel_desliza", "vol": 0.4}, {"t": 11.9, "f": "papel_movimiento", "vol": 0.4},
+    {"t": 12.5, "f": "papel_desliza", "vol": 0.4}, {"t": 13.4, "f": "papel_movimiento", "vol": 0.4},
+    {"t": 17.2, "f": "golpe_grave", "vol": 0.5},
+    {"t": 18.4, "f": "teclado_rapido", "vol": 0.3, "dur": 1.5},
+    {"t": 19.7, "f": "click_raton", "vol": 0.4, "dur": 0.5}, {"t": 20.9, "f": "click_cerca", "vol": 0.4, "dur": 0.6},
+    {"t": 22.85, "f": "whoosh_swoosh", "vol": 0.25}, {"t": 22.95, "f": "golpe_sub", "vol": 0.35, "dur": 1.2},
+    {"t": 24.25, "f": "papel_periodico", "vol": 0.4, "dur": 1.4},
+    {"t": 26.45, "f": "click_select", "vol": 0.35},
+    {"t": 27.85, "f": "whoosh_rapido", "vol": 0.28, "dur": 1.0},
+    {"t": 32.45, "f": "whoosh_viento", "vol": 0.2, "dur": 1.0},
+    {"t": 33.55, "f": "whoosh_rapido", "vol": 0.28, "dur": 1.0},
+    {"t": 36.55, "f": "click_raton", "vol": 0.5, "dur": 0.5},
+    {"t": 36.7, "f": "tono_confirmacion", "vol": 0.3}
+  ]
+}
