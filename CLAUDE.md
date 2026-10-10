@@ -106,7 +106,7 @@ Después de los pasos 1-5 de cámara:
 
 ## Presets de rótulo clave (remotion/src/presets.tsx) — iluminación, sombras y animación por letras
 - `preset`: `neon` (tubo azul con parpadeo y bloom), `cromo` (metal con extrusión azul y barrido de luz), `ambar` (oro/fuego con extrusión),
-  `cristal` (letras de vidrio con borde y reflejo), `foco` (blanco cálido con haz de luz), `hielo` (azul helado). No usar siempre el mismo ni todo naranja.
+  `cristal` (letras de vidrio con borde y reflejo), `foco` (blanco cálido con haz de luz), `hielo` (azul helado), `sombra` (blanco con sombra larga). TODOS llevan sombra larga proyectada + extrusión + sombra de contacto. No usar siempre el mismo ni todo naranja. El fondo NO se oscurece ni se tiñe al salir un rótulo (la escena `noche` queda desactivada por defecto).
 - Escena `clave`: `plano: detras|frente`, `layout: centro|diagonal|gigante`, `preset`, `lineas`. Detrás de la persona requiere matte de esa ventana (05_matte.py).
 - Subtítulos normales: palabra activa en píldora que alterna azul / blanco / naranja.
 - Escenas que conectan con el cliente ideal (pymes): `sectores` (comercio, clínica, despacho, obra, transporte), `movil` (avisos sin contestar),

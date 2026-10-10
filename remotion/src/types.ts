@@ -6,7 +6,7 @@ type Base = {t0: number; t1: number};
 export type Escena =
   | (Base & {tipo: 'lowerThird'; nombre: string; cargo: string})
   | (Base & {tipo: 'reloj'; desde: string; hasta: string; etiqueta: string})
-  | (Base & {tipo: 'clave'; plano: 'detras' | 'frente'; layout: 'centro' | 'diagonal' | 'gigante'; preset: 'neon' | 'cromo' | 'ambar' | 'cristal' | 'foco' | 'hielo'; lineas: string[]})
+  | (Base & {tipo: 'clave'; plano: 'detras' | 'frente'; layout: 'centro' | 'diagonal' | 'gigante'; preset: 'neon' | 'cromo' | 'ambar' | 'cristal' | 'foco' | 'hielo' | 'sombra'; lineas: string[]})
   | (Base & {tipo: 'sectores'; items: {texto: string; icono: string; t: number}[]})
   | (Base & {tipo: 'movil'; avisos: {app: string; titulo: string; texto: string; tipo: 'chat' | 'obra' | 'tel'; t: number}[]})
   | (Base & {tipo: 'noche'})

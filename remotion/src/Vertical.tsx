@@ -4,7 +4,7 @@ import type {Edicion, Escena} from './types';
 import {Subs} from './Subs';
 import {Broll, Copiar, Cta, LowerThird, Notas, Periodico, Reloj} from './escenas';
 import {Donut, Movil, Noche, Sectores, Sello} from './escenas2';
-import {Bloom, HazFoco, Linea} from './presets';
+import {Linea} from './presets';
 import {C, clamp, entra, sale} from './util';
 
 type ClaveE = Extract<Escena, {tipo: 'clave'}>;
@@ -40,7 +40,7 @@ const Camara: React.FC<{ed: Edicion; zoom: number; mascara?: string}> = ({ed, zo
 /* Rótulo clave con preset (luz, sombras, extrusión) en tres composiciones */
 const Clave: React.FC<{e: ClaveE; dur: number}> = ({e, dur}) => {
   const ajusta = (l: string, max: number, ancho: number) => Math.min(max, Math.floor(ancho / (l.length * 0.64)));
-  const luz = e.preset === 'foco' ? <HazFoco dur={dur} /> : e.preset === 'neon' ? <Bloom color="#3B82F6" dur={dur} /> : e.preset === 'hielo' ? <Bloom color="#7dc4ff" dur={dur} /> : null;
+  const luz = null; // el fondo NO cambia de color al salir un rótulo (Ángel, 2026-10-10)
   if (e.layout === 'diagonal') {
     return (
       <>
@@ -96,7 +96,6 @@ export const Vertical: React.FC<{ed: Edicion}> = ({ed}) => {
   return (
     <AbsoluteFill style={{background: C.fondo}}>
       <Camara ed={ed} zoom={zoom} />
-      <AbsoluteFill style={{background: `rgba(13,13,26,${0.4 * oscuro})`}} />
 
       {/* rótulos DETRÁS de la persona */}
       {detras.map((e, i) => (

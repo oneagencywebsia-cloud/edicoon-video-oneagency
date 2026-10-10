@@ -847,11 +847,6 @@
    ]
   },
   {
-   "tipo": "noche",
-   "t0": 8.5,
-   "t1": 11.2
-  },
-  {
    "tipo": "broll",
    "t0": 8.55,
    "t1": 10.2,
@@ -924,7 +919,7 @@
    "tipo": "clave",
    "plano": "frente",
    "layout": "centro",
-   "preset": "cristal",
+   "preset": "sombra",
    "t0": 22.85,
    "t1": 24.25,
    "lineas": [

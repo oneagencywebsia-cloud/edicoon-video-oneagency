@@ -5,7 +5,7 @@ import {FUENTE, clamp, out5} from './util';
 /* ───────────────────────── Presets de rótulo clave ─────────────────────────
    Cada preset = relleno + borde + extrusión 3D + brillo (glow) + sombra de suelo + barrido de luz + animación por letras.
    Capas por letra: A (extrusión y sombra, define el hueco) · B (relleno con degradado y brillo) · C (barrido de luz). */
-export type Preset = 'neon' | 'cromo' | 'ambar' | 'cristal' | 'foco' | 'hielo';
+export type Preset = 'neon' | 'cromo' | 'ambar' | 'cristal' | 'foco' | 'hielo' | 'sombra';
 
 type Cfg = {
   grad: string;
@@ -18,6 +18,7 @@ type Cfg = {
   anim: 'subir' | 'enfoque' | 'parpadeo' | 'caer';
   rellenoPlano?: string; // color sólido (neón)
   textShadowB?: string;
+  larga?: {color: string; largo: number; alfa: number; ang: number}; // sombra larga proyectada que se desvanece
 };
 
 export const PRESETS: Record<Preset, Cfg> = {
@@ -28,6 +29,7 @@ export const PRESETS: Record<Preset, Cfg> = {
     bordePx: 0,
     glow: ['0 0 6px #fff', '0 0 22px #60a5fa', '0 0 54px #3B82F6', '0 0 110px #3B82F6'],
     sombra: '0 30px 80px rgba(8,20,70,0.6)',
+    larga: {color: '4,10,50', largo: 60, alfa: 0.45, ang: 120},
     anim: 'parpadeo',
   },
   cromo: {
@@ -36,6 +38,7 @@ export const PRESETS: Record<Preset, Cfg> = {
     glow: ['0 0 30px rgba(255,255,255,0.45)', '0 0 90px rgba(96,165,250,0.5)'],
     sombra: '0 40px 70px rgba(0,0,0,0.55)',
     barrido: true,
+    larga: {color: '4,12,60', largo: 70, alfa: 0.5, ang: 118},
     anim: 'enfoque',
   },
   ambar: {
@@ -43,6 +46,7 @@ export const PRESETS: Record<Preset, Cfg> = {
     extrusion: {color: '#5a2406', prof: 13, ang: 125},
     glow: ['0 0 24px rgba(255,170,60,0.7)', '0 0 80px rgba(249,115,22,0.6)'],
     sombra: '0 36px 60px rgba(40,10,0,0.6)',
+    larga: {color: '30,8,0', largo: 70, alfa: 0.5, ang: 125},
     barrido: true,
     anim: 'subir',
   },
@@ -52,6 +56,7 @@ export const PRESETS: Record<Preset, Cfg> = {
     bordePx: 4,
     glow: ['0 0 18px rgba(255,255,255,0.35)', '0 0 70px rgba(96,165,250,0.55)'],
     sombra: '0 30px 60px rgba(10,20,60,0.5)',
+    larga: {color: '6,14,50', largo: 70, alfa: 0.5, ang: 120},
     barrido: true,
     anim: 'enfoque',
   },
@@ -60,27 +65,54 @@ export const PRESETS: Record<Preset, Cfg> = {
     extrusion: {color: '#6b4a10', prof: 9, ang: 120},
     glow: ['0 0 40px rgba(255,236,190,0.7)', '0 0 120px rgba(255,214,120,0.45)'],
     sombra: '0 40px 80px rgba(0,0,0,0.65)',
+    larga: {color: '10,6,0', largo: 70, alfa: 0.55, ang: 120},
     barrido: false,
     anim: 'caer',
+  },
+  sombra: {
+    grad: 'linear-gradient(180deg,#ffffff 0%,#eaf2ff 100%)',
+    glow: ['0 0 22px rgba(255,255,255,0.35)'],
+    sombra: '0 20px 40px rgba(0,10,40,0.45)',
+    larga: {color: '6,24,96', largo: 90, alfa: 0.62, ang: 122},
+    anim: 'enfoque',
   },
   hielo: {
     grad: 'linear-gradient(180deg,#ffffff 0%,#d9f0ff 40%,#7dc4ff 75%,#3B82F6 100%)',
     extrusion: {color: '#0b2a6b', prof: 14, ang: 122},
     glow: ['0 0 30px rgba(125,196,255,0.6)', '0 0 90px rgba(59,130,246,0.6)'],
     sombra: '0 36px 70px rgba(0,10,50,0.6)',
+    larga: {color: '2,12,60', largo: 70, alfa: 0.5, ang: 122},
     barrido: true,
     anim: 'subir',
   },
 };
 
 const extrusion = (c: Cfg) => {
-  if (!c.extrusion) return c.sombra;
-  const {color, prof, ang} = c.extrusion;
-  const dx = Math.cos((ang * Math.PI) / 180);
-  const dy = Math.sin((ang * Math.PI) / 180);
   const capas: string[] = [];
-  for (let i = 1; i <= prof; i++) capas.push(`${(dx * i).toFixed(1)}px ${(dy * i).toFixed(1)}px 0 ${color}`);
-  capas.push(c.sombra.replace(/^(\S+) (\S+) (\S+)/, (_m, x, y, b) => `${parseFloat(x) + dx * prof}px ${parseFloat(y) + dy * prof}px ${b}`));
+  let prof = 0;
+  if (c.extrusion) {
+    const {color, ang} = c.extrusion;
+    prof = c.extrusion.prof;
+    const dx = Math.cos((ang * Math.PI) / 180);
+    const dy = Math.sin((ang * Math.PI) / 180);
+    for (let i = 1; i <= prof; i++) capas.push(`${(dx * i).toFixed(1)}px ${(dy * i).toFixed(1)}px 0 ${color}`);
+  }
+  if (c.larga) {
+    // sombra larga proyectada (luz desde arriba-izquierda): capas que se desvanecen con la distancia
+    const {color, largo, alfa, ang} = c.larga;
+    const dx = Math.cos((ang * Math.PI) / 180);
+    const dy = Math.sin((ang * Math.PI) / 180);
+    for (let i = prof + 1; i <= prof + largo; i += 2) {
+      const k = (i - prof) / largo;
+      capas.push(`${(dx * i).toFixed(1)}px ${(dy * i).toFixed(1)}px ${(1 + k * 5).toFixed(1)}px rgba(${color},${(alfa * (1 - k) ** 1.4).toFixed(3)})`);
+    }
+  }
+  // sombra de contacto / ambiente
+  const m = c.sombra.match(/^(-?[\d.]+)px (-?[\d.]+)px (-?[\d.]+)px (.+)$/);
+  if (m) {
+    const [, x, y, bl, col] = m;
+    capas.push(`${parseFloat(x)}px ${parseFloat(y) + prof}px ${bl}px ${col}`);
+  }
   return capas.join(',');
 };
 
