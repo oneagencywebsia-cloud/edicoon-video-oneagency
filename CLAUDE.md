@@ -1,5 +1,8 @@
 # Proyecto: edición de vídeo con IA (marca blanca) — O.N.E-Agency
 
+**ANTES DE EDITAR CUALQUIER VÍDEO: lee `memoria/MEMORY.md` y todos los archivos que enlaza. Son las preferencias de Ángel y se aplican en TODOS los vídeos.**
+Si Ángel da un consejo nuevo: actualiza el archivo de memoria que lo cubra (no dupliques) y haz commit.
+
 Ver `ESTADO.md` para el estado y las decisiones. Identidad solo desde `marca/` (nada fijo en el código).
 
 ## Entorno de trabajo: la NUBE (contenedor Linux, 4 CPU, 15 GB, sin GPU)
@@ -116,3 +119,8 @@ Después de los pasos 1-5 de cámara:
 - LUT: `python pipeline/04b_color.py corte_voz.mp4 corte_color.mp4` (Oceano_oscuro a 0,55). Los otros 11 LUTs ensucian la piel.
 - De 175 b-rolls solo encajan 2-3 (131 = casa/papeles/velas día->noche; 7 = estadio vacío de noche, parece de PELÍCULA: licencia dudosa). Es stock de estilo de vida/viajes.
 - OVERLAY 4.mp4 es un croma verde (inservible).
+
+## Voz FX en apartes (eco) — `voz_fx` en guion.json
+- `python pipeline/03c_apartes.py videos/<v>/corte.trans.json` propone tramos (frases tipo «y no necesitas…», «por cierto», «obviamente»).
+- `python pipeline/04c_voz_fx.py videos/<v>/corte_voz.mp4 videos/<v>/corte_vozfx.mp4 --guion videos/<v>/guion.json` (eco | reverb | telefono) y DESPUÉS `04b_color.py corte_vozfx.mp4 corte_color.mp4`.
+- Orden de voz/color: corte -> 04_voz (EQ) -> 04c_voz_fx -> 04b_color. Los subtítulos dejan un rastro visual de eco durante el tramo (`vozFx` en edicion.json).

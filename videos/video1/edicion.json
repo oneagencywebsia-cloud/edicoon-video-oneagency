@@ -1603,6 +1603,18 @@
    "ancla": "inicio"
   },
   {
+   "f": "p/woosh_effect_5",
+   "ini": 23.72,
+   "archivo": "sfx/pack/woosh_effect_5.wav",
+   "vol": 0.3,
+   "desde": 0.0,
+   "dur": 1.086,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 24.0,
+   "ancla": "pico"
+  },
+  {
    "f": "papel_periodico",
    "ini": 24.23,
    "archivo": "sfx/papel_periodico.wav",
@@ -1820,6 +1832,13 @@
   }
  ],
  "sfx_gain": 1.7,
+ "vozFx": [
+  {
+   "t0": 24.05,
+   "t1": 27.15,
+   "fx": "eco"
+  }
+ ],
  "zooms": [
   [
    0,

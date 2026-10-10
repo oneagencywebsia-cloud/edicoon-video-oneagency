@@ -2,7 +2,7 @@ import {useCurrentFrame, useVideoConfig, spring} from 'remotion';
 import type {Chunk} from './types';
 import {C, FUENTE} from './util';
 
-export const Subs: React.FC<{chunks: Chunk[]}> = ({chunks}) => {
+export const Subs: React.FC<{chunks: Chunk[]; vozFx?: {t0: number; t1: number; fx: string}[]}> = ({chunks, vozFx = []}) => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
   const t = frame / fps;
@@ -14,9 +14,15 @@ export const Subs: React.FC<{chunks: Chunk[]}> = ({chunks}) => {
   if (i < 0) return null;
   const c = chunks[i];
   const pill = [{fondo: C.acento, texto: '#fff'}, {fondo: '#ffffff', texto: '#0d0d1a'}, {fondo: C.acento2, texto: '#fff'}][i % 3];
+  const eco = vozFx.some((v) => t >= v.t0 && t <= v.t1 + 0.2 && (v.fx === 'eco' || v.fx === 'reverb'));
   const pop = spring({frame: frame - Math.round((c.t0 - 0.03) * fps), fps, config: {damping: 16, stiffness: 260}, durationInFrames: 8});
   return (
     <div style={{position: 'absolute', left: 50, right: 50, top: 1400, height: 190, display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center'}}>
+      {eco && [2, 1].map((k) => (
+        <div key={k} style={{position: 'absolute', fontFamily: FUENTE, fontWeight: 800, fontSize: 78, lineHeight: 1.1, letterSpacing: -1.5, color: '#9fc4ff', opacity: 0.2 * k * (0.7 + 0.3 * Math.sin(frame / 3 + k)), transform: `scale(${1 + k * 0.07}) translateY(${-k * 16}px)`, filter: `blur(${k * 3}px)`, whiteSpace: 'pre'}}>
+          {c.palabras.map((w) => w.w).join('  ')}
+        </div>
+      ))}
       <div style={{fontFamily: FUENTE, fontWeight: 800, fontSize: 78, lineHeight: 1.1, letterSpacing: -1.5, transform: `scale(${0.9 + 0.1 * pop})`, opacity: Math.min(1, pop * 1.4)}}>
         {c.palabras.map((w, k) => {
           const sig = c.palabras[k + 1];

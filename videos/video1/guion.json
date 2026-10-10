@@ -740,7 +740,20 @@
    "vol": 0.25,
    "ancla": "inicio",
    "dur": 0.5
+  },
+  {
+   "en": 24.0,
+   "f": "p/woosh_effect_5",
+   "vol": 0.3,
+   "ancla": "pico"
   }
  ],
- "sfx_gain": 1.7
+ "sfx_gain": 1.7,
+ "voz_fx": [
+  {
+   "t0": 24.05,
+   "t1": 27.15,
+   "fx": "eco"
+  }
+ ]
 }

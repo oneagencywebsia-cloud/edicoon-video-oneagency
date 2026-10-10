@@ -27,6 +27,7 @@ export type Edicion = {
   escenas: Escena[];
   sfx: Sfx[];
   zooms: [number, number][];
+  vozFx?: {t0: number; t1: number; fx: string}[];
 };
 
 export type Props = {id: string; ed?: Edicion};

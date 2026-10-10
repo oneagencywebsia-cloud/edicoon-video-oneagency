@@ -139,7 +139,7 @@ export const Vertical: React.FC<{ed: Edicion}> = ({ed}) => {
         ) : null;
       })}
 
-      <Subs chunks={ed.chunks} />
+      <Subs chunks={ed.chunks} vozFx={ed.vozFx} />
 
       {/* efectos de sonido: pista única (pipeline/08_sfx_bed.py) */}
       <Audio src={staticFile(`${ed.id}/sfx_bed.wav`)} />
