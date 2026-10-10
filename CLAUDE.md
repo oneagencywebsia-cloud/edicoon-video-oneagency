@@ -40,3 +40,11 @@ Tono: cercano, tuteo, sin jerga, honesto con los límites de la IA.
 - Anclar a la palabra exacta (inicio y fin), sin tapar frases clave del discurso ni los rótulos. Sin audio del b-roll.
 - Lo mismo vale para las animaciones: cada una refuerza lo que se dice en ese momento (dato → recorte de prensa/blog, etc.),
   con variedad de formato y fondo entre una y otra.
+
+## Móvil de Ángel (observado en el vídeo de prueba)
+- Los .MOV son HEVC 3840x2160 con rotación -90 guardada (se ven 2160x3840 vertical). ffmpeg autorrota; no desactivarlo.
+- El vídeo hablado a cámara llegó a 30 fps y el b-roll a 60 fps: normalizar todo a 60 fps de salida (o decidir con Ángel).
+- Los .MOV traen pistas de datos extra; usar `-map 0:v:0 -map 0:a:0` al cortar.
+- Drive: `python pipeline/drive_api.py info|ls|get <id|enlace> [--dest raw/<id>]` (solo lectura, reanudable, comprueba tamaño y ffprobe).
+  El conector de Drive de la sesión NO sirve; usar la API con las variables GOOGLE_* (nunca imprimirlas).
+- Transcripción: `python pipeline/02_transcribe.py <vídeo> videos/<id>/transcripcion.json` (CPU turbo: ~2,5 min para 77 s la primera vez por la descarga del modelo, ~20 s de cálculo).

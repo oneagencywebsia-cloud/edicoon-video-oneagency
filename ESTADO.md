@@ -56,3 +56,9 @@ Después: fase 1b (Drive API), fase 2 (estructura), fase 3 (pipeline de cámara)
   (uno es el vídeo de prueba y el otro, posiblemente el b-roll; confirmar con metadatos).
 - Siguiente: escribir `pipeline/drive_api.py` (listar, descargar reanudable en trozos, comprobar con ffprobe, no repetir descargas), probarlo con esos dos IDs.
 - Nunca imprimir ni guardar en archivos los valores de las variables.
+
+## Fase 1b COMPLETA (Drive)
+- Variables GOOGLE_* definidas y probadas. `pipeline/drive_api.py` lista/descarga con MD5 correcto.
+- Vídeo de prueba en `raw/video1/`: IMG_1279.MOV (Ángel a cámara, 77 s, 30 fps) e IMG_1280.MOV (b-roll: pantalla con one-agency.es, 13,5 s, 60 fps). 
+- `pipeline/02_transcribe.py` probado: 117 palabras. Hay una toma repetida al inicio («Todos los días… No. Durante el día…»).
+- Siguiente: fase 2 (estructura de carpetas) y fase 3 (pipeline de cámara: tomas, silencios, corte palabra a palabra).
