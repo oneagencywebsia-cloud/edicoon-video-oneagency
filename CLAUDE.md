@@ -108,7 +108,7 @@ Después de los pasos 1-5 de cámara:
 - `preset`: `neon` (tubo azul con parpadeo y bloom), `cromo` (metal con extrusión azul y barrido de luz), `ambar` (oro/fuego con extrusión),
   `cristal` (letras de vidrio con borde y reflejo), `foco` (blanco cálido con haz de luz), `hielo` (azul helado), `sombra` (blanco con sombra larga). TODOS llevan sombra larga proyectada + extrusión + sombra de contacto. No usar siempre el mismo ni todo naranja. El fondo NO se oscurece ni se tiñe al salir un rótulo (la escena `noche` queda desactivada por defecto).
 - Escena `clave`: `plano: detras|frente`, `layout: centro|diagonal|gigante`, `preset`, `lineas`. Detrás de la persona requiere matte de esa ventana (05_matte.py).
-- Subtítulos normales: palabra activa en píldora que alterna azul / blanco / naranja.
+- Subtítulos normales: palabra activa en píldora de UN solo color (azul de marca); no cambiar de color entre bloques.
 - Escenas que conectan con el cliente ideal (pymes): `sectores` (comercio, clínica, despacho, obra, transporte), `movil` (avisos sin contestar),
   `noche` (oscurece y enfría = «segundo turno»), `donut` (lo que solo tú puedes hacer vs. lo que se repite; SIN cifras inventadas),
   `sello` (pegatina «GRATIS»), más `notas`, `copiar`, `periodico`, `broll`, `cta`. Las tarjetas de cristal son OSCURAS (contraste con la pared clara).
@@ -130,3 +130,8 @@ Después de los pasos 1-5 de cámara:
 - `06_edicion.py` añade el efecto de sonido de cada zoom (`sfx_zoom`), sincronizado por el pico del whoosh. Zoom total limitado a 1,16.
 - Subtítulos durante un rótulo clave: se ocultan las palabras ya mostradas por el preset (`ocultar` en `Subs.tsx`, calculado desde las escenas `clave`).
 - Zoom: `06_edicion.py` calcula `zoomCurva` (un valor por fotograma): in 12 fotogramas, out 18, amplitud mín. 0,11/0,10, escalones base suaves y fuera de los énfasis, tope 1,18. Comprobar que `paso máx. < 0,02` en la salida del script. Remotion solo lee la curva.
+
+## Mirada a cámara (`09_mirada.py`, ver memoria/feedback_mirada.md)
+- Orden: corte -> 04_voz -> 04c_voz_fx -> **09_mirada** (`--fuerza 2.4 --max 0.45 --vy 1.0 --antes-despues out/qa/mirada.png`) -> 04b_color. Medir con `09b_medir_mirada.py a.mp4 b.mp4`.
+- Corrige bien lo horizontal; lo vertical (mirar abajo) solo un poco. NO subir `--vy` (ojos entrecerrados). Enseñar siempre antes/después.
+- Contenedor: `pip install mediapipe opencv-python-headless`; `apt-get install -y libegl1 libgles2`; modelo en `videos/_shared/modelos/face_landmarker.task`.

@@ -6,6 +6,7 @@
 - [[reference_video1_plantilla]] — el vídeo 1 como ejemplo de referencia (qué copiar, qué no)
 - [[feedback_estilo_visual]] — variedad, presets de rótulo con luz, animaciones que conectan, sin todo naranja
 - [[feedback_sonido]] — SFX reales y audibles, risers, clics en rótulos, sincronía, eco en apartes
+- [[feedback_mirada]] — corrección de mirada a cámara: qué hace, límites y cómo grabar
 - [[feedback_cortes_y_edicion]] — cortes secos, última toma, verificar transcribiendo
 - [[feedback_brolls]] — b-roll solo con sentido, sin audio, licencias del pack
 - [[feedback_comunicacion]] — español conciso, no publicar/gastar/subir sin preguntar
