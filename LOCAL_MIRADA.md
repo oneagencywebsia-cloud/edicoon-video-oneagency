@@ -1,3 +1,5 @@
+> **OBSOLETO (2026-10-12):** Ángel canceló este encargo; no ejecutar.
+
 # Encargo para la sesión LOCAL (PC de Ángel, Windows 11, RTX 5060): mirada a cámara con IA
 
 Eres la sesión local de Claude Code en el PC de Ángel (con GPU). Lee primero `memoria/MEMORY.md` y `memoria/feedback_mirada.md`, y `CLAUDE.md`.

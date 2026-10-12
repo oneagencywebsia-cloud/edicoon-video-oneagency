@@ -131,7 +131,7 @@ Después de los pasos 1-5 de cámara:
 - Subtítulos durante un rótulo clave: se ocultan las palabras ya mostradas por el preset (`ocultar` en `Subs.tsx`, calculado desde las escenas `clave`).
 - Zoom: `06_edicion.py` calcula `zoomCurva` (un valor por fotograma): in 12 fotogramas, out 18, amplitud mín. 0,11/0,10, escalones base suaves y fuera de los énfasis, tope 1,18. Comprobar que `paso máx. < 0,02` en la salida del script. Remotion solo lee la curva.
 
-## Mirada a cámara (`09_mirada.py`, ver memoria/feedback_mirada.md)
+## Mirada a cámara (`09_mirada.py`, ver memoria/feedback_mirada.md) — OPCIONAL: NO aplicar por defecto (Ángel graba mirando a cámara; decisión 2026-10-12). Solo si lo pide.
 - Orden: corte -> 04_voz -> 04c_voz_fx -> **09_mirada** (`--fuerza 2.4 --max 0.45 --vy 1.0 --antes-despues out/qa/mirada.png`) -> 04b_color. Medir con `09b_medir_mirada.py a.mp4 b.mp4`.
 - Corrige bien lo horizontal; lo vertical (mirar abajo) solo un poco. NO subir `--vy` (ojos entrecerrados). Enseñar siempre antes/después.
 - Contenedor: `pip install mediapipe opencv-python-headless`; `apt-get install -y libegl1 libgles2`; modelo en `videos/_shared/modelos/face_landmarker.task`.
