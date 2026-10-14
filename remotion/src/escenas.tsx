@@ -135,13 +135,13 @@ export const Periodico: React.FC<P<'periodico'>> = ({e, f0, dur}) => {
     );
   };
   return (
-    <div style={{position: 'absolute', left: 26, top: 170, width: 350, height: 300, opacity: a, transform: `translate(${(1 - p) * -300}px, ${(1 - p) * -60}px) rotate(${-3 - (1 - p) * 8}deg)`, background: '#F2EDDF', boxShadow: '0 30px 70px rgba(0,0,0,0.5)', padding: '12px 22px', overflow: 'hidden'}}>
+    <div style={{position: 'absolute', left: 704, top: 170, width: 350, height: 300, opacity: a, transform: `translate(${(1 - p) * 300}px, ${(1 - p) * -60}px) rotate(${3 + (1 - p) * 8}deg)`, background: '#F2EDDF', boxShadow: '0 30px 70px rgba(0,0,0,0.5)', padding: '12px 22px', overflow: 'hidden'}}>
       <svg width="100%" height="100%" style={{position: 'absolute', inset: 0, opacity: 0.1, mixBlendMode: 'multiply'}}>
         <filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" /></filter>
         <rect width="100%" height="100%" filter="url(#n)" />
       </svg>
       <div style={{fontFamily: SERIF, fontWeight: 700, fontSize: 17, letterSpacing: 3, textAlign: 'center', color: '#222', borderBottom: '3px double #222', paddingBottom: 6}}>{e.cabecera}</div>
-      <div style={{fontFamily: SERIF, fontWeight: 700, fontSize: 41, lineHeight: 1.05, color: '#141414', marginTop: 14, letterSpacing: -1}}>
+      <div style={{fontFamily: SERIF, fontWeight: 700, fontSize: 36, lineHeight: 1.06, color: '#141414', marginTop: 14, letterSpacing: -1}}>
         <div>{a1}</div>
         <div>{a2}</div>
         <div>{palabra(a3)}</div>
