@@ -83,7 +83,7 @@ Tono: cercano, tuteo, sin jerga, honesto con los límites de la IA.
 ## Procedimiento de edición completa (probado en video1)
 Después de los pasos 1-5 de cámara:
 6. `python pipeline/04_voz.py videos/<v>/corte.mp4 videos/<v>/corte_voz.mp4` (EQ + de-esser + compresor 1,8:1, -16 LUFS; SIN reducción de ruido: la sala ya está a -77 dB).
-7. `python pipeline/05_matte.py videos/<v>/corte.mp4 videos/<v>/matte --ventanas 3.5-5.0,...` (recorte de persona SOLO en las ventanas de rótulos «detrás de ti»; rembg u2net_human_seg en CPU, ~1 s/fotograma).
+7. `python pipeline/05_matte.py ... --edicion videos/<v>/edicion.json` (DESPUÉS de 06_edicion.py; o `--ventanas 3.5-5.0,...`) (recorte de persona en las ventanas de escenas «detrás de ti»; rembg u2net_human_seg en CPU, ~1 s/fotograma; los fotogramas usan los fps del corte: 60 fps en video2).
 8. B-roll: `ffmpeg -i raw/<v>/<b-roll>.MOV -map 0:v:0 -an -vf "fps=30,scale=1080:1920,format=yuv420p" -c:v libx264 -crf 20 -g 30 videos/<v>/broll1.mp4`
 9. Escribir `videos/<v>/guion.json` (escenas por tiempos del corte, correcciones de texto, efectos con `en` = instante del evento).
 10. `python pipeline/06_edicion.py <v>` -> `edicion.json` (subtítulos en bloques + posiciones exactas de efectos).
@@ -92,10 +92,15 @@ Después de los pasos 1-5 de cámara:
 13. `npx remotion render src/index.ts Vertical ../out/<v>.mp4 --codec=h264 --crf=18 --audio-bitrate=256k --concurrency=3` (~4 min para 37 s, CPU).
 14. `python pipeline/07_final.py out/final/<v>.mp4 out/<v>.mp4` (-14 LUFS) + `out/final/descripcion.txt`.
 
+## Regla de composición: la cara siempre a la vista (Ángel, 2026-10-14)
+- Ninguna animación tapa la cara. Todo lo que no es pantalla completa (`broll`, `cta`, `sello` van delante) se dibuja DETRÁS de la persona con matte.
+- Escenas compactas en la franja superior (y < ~270 px) o a los lados de la cabeza; rótulos `clave` siempre `plano: detras` y subidos (centro top 50, diagonal top 170).
+- 05_matte: `python pipeline/05_matte.py videos/<v>/corte.mp4 videos/<v>/matte --edicion videos/<v>/edicion.json --parte 0/2` (y `1/2` en paralelo). `06_edicion.py` calcula las ventanas (todas las escenas no pantalla completa) y `mattePaso` (2 = matte en fotogramas pares; Remotion reutiliza el anterior).
+
 ## Catálogo de rótulos clave (variar SIEMPRE el formato; no repetir el mismo dos veces seguidas)
 - `claveDetras` + `estilo`: `centro` (2 líneas enormes), `diagonal` (inclinado a la izquierda con barra), `gigante` (palabra enorme + una pequeña encima). Van detrás de la persona (necesitan matte).
 - `claveFrente` + `estilo: marcador` (delante, con subrayado de rotulador animado).
-- Otras escenas: `lowerThird`, `reloj`, `notas`, `copiar`, `periodico`, `broll`, `cta`.
+- Otras escenas: `lowerThird`, `reloj`, `notas`, `copiar`, `periodico`, `broll`, `cta`, `agenda` (tarjetas de cristal de la jornada con hora y tick: {titulo, items:[{hora,texto,t}]}), `comentario` (campo de comentario que escribe una palabra y la envía: {palabra, escribeT, enviaT}; para CTAs tipo «comenta la palabra X»).
 
 ## Sonido (reglas)
 - Solo efectos REALES (Mixkit, `videos/_shared/sfx/`, regenerables con `python pipeline/00_sfx.py`; hay que tener el catálogo en `/tmp/mixkit_catalogo.json`).

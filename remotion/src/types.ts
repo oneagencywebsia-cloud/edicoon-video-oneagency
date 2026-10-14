@@ -16,7 +16,9 @@ export type Escena =
   | (Base & {tipo: 'copiar'; origen: string; destino: string})
   | (Base & {tipo: 'periodico'; cabecera: string; titular: string[]; resaltar: string; resaltarT: number})
   | (Base & {tipo: 'broll'; src: string; desde: number; etiqueta?: string; yc?: number; reloj?: {desde: string; hasta: string}})
-  | (Base & {tipo: 'cta'; boton: string; clicT: number});
+  | (Base & {tipo: 'cta'; boton: string; clicT: number})
+  | (Base & {tipo: 'agenda'; titulo: string; items: {hora: string; texto: string; t: number}[]})
+  | (Base & {tipo: 'comentario'; palabra: string; escribeT: number; enviaT: number});
 
 export type Edicion = {
   id: string;
@@ -29,6 +31,8 @@ export type Edicion = {
   zooms: [number, number][];
   vozFx?: {t0: number; t1: number; fx: string}[];
   zoomCurva?: number[];
+  mattePaso?: number;
+  ventanasMatte?: [number, number][];
   enfasis?: {t0: number; t1: number; modo: 'in' | 'out'; escala: number}[];
 };
 

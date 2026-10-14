@@ -36,7 +36,7 @@ for fx in G["correcciones"]:
 
 # 2) bloques de subtítulos: máx. 4 palabras y 28 letras, corte tras signo de puntuación; un bloque de 1 palabra corta se une al anterior
 letras = lambda ws: sum(len(x["w"]) for x in ws) + len(ws)
-SUELTAS = {"y", "a", "de", "en", "la", "el", "los", "las", "una", "un", "que", "para", "tu", "se", "o", "con", "por", "del", "al", "ese", "mi", "su"}
+SUELTAS = {"y", "a", "de", "en", "la", "el", "los", "las", "una", "un", "que", "para", "tu", "se", "o", "con", "por", "del", "al", "ese", "mi", "su", "me", "te", "lo", "le", "nos"}
 chunks, cur = [], []
 for p in P:
     if cur and (len(cur) >= 4 or letras(cur + [p]) > 26):
@@ -137,7 +137,19 @@ zoom_curva = np.minimum(nivel + extra, 1.18)
 maxpaso = float(np.abs(np.diff(zoom_curva)).max())
 print(f"curva de zoom: {len(zoom_curva)} valores, paso máx. entre fotogramas {maxpaso:.4f} en t={int(np.abs(np.diff(zoom_curva)).argmax())/fps:.2f}s (suave si < 0,02), rango {zoom_curva.min():.3f}-{zoom_curva.max():.3f}")
 
-ed = {"id": G["id"], "fps": fps, "frames": frames, "camara": G["camara"], "chunks": chunks,
+# 3c) ventanas donde hay que recortar a la persona: TODAS las escenas que no son pantalla completa van detrás de ella
+FRENTE = {"broll", "cta", "sello"}
+paso = int(G.get("matte_paso", 2))
+vent = sorted([max(0.0, e["t0"] - 0.05), e["t1"] + 0.05] for e in G["escenas"] if e["tipo"] not in FRENTE)
+fus = []
+for a, b in vent:
+    if fus and a <= fus[-1][1] + 0.05:
+        fus[-1][1] = max(fus[-1][1], b)
+    else:
+        fus.append([a, b])
+print("ventanas de matte (05_matte.py --edicion):", ",".join(f"{a:.2f}-{b:.2f}" for a, b in fus))
+
+ed = {"id": G["id"], "mattePaso": paso, "ventanasMatte": [[round(a, 3), round(b, 3)] for a, b in fus], "fps": fps, "frames": frames, "camara": G["camara"], "chunks": chunks,
       "escenas": G["escenas"], "sfx": sfx, "sfx_gain": G.get("sfx_gain", 1.0), "vozFx": G.get("voz_fx", []), "enfasis": enfasis, "zoomCurva": [round(float(x), 4) for x in zoom_curva], "zooms": G["zooms"]}
 json.dump(ed, open(f"{base}/edicion.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print(f"{len(chunks)} bloques de subtítulos, {len(G['escenas'])} escenas, {len(sfx)} efectos, {frames} fotogramas a {fps} fps")

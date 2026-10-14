@@ -1,0 +1,72 @@
+[
+ {
+  "isla": 0,
+  "t0": 4.4,
+  "t1": 5.18,
+  "texto": "Chau, chau.",
+  "motivo": "confianza baja (0.53)"
+ },
+ {
+  "isla": 1,
+  "t0": 6.2,
+  "t1": 8.32,
+  "texto": "Si tiene una empresa sigue trabajando cuando todo se va en...",
+  "motivo": "toma repetida (vuelve a decirlo en la isla 2)"
+ },
+ {
+  "isla": 2,
+  "t0": 10.31,
+  "t1": 11.65,
+  "texto": "Si tiene una empresa y se ha trabajado...",
+  "motivo": "toma repetida (vuelve a decirlo en la isla 3)"
+ },
+ {
+  "isla": 5,
+  "t0": 17.36,
+  "t1": 18.71,
+  "texto": "Durante el día atiende el cliente.",
+  "motivo": "toma repetida (vuelve a decirlo en la isla 6)"
+ },
+ {
+  "isla": 6,
+  "t0": 20.15,
+  "t1": 23.73,
+  "texto": "Durante el día tiene el cliente a esa llamada, a esa parte del trabajo.",
+  "motivo": "toma repetida (vuelve a decirlo en la isla 7)"
+ },
+ {
+  "isla": 8,
+  "t0": 31.5,
+  "t1": 32.71,
+  "texto": "Y cuando llega en...",
+  "motivo": "decisión del editor"
+ },
+ {
+  "isla": 9,
+  "t0": 36.01,
+  "t1": 39.38,
+  "texto": "Y cuando llegue a casa, empieza tu segundo turno.",
+  "motivo": "toma repetida (vuelve a decirlo en la isla 13)"
+ },
+ {
+  "isla": 10,
+  "t0": 39.78,
+  "t1": 40.35,
+  "texto": "Llamada.",
+  "motivo": "toma repetida (vuelve a decirlo en la isla 14)"
+ },
+ {
+  "isla": 11,
+  "t0": 40.74,
+  "t1": 41.54,
+  "texto": "Rejo poeta.",
+  "motivo": "decisión del editor"
+ },
+ {
+  "isla": 12,
+  "t0": 42.58,
+  "t1": 42.98,
+  "texto": "parte",
+  "motivo": "toma repetida (vuelve a decirlo en la isla 15)"
+ }
+]
