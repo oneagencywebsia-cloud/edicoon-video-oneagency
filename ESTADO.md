@@ -67,3 +67,7 @@ Después: fase 1b (Drive API), fase 2 (estructura), fase 3 (pipeline de cámara)
 - Vuelve a ser el PC (Windows 11, RTX 5060): el pipeline detecta GPU (Whisper, rembg) y cae a CPU si no hay.
 - `tools/setup_local.ps1` + `requirements-local.txt` preparan el entorno. Brutos en `raw/<video>/`, sin Drive.
 - Sin corrección de mirada (graba mirando a cámara). La nube queda como alternativa (ver CLAUDE.md).
+
+## Vídeo 2 (preparado 2026-10-14, esperando brutos)
+- Carpetas `raw/video2/` y `videos/video2/`. Ángel entrega vídeo + archivo de audio (por confirmar si es micro aparte -> `00b_sync_audio.py`, u otra cosa).
+- Aplicar TODA la memoria (`memoria/`), sin corrección de mirada. Variar animaciones respecto al vídeo 1 (no copiar su guion). Entregar vídeo -14 LUFS + `descripcion.txt`.

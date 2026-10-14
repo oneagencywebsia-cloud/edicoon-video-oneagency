@@ -57,6 +57,12 @@ Tono: cercano, tuteo, sin jerga, honesto con los límites de la IA.
   El conector de Drive de la sesión NO sirve; usar la API con las variables GOOGLE_* (nunca imprimirlas).
 - Transcripción: `python pipeline/02_transcribe.py <vídeo> videos/<id>/transcripcion.json` (CPU turbo: ~2,5 min para 77 s la primera vez por la descarga del modelo, ~20 s de cálculo).
 
+## Audio externo (micro/grabadora aparte) — `pipeline/00b_sync_audio.py` (probado con señal sintética, ~3 ms de error)
+- Si Ángel entrega vídeo + audio aparte: `python pipeline/00b_sync_audio.py raw/<v>/<bruto>.MOV raw/<v>/<audio> raw/<v>/bruto_sync.mp4`
+  (correlación cruzada, corrige desfase y deriva, copia el vídeo sin recodificar, avisa si no son la misma grabación o la fase está invertida).
+  Después seguir el procedimiento normal usando `bruto_sync.mp4` como bruto. Comprobar a oído/ojo que los labios van en sincronía.
+- Si el audio NO es una grabación de la misma toma (música, voz en off): no sincronizar; preguntar a Ángel qué quiere hacer. Música de artistas comerciales: no usar sin permiso.
+
 ## Procedimiento de cámara (probado en video1)
 1. Brutos en `raw/<video>/` (los copia Ángel; en la nube: `python pipeline/drive_api.py get <id> --dest raw/<video>`)
 2. `python pipeline/02b_islas.py raw/<video>/<bruto>.MOV videos/<video>/islas.json` (transcripción por islas de voz; ~90 s por 77 s de vídeo en CPU)
