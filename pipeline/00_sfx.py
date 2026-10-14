@@ -8,6 +8,7 @@ Escribe index.json. Los efectos de tipo `riser` reciben un recorte de medios (-5
 """
 import json
 import os
+import tempfile
 import re
 import subprocess
 
@@ -15,7 +16,7 @@ import numpy as np
 
 D = "videos/_shared/sfx"
 L = json.load(open(f"{D}/lista.json", encoding="utf-8"))
-CAT = json.load(open(os.environ.get("MIXKIT_CATALOGO", "/tmp/mixkit_catalogo.json"), encoding="utf-8"))
+CAT = json.load(open(os.environ.get("MIXKIT_CATALOGO", os.path.join(tempfile.gettempdir(), "mixkit_catalogo.json")), encoding="utf-8"))
 SR = 48000
 
 
@@ -32,13 +33,13 @@ def env_db(x, ms=10):
 
 idx = {}
 for nom, (i, tipo, uso) in L["efectos"].items():
-    mp3 = f"/tmp/sfx_{i}.mp3"
+    mp3 = os.path.join(tempfile.gettempdir(), f"sfx_{i}.mp3")
     if not os.path.exists(mp3):
         subprocess.run(["curl", "-sS", "-L", "-m", "60", "-o", mp3, CAT[str(i)]["url"]], check=True)
     filtro = "silenceremove=start_periods=1:start_threshold=-50dB:start_silence=0.015,areverse,silenceremove=start_periods=1:start_threshold=-55dB:start_silence=0.05,areverse"
     if tipo == "riser":
         filtro += ",equalizer=f=2500:t=q:w=0.8:g=-5"
-    tmp = f"/tmp/sfx_{nom}.wav"
+    tmp = os.path.join(tempfile.gettempdir(), f"sfx_{nom}.wav")
     subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", mp3, "-af", filtro, "-ac", "1", "-ar", str(SR), tmp], check=True)
     x = leer(tmp)
     pico = np.abs(x).max()

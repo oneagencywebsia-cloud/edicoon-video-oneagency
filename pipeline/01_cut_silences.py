@@ -67,7 +67,10 @@ def verificar(bruto, seg_f, W, fps, max_iter=3):
     import os
     import tempfile
     from faster_whisper import WhisperModel
-    modelo = WhisperModel("turbo", device="cpu", compute_type="int8", cpu_threads=4)
+    try:
+        modelo = WhisperModel("turbo", device="cuda", compute_type="float16")
+    except Exception:
+        modelo = WhisperModel("turbo", device="cpu", compute_type="int8", cpu_threads=4)
     esperado = [t for w in W for t in norm(w["w"]).split()]
     excl = []
     seg = [list(x) for x in seg_f]

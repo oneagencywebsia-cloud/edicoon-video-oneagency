@@ -1,0 +1,11 @@
+# Python 3.12 (NO 3.14). Instalar: py -3.12 -m venv .venv ; .\.venv\Scripts\Activate.ps1 ; pip install -r requirements-local.txt
+numpy
+scipy
+pillow
+requests
+av>=14,<16
+faster-whisper==1.2.1
+rembg==2.0.85
+onnxruntime
+opencv-python-headless
+mediapipe

@@ -5,19 +5,24 @@ Si Ángel da un consejo nuevo: actualiza el archivo de memoria que lo cubra (no 
 
 Ver `ESTADO.md` para el estado y las decisiones. Identidad solo desde `marca/` (nada fijo en el código).
 
-## Entorno de trabajo: la NUBE (contenedor Linux, 4 CPU, 15 GB, sin GPU)
-- Python: `.venv` (Python 3.13). Activar con `. .venv/bin/activate`.
-- Transcripción: `faster-whisper`, modelo `turbo`, `device="cpu"`, `compute_type="int8"`.
-- Remotion: `cd remotion && export REMOTION_BROWSER=$PWD/../tools/chrome-nosandbox.sh`
+## Entorno de trabajo: LOCAL (PC de Ángel: Windows 11, Ryzen 7 5800X, 32 GB, RTX 5060 8 GB) — decisión 2026-10-14
+Antes se trabajaba en la nube; ahora el editor corre en local. Los brutos ya NO se bajan por la API de Drive.
+- Preparación (una vez): `powershell -ExecutionPolicy Bypass -File tools\setup_local.ps1` (crea `.venv` con Python 3.12, instala `requirements-local.txt`, `npm install` y el navegador de Remotion). Necesita Node 20+, ffmpeg y Python 3.12 en el PATH.
+- Activar: `.\.venv\Scripts\Activate.ps1` (PowerShell) o `source .venv/Scripts/activate` (Git Bash). Los comandos de abajo usan `python pipeline/...` y rutas con `/`, que valen en ambos.
+- Brutos: Ángel los copia a `raw/<video>/` (o dice la ruta). Si `raw/<video>/` está vacío, preguntar la ruta; NO usar Drive ni pedir credenciales.
+- Entregas: `out/final/<video>.mp4` + `descripcion.txt`; decirle la ruta completa para que las publique él. No subir nada.
+- Whisper: GPU (`cuda`, float16) con caída automática a CPU. rembg: usa CUDA si `onnxruntime-gpu` está instalado, si no CPU.
+- Remotion: no hace falta `REMOTION_BROWSER` ni el wrapper de la nube. `cd remotion; npx tsc --noEmit`; render con `--concurrency=6` (o más).
   - QA: `npx remotion still src/index.ts <Comp> ../out/qa/x.png --frame=N`
-  - Antes de cada render: `npx tsc --noEmit`.
+- Compatibilidad nube (por si se vuelve): `.venv` Python 3.13, `export REMOTION_BROWSER=$PWD/../tools/chrome-nosandbox.sh`, Drive con `pipeline/drive_api.py` y variables GOOGLE_*.
+- La RTX 5060 (Blackwell) necesita CUDA 12.8+ si se instala PyTorch/onnxruntime-gpu; ctranslate2 usa su propio CUDA: si falla, se cae solo a CPU.
 
 ## Reglas técnicas (fallos conocidos)
 - `faster-whisper` 1.2.1 falla con PyAV 19 (`metadata_errors`): fijar `av>=14,<16`.
 - Python 3.14 (PC de Ángel) no sirve para faster-whisper: usar 3.12 o el Python de la nube.
-- Chromium como root en el contenedor no arranca: usar el wrapper `tools/chrome-nosandbox.sh` (añade `--no-sandbox`)
+- (Solo nube) Chromium como root en el contenedor no arranca: usar el wrapper `tools/chrome-nosandbox.sh` (añade `--no-sandbox`)
   apuntando al headless shell de Remotion (`npx remotion browser ensure`).
-- Chromium no confía en el certificado del proxy de la nube: NO cargar fuentes ni recursos de internet desde Remotion.
+- (Solo nube; en local también conviene) Chromium no confía en el certificado del proxy de la nube: NO cargar fuentes ni recursos de internet desde Remotion.
   Descargarlos con curl a `videos/_shared/` y usar `staticFile()`. Las fuentes están en `videos/_shared/fonts/`.
 - `publicDir` de Remotion = `videos/` (así llega a `_shared/` y a cada `<id>/`).
 - Fuentes en Remotion: cargar con `FontFace` + `delayRender` (ver `remotion/src/fuentes.ts`) y poner `fontFamily` en el contenedor raíz.
@@ -53,7 +58,7 @@ Tono: cercano, tuteo, sin jerga, honesto con los límites de la IA.
 - Transcripción: `python pipeline/02_transcribe.py <vídeo> videos/<id>/transcripcion.json` (CPU turbo: ~2,5 min para 77 s la primera vez por la descarga del modelo, ~20 s de cálculo).
 
 ## Procedimiento de cámara (probado en video1)
-1. `python pipeline/drive_api.py get <id> --dest raw/<video>`
+1. Brutos en `raw/<video>/` (los copia Ángel; en la nube: `python pipeline/drive_api.py get <id> --dest raw/<video>`)
 2. `python pipeline/02b_islas.py raw/<video>/<bruto>.MOV videos/<video>/islas.json` (transcripción por islas de voz; ~90 s por 77 s de vídeo en CPU)
 3. `python pipeline/03_tomas.py videos/<video>/islas.json videos/<video>/palabras.json --quitadas videos/<video>/quitadas.json [--prep tomas.prep.json]`
    - Revisar lo que imprime. Se queda la ÚLTIMA versión de cada frase.

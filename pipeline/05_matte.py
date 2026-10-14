@@ -22,7 +22,9 @@ def main() -> None:
     ap.add_argument("--fps", type=int, default=30)
     a = ap.parse_args()
     os.makedirs(a.salida, exist_ok=True)
-    ses = new_session("u2net_human_seg", providers=["CPUExecutionProvider"])
+    import onnxruntime as ort
+    prov = ["CUDAExecutionProvider", "CPUExecutionProvider"] if "CUDAExecutionProvider" in ort.get_available_providers() else ["CPUExecutionProvider"]
+    ses = new_session("u2net_human_seg", providers=prov)
     for v in a.ventanas.split(","):
         t0, t1 = (float(x) for x in v.split("-"))
         f0, f1 = round(t0 * a.fps), round(t1 * a.fps)
