@@ -79,7 +79,7 @@ export const Movil: React.FC<P<'movil'>> = ({e, f0, dur}) => {
         const p = spring({frame: frame - s, fps, config: {damping: 14, stiffness: 170}});
         const tiembla = a.tipo === 'tel' ? Math.sin((frame - s) * 1.6) * (frame - s < 22 ? 5 : 0) : 0;
         return (
-          <div key={i} style={{position: 'absolute', left: 28 + i * 342, top: 44, width: 326, height: 206, borderRadius: 34, background: 'rgba(250,251,255,0.94)', boxShadow: '0 24px 60px rgba(0,0,0,0.4)', padding: '16px 20px', boxSizing: 'border-box', fontFamily: FUENTE, transform: `translateY(${(1 - p) * -170}px) translateX(${tiembla}px) scale(${0.94 + 0.06 * p})`, opacity: Math.min(1, p * 1.6)}}>
+          <div key={i} style={{position: 'absolute', left: i % 2 === 0 ? 28 : 726, top: 175 + Math.floor(i / 2) * 225, width: 326, height: 206, borderRadius: 34, background: 'rgba(250,251,255,0.94)', boxShadow: '0 24px 60px rgba(0,0,0,0.4)', padding: '16px 20px', boxSizing: 'border-box', fontFamily: FUENTE, transform: `translateY(${(1 - p) * -170}px) translateX(${tiembla}px) scale(${0.94 + 0.06 * p})`, opacity: Math.min(1, p * 1.6)}}>
             <div style={{display: 'flex', alignItems: 'center', gap: 12}}>
               <Icono tipo={a.tipo} s={50} />
               <div style={{flex: 1, fontWeight: 700, fontSize: 24, color: '#6b7185'}}>{a.app}</div>
@@ -116,24 +116,25 @@ export const Donut: React.FC<P<'donut'>> = ({e, f0, dur}) => {
   const partir = interpolate(frame, [at(e.partirT), at(e.partirT) + 12], [0, 1], {...clamp, easing: out5});
   const solo = e.soloTu; // 0..1 (visual, sin cifras)
   return (
-    <div style={{position: 'absolute', left: 0, right: 0, top: 40, height: 210, opacity: a}}>
-      <div style={{...cristal, position: 'absolute', left: 30, right: 30, top: 0, bottom: 0, borderRadius: 44}} />
-      <svg width="170" height="170" viewBox="-85 -85 170 170" style={{position: 'absolute', left: 60, top: 20, transform: 'rotate(-90deg)'}}>
-        <circle r={R} fill="none" stroke="rgba(255,255,255,0.14)" strokeWidth={W} />
-        <circle r={R} fill="none" stroke="#9fb4e8" strokeWidth={W} strokeDasharray={`${L * lleno * (1 - solo)} ${L}`} strokeDashoffset={-L * solo * partir} strokeLinecap="butt" style={{filter: 'drop-shadow(0 0 10px #60a5fa88)'}} />
-        <circle r={R} fill="none" stroke={C.acento} strokeWidth={W} strokeDasharray={`${L * lleno * solo * partir} ${L}`} strokeLinecap="butt" style={{filter: `drop-shadow(0 0 12px ${C.acento})`}} />
-      </svg>
-      <div style={{position: 'absolute', left: 60, top: 20, width: 170, height: 170, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: FUENTE, fontWeight: 800, fontSize: 64, color: '#fff', textShadow: sombraTexto}}>
-        {partir > 0.5 ? '¿?' : 'TÚ'}
-      </div>
-      <div style={{position: 'absolute', left: 290, top: 34, right: 60, fontFamily: FUENTE}}>
-        <div style={{opacity: partir, transform: `translateX(${(1 - partir) * 40}px)`, marginBottom: 26, display: 'flex', alignItems: 'center', gap: 16}}>
-          <div style={{width: 20, height: 20, borderRadius: 10, background: C.acento, boxShadow: `0 0 18px ${C.acento}`}} />
-          <div style={{fontWeight: 800, fontSize: 40, color: '#fff', lineHeight: 1.1}}>Lo que solo puedes hacer tú</div>
+    <div style={{position: 'absolute', inset: 0, opacity: a}}>
+      <div style={{...cristal, position: 'absolute', left: 30, top: 175, width: 330, height: 330, borderRadius: 44}}>
+        <svg width="250" height="250" viewBox="-85 -85 170 170" style={{position: 'absolute', left: 40, top: 40, transform: 'rotate(-90deg)'}}>
+          <circle r={R} fill="none" stroke="rgba(255,255,255,0.14)" strokeWidth={W} />
+          <circle r={R} fill="none" stroke="#9fb4e8" strokeWidth={W} strokeDasharray={`${L * lleno * (1 - solo)} ${L}`} strokeDashoffset={-L * solo * partir} strokeLinecap="butt" style={{filter: 'drop-shadow(0 0 10px #60a5fa88)'}} />
+          <circle r={R} fill="none" stroke={C.acento} strokeWidth={W} strokeDasharray={`${L * lleno * solo * partir} ${L}`} strokeLinecap="butt" style={{filter: `drop-shadow(0 0 12px ${C.acento})`}} />
+        </svg>
+        <div style={{position: 'absolute', left: 40, top: 40, width: 250, height: 250, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: FUENTE, fontWeight: 800, fontSize: 92, color: '#fff', textShadow: sombraTexto}}>
+          {partir > 0.5 ? '¿?' : 'TÚ'}
         </div>
-        <div style={{opacity: entra(frame, 18, 10), transform: `translateX(${(1 - entra(frame, 18, 10)) * 40}px)`, display: 'flex', alignItems: 'center', gap: 16}}>
-          <div style={{width: 20, height: 20, borderRadius: 10, background: '#9fb4e8'}} />
-          <div style={{fontWeight: 800, fontSize: 40, color: '#fff', lineHeight: 1.1}}>Lo que se repite cada día</div>
+      </div>
+      <div style={{position: 'absolute', left: 726, top: 175, width: 326, fontFamily: FUENTE}}>
+        <div style={{...cristal, borderRadius: 34, padding: '18px 22px', opacity: partir, transform: `translateX(${(1 - partir) * 60}px)`, marginBottom: 18, display: 'flex', alignItems: 'center', gap: 14}}>
+          <div style={{width: 22, height: 22, borderRadius: 11, background: C.acento, boxShadow: `0 0 18px ${C.acento}`, flexShrink: 0}} />
+          <div style={{fontWeight: 800, fontSize: 38, color: '#fff', lineHeight: 1.08}}>Lo que solo puedes hacer tú</div>
+        </div>
+        <div style={{...cristal, borderRadius: 34, padding: '18px 22px', opacity: entra(frame, 18, 10), transform: `translateX(${(1 - entra(frame, 18, 10)) * 60}px)`, display: 'flex', alignItems: 'center', gap: 14}}>
+          <div style={{width: 22, height: 22, borderRadius: 11, background: '#9fb4e8', flexShrink: 0}} />
+          <div style={{fontWeight: 800, fontSize: 38, color: '#fff', lineHeight: 1.08}}>Lo que se repite cada día</div>
         </div>
       </div>
     </div>
@@ -162,27 +163,26 @@ export const Agenda: React.FC<P<'agenda'>> = ({e, f0, dur}) => {
   const at = useAt(f0);
   const a = vis(frame, 0, dur, 10, 8);
   return (
-    <div style={{position: 'absolute', left: 30, right: 30, top: 36, opacity: a}}>
-      <div style={{display: 'inline-flex', alignItems: 'center', gap: 12, padding: '6px 22px', borderRadius: 34, ...cristal, transform: `translateY(${(1 - entra(frame, 0, 12)) * -30}px)`}}>
+    <div style={{position: 'absolute', inset: 0, opacity: a}}>
+      <div style={{position: 'absolute', left: 30, top: 150, display: 'inline-flex', alignItems: 'center', gap: 12, padding: '6px 22px', borderRadius: 34, ...cristal, transform: `translateY(${(1 - entra(frame, 0, 12)) * -30}px)`}}>
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke={C.acento2} strokeWidth="2" strokeLinecap="round"><circle cx="12" cy="12" r="4.2" fill={C.acento2} /><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1" /></svg>
-        <span style={{fontFamily: FUENTE, fontWeight: 800, fontSize: 30, color: C.texto, letterSpacing: 4}}>{e.titulo}</span>
+        <span style={{fontFamily: FUENTE, fontWeight: 800, fontSize: 28, color: C.texto, letterSpacing: 3}}>{e.titulo}</span>
       </div>
-      <div style={{display: 'flex', gap: 16, marginTop: 14}}>
-        {e.items.map((it, i) => {
-          const f = frame - at(it.t);
-          const p = entra(f, 0, 14);
-          const tick = interpolate(f, [10, 20], [0, 1], clamp);
-          return (
-            <div key={i} style={{flex: 1, position: 'relative', padding: '14px 20px 16px', borderRadius: 30, ...cristal, opacity: p, transform: `translateY(${(1 - p) * -90}px)`}}>
-              <div style={{fontFamily: FUENTE, fontWeight: 800, fontSize: 32, color: C.acento, fontVariantNumeric: 'tabular-nums'}}>{it.hora}</div>
-              <div style={{fontFamily: FUENTE, fontWeight: 800, fontSize: 46, color: C.texto, textShadow: sombraTexto, lineHeight: 1.02, marginTop: 2}}>{it.texto}</div>
-              <div style={{position: 'absolute', right: 14, top: 14, width: 40, height: 40, borderRadius: '50%', background: C.acento, opacity: tick, transform: `scale(${0.6 + 0.4 * tick})`, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12.5l4.5 4.5L19 7" /></svg>
-              </div>
+      {e.items.map((it, i) => {
+        const f = frame - at(it.t);
+        const p = entra(f, 0, 14);
+        const tick = interpolate(f, [10, 20], [0, 1], clamp);
+        const izq = i % 2 === 0;
+        return (
+          <div key={i} style={{position: 'absolute', left: izq ? 30 : 718, top: 232 + Math.floor(i / 2) * 190, width: 330, padding: '14px 22px 18px', borderRadius: 30, ...cristal, opacity: p, transform: `translateX(${(1 - p) * (izq ? -160 : 160)}px)`}}>
+            <div style={{fontFamily: FUENTE, fontWeight: 800, fontSize: 32, color: C.acento, fontVariantNumeric: 'tabular-nums'}}>{it.hora}</div>
+            <div style={{fontFamily: FUENTE, fontWeight: 800, fontSize: 46, color: C.texto, textShadow: sombraTexto, lineHeight: 1.02, marginTop: 2}}>{it.texto}</div>
+            <div style={{position: 'absolute', right: 14, top: 14, width: 40, height: 40, borderRadius: '50%', background: C.acento, opacity: tick, transform: `scale(${0.6 + 0.4 * tick})`, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12.5l4.5 4.5L19 7" /></svg>
             </div>
-          );
-        })}
-      </div>
+          </div>
+        );
+      })}
     </div>
   );
 };
@@ -201,7 +201,7 @@ export const Comentario: React.FC<P<'comentario'>> = ({e, f0, dur}) => {
   const pop = spring({frame: frame - env - 6, fps, config: {damping: 9, stiffness: 220}});
   const cursor = !enviado && frame % 20 < 12;
   return (
-    <div style={{position: 'absolute', left: 80, top: 56, width: 920, opacity: a, transform: `translateY(${(1 - entra(frame, 0, 14)) * -60}px)`}}>
+    <div style={{position: 'absolute', left: 80, top: 150, width: 920, opacity: a, transform: `translateY(${(1 - entra(frame, 0, 14)) * -60}px)`}}>
       <div style={{display: 'flex', alignItems: 'center', gap: 20, padding: '14px 26px', borderRadius: 44, ...cristal}}>
         <div style={{width: 70, height: 70, borderRadius: '50%', background: `linear-gradient(135deg,${C.acento},${C.acento2})`, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: FUENTE, fontWeight: 800, fontSize: 34, color: '#fff', flexShrink: 0}}>Tú</div>
         <div style={{flex: 1, minHeight: 70, display: 'flex', alignItems: 'center'}}>

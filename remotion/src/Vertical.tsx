@@ -57,7 +57,7 @@ const Clave: React.FC<{e: ClaveE; dur: number}> = ({e, dur}) => {
     return (
       <>
         {luz}
-        <div style={{position: 'absolute', left: 50, top: 170, transform: 'rotate(-7deg)', transformOrigin: 'left top'}}>
+        <div style={{position: 'absolute', left: 40, top: 235, transform: 'rotate(-5deg)', transformOrigin: 'left top'}}>
           {e.lineas.map((l, i) => (
             <div key={i} style={{marginLeft: i * 150, marginTop: i ? 10 : 0}}>
               <Linea texto={l} preset={e.preset} size={ajusta(l, 200, 900)} ls={-5} inicio={i * 4} dur={dur} />
@@ -72,7 +72,7 @@ const Clave: React.FC<{e: ClaveE; dur: number}> = ({e, dur}) => {
     return (
       <>
         {luz}
-        <div style={{position: 'absolute', left: 0, right: 0, top: 150, textAlign: 'center'}}>
+        <div style={{position: 'absolute', left: 0, right: 0, top: 180, textAlign: 'center'}}>
           <Linea texto={pequena} preset={e.preset} size={112} ls={18} dur={dur} />
           <div style={{marginTop: 150}}>
             <Linea texto={grande} preset={e.preset} size={760} ls={-30} inicio={5} dur={dur} />
@@ -84,7 +84,7 @@ const Clave: React.FC<{e: ClaveE; dur: number}> = ({e, dur}) => {
   return (
     <>
       {luz}
-      <div style={{position: 'absolute', left: 0, right: 0, top: 50, textAlign: 'center'}}>
+      <div style={{position: 'absolute', left: 0, right: 0, top: 150, textAlign: 'center'}}>
         {e.lineas.map((l, i) => (
           <div key={i} style={{marginTop: i ? 14 : 0}}>
             <Linea texto={l} preset={e.preset} size={ajusta(l, 250, 960)} ls={-6} inicio={i * 4} dur={dur} />
