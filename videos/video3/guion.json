@@ -1,0 +1,741 @@
+{
+ "id": "video3",
+ "camara": "video3/corte_color.mp4",
+ "correcciones": [
+  {
+   "match": [
+    "quiere",
+    "quitar"
+   ],
+   "a": [
+    "quieres",
+    "quitar"
+   ]
+  },
+  {
+   "match": [
+    "cómo",
+    "no,"
+   ],
+   "a": [
+    "como",
+    "no,"
+   ]
+  },
+  {
+   "match": [
+    "papeleos"
+   ],
+   "a": [
+    "papeleo"
+   ]
+  },
+  {
+   "match": [
+    "a",
+    "toda",
+    "la"
+   ],
+   "a": [
+    "adaptada",
+    "a",
+    "la"
+   ]
+  },
+  {
+   "match": [
+    "funciones",
+    "de",
+    "inteligencia",
+    "y",
+    "certificación."
+   ],
+   "a": [
+    "función",
+    "de",
+    "inteligencia",
+    "artificial."
+   ]
+  },
+  {
+   "match": [
+    "y",
+    "es",
+    "una",
+    "herramienta"
+   ],
+   "a": [
+    "y",
+    "alguna",
+    "herramienta"
+   ]
+  },
+  {
+   "match": [
+    "no",
+    "tiene",
+    "que",
+    "sufrir"
+   ],
+   "a": [
+    "uno",
+    "tiene",
+    "que",
+    "sufrir"
+   ]
+  }
+ ],
+ "zooms": [
+  [
+   0,
+   1.0
+  ],
+  [
+   8.04,
+   1.06
+  ],
+  [
+   13.76,
+   1.0
+  ],
+  [
+   16.71,
+   1.06
+  ],
+  [
+   28.18,
+   1.0
+  ],
+  [
+   32.49,
+   1.05
+  ],
+  [
+   35.05,
+   1.0
+  ],
+  [
+   43.07,
+   1.06
+  ]
+ ],
+ "escenas": [
+  {
+   "tipo": "lowerThird",
+   "t0": 0.25,
+   "t1": 1.7,
+   "nombre": "Ángel Carrillo",
+   "cargo": "CEO & FOUNDER"
+  },
+  {
+   "tipo": "clave",
+   "plano": "detras",
+   "layout": "centro",
+   "preset": "cromo",
+   "t0": 1.75,
+   "t1": 2.95,
+   "lineas": [
+    "PAPELES"
+   ]
+  },
+  {
+   "tipo": "lista",
+   "t0": 3.3,
+   "t1": 7.95,
+   "titulo": "CASO REAL",
+   "lado": "izq",
+   "acento": "azul",
+   "items": [
+    {
+     "texto": "Electricista",
+     "t": 5.2,
+     "icono": "rayo"
+    }
+   ]
+  },
+  {
+   "tipo": "notas",
+   "t0": 10.4,
+   "t1": 13.75,
+   "items": [
+    {
+     "texto": "Partes de trabajo",
+     "t": 10.6
+    },
+    {
+     "texto": "Materiales",
+     "t": 11.25
+    },
+    {
+     "texto": "Clientes",
+     "t": 11.85
+    }
+   ]
+  },
+  {
+   "tipo": "clave",
+   "plano": "detras",
+   "layout": "diagonal",
+   "preset": "ambar",
+   "t0": 15.25,
+   "t1": 16.4,
+   "lineas": [
+    "APLICACIÓN"
+   ]
+  },
+  {
+   "tipo": "lista",
+   "t0": 16.75,
+   "t1": 23.4,
+   "titulo": "APP A MEDIDA",
+   "lado": "der",
+   "acento": "azul",
+   "items": [
+    {
+     "texto": "Agendar partes de trabajo",
+     "t": 17.26,
+     "icono": "check"
+    },
+    {
+     "texto": "Consultar materiales",
+     "t": 19.6,
+     "icono": "check"
+    },
+    {
+     "texto": "Atender clientes",
+     "t": 21.0,
+     "icono": "check"
+    }
+   ]
+  },
+  {
+   "tipo": "lista",
+   "t0": 23.9,
+   "t1": 27.95,
+   "titulo": "CONECTADA A",
+   "lado": "izq",
+   "acento": "naranja",
+   "items": [
+    {
+     "texto": "Telegram",
+     "t": 24.74,
+     "icono": "enviar"
+    },
+    {
+     "texto": "Automatizaciones",
+     "t": 25.44,
+     "icono": "rayo"
+    },
+    {
+     "texto": "IA",
+     "t": 26.2,
+     "icono": "chispa"
+    }
+   ]
+  },
+  {
+   "tipo": "clave",
+   "plano": "detras",
+   "layout": "gigante",
+   "preset": "cristal",
+   "t0": 29.5,
+   "t1": 30.7,
+   "lineas": [
+    "FUNCIÓN DE",
+    "IA"
+   ]
+  },
+  {
+   "tipo": "sello",
+   "t0": 34.4,
+   "t1": 35.15,
+   "texto": "EN USO",
+   "x": 640,
+   "y": 170,
+   "giro": -8
+  },
+  {
+   "tipo": "clave",
+   "plano": "detras",
+   "layout": "centro",
+   "preset": "foco",
+   "t0": 40.05,
+   "t1": 41.25,
+   "lineas": [
+    "AHORRA"
+   ]
+  },
+  {
+   "tipo": "comentario",
+   "t0": 44.55,
+   "t1": 47.05,
+   "palabra": "electricidad",
+   "escribeT": 44.95,
+   "enviaT": 45.95,
+   "compacto": true
+  }
+ ],
+ "sfx": [
+  {
+   "en": 1.78,
+   "f": "p/02_riser",
+   "vol": 0.5,
+   "ancla": "fin",
+   "largo": 1.75
+  },
+  {
+   "en": 1.78,
+   "f": "p/riser",
+   "vol": 0.3,
+   "ancla": "fin",
+   "largo": 1.4
+  },
+  {
+   "en": 0.3,
+   "f": "p/swoosh_01_04",
+   "vol": 0.35,
+   "ancla": "pico"
+  },
+  {
+   "en": 1.78,
+   "f": "p/deep_bass_hit_1",
+   "vol": 0.55,
+   "ancla": "inicio",
+   "dur": 0.9,
+   "fade_out": 0.25
+  },
+  {
+   "en": 1.79,
+   "f": "p/sub_bass_drop_4",
+   "vol": 0.3,
+   "ancla": "inicio",
+   "dur": 1.3,
+   "fade_out": 0.4
+  },
+  {
+   "en": 1.78,
+   "f": "p/mouse_click_03",
+   "vol": 0.4,
+   "ancla": "inicio"
+  },
+  {
+   "en": 1.74,
+   "f": "p/woosh_effect_12",
+   "vol": 0.27,
+   "ancla": "pico"
+  },
+  {
+   "en": 3.3,
+   "f": "p/vs_short_whoosh_4",
+   "vol": 0.3,
+   "ancla": "pico"
+  },
+  {
+   "en": 5.2,
+   "f": "p/pop_up_sfx",
+   "vol": 0.4,
+   "ancla": "inicio"
+  },
+  {
+   "en": 5.22,
+   "f": "p/mechanical_keyboard_click_09",
+   "vol": 0.3,
+   "ancla": "inicio"
+  },
+  {
+   "en": 10.6,
+   "f": "papel_desliza",
+   "vol": 0.4,
+   "ancla": "pico"
+  },
+  {
+   "en": 11.25,
+   "f": "grapadora",
+   "vol": 0.3,
+   "ancla": "pico"
+  },
+  {
+   "en": 11.85,
+   "f": "lapiz_escribe",
+   "vol": 0.4,
+   "ancla": "inicio",
+   "dur": 0.9
+  },
+  {
+   "en": 15.25,
+   "f": "p/01_riser",
+   "vol": 0.4,
+   "ancla": "fin",
+   "largo": 1.5
+  },
+  {
+   "en": 15.25,
+   "f": "p/cinematic_bass_3",
+   "vol": 0.5,
+   "ancla": "inicio",
+   "dur": 0.9,
+   "fade_out": 0.25
+  },
+  {
+   "en": 15.26,
+   "f": "p/sub_bass_drop_2",
+   "vol": 0.3,
+   "ancla": "inicio",
+   "dur": 1.3,
+   "fade_out": 0.4
+  },
+  {
+   "en": 15.25,
+   "f": "p/mouse_click_04",
+   "vol": 0.4,
+   "ancla": "inicio"
+  },
+  {
+   "en": 15.21,
+   "f": "p/woosh_effect_6",
+   "vol": 0.27,
+   "ancla": "pico"
+  },
+  {
+   "en": 16.75,
+   "f": "interfaz_abre",
+   "vol": 0.28,
+   "ancla": "inicio"
+  },
+  {
+   "en": 16.8,
+   "f": "p/vs_short_whoosh_5",
+   "vol": 0.2,
+   "ancla": "pico"
+  },
+  {
+   "en": 17.26,
+   "f": "p/pop_up_sfx",
+   "vol": 0.4,
+   "ancla": "inicio"
+  },
+  {
+   "en": 17.28,
+   "f": "p/mechanical_keyboard_click_07",
+   "vol": 0.3,
+   "ancla": "inicio"
+  },
+  {
+   "en": 19.6,
+   "f": "p/pop_up_sfx",
+   "vol": 0.4,
+   "ancla": "inicio"
+  },
+  {
+   "en": 19.62,
+   "f": "p/mechanical_keyboard_click_05",
+   "vol": 0.3,
+   "ancla": "inicio"
+  },
+  {
+   "en": 21.0,
+   "f": "p/pop_up_sfx",
+   "vol": 0.4,
+   "ancla": "inicio"
+  },
+  {
+   "en": 21.02,
+   "f": "p/mechanical_keyboard_click_09",
+   "vol": 0.3,
+   "ancla": "inicio"
+  },
+  {
+   "en": 23.9,
+   "f": "p/vs_short_whoosh_1",
+   "vol": 0.25,
+   "ancla": "pico"
+  },
+  {
+   "en": 24.74,
+   "f": "p/pop_up_sfx",
+   "vol": 0.38,
+   "ancla": "inicio"
+  },
+  {
+   "en": 24.76,
+   "f": "mensaje_alerta",
+   "vol": 0.22,
+   "ancla": "pico"
+  },
+  {
+   "en": 25.44,
+   "f": "p/pop_up_sfx",
+   "vol": 0.38,
+   "ancla": "inicio"
+  },
+  {
+   "en": 25.46,
+   "f": "mensaje_alerta",
+   "vol": 0.22,
+   "ancla": "pico"
+  },
+  {
+   "en": 26.2,
+   "f": "p/pop_up_sfx",
+   "vol": 0.38,
+   "ancla": "inicio"
+  },
+  {
+   "en": 26.22,
+   "f": "mensaje_alerta",
+   "vol": 0.22,
+   "ancla": "pico"
+  },
+  {
+   "en": 29.54,
+   "f": "p/02_riser",
+   "vol": 0.45,
+   "ancla": "fin",
+   "largo": 1.4
+  },
+  {
+   "en": 29.54,
+   "f": "p/deep_bass_hit_1",
+   "vol": 0.55,
+   "ancla": "inicio",
+   "dur": 0.9,
+   "fade_out": 0.25
+  },
+  {
+   "en": 29.55,
+   "f": "p/sub_bass_hit",
+   "vol": 0.3,
+   "ancla": "inicio",
+   "dur": 1.3,
+   "fade_out": 0.4
+  },
+  {
+   "en": 29.54,
+   "f": "p/mouse_click_04",
+   "vol": 0.4,
+   "ancla": "inicio"
+  },
+  {
+   "en": 29.5,
+   "f": "p/woosh_effect_6",
+   "vol": 0.27,
+   "ancla": "pico"
+  },
+  {
+   "en": 34.4,
+   "f": "p/mouse_click_04",
+   "vol": 0.5,
+   "ancla": "inicio"
+  },
+  {
+   "en": 34.41,
+   "f": "p/deep_bass_hit_1",
+   "vol": 0.4,
+   "ancla": "inicio",
+   "dur": 0.7,
+   "fade_out": 0.2
+  },
+  {
+   "en": 34.5,
+   "f": "tono_confirmacion",
+   "vol": 0.22,
+   "ancla": "inicio",
+   "dur": 0.5
+  },
+  {
+   "en": 40.12,
+   "f": "p/02_riser",
+   "vol": 0.45,
+   "ancla": "fin",
+   "largo": 1.7
+  },
+  {
+   "en": 40.12,
+   "f": "p/riser_1",
+   "vol": 0.3,
+   "ancla": "fin",
+   "largo": 1.2
+  },
+  {
+   "en": 40.12,
+   "f": "interruptor_luz",
+   "vol": 0.5,
+   "ancla": "inicio"
+  },
+  {
+   "en": 40.12,
+   "f": "p/cinematic_bass_3",
+   "vol": 0.5,
+   "ancla": "inicio",
+   "dur": 1.0,
+   "fade_out": 0.3
+  },
+  {
+   "en": 40.13,
+   "f": "p/sub_bass_drop_2",
+   "vol": 0.26,
+   "ancla": "inicio",
+   "dur": 1.3,
+   "fade_out": 0.4
+  },
+  {
+   "en": 40.12,
+   "f": "p/mouse_click_04",
+   "vol": 0.4,
+   "ancla": "inicio"
+  },
+  {
+   "en": 40.08,
+   "f": "p/woosh_effect_6",
+   "vol": 0.25,
+   "ancla": "pico"
+  },
+  {
+   "en": 38.12,
+   "f": "p/woosh_effect_5",
+   "vol": 0.28,
+   "ancla": "pico"
+  },
+  {
+   "en": 44.55,
+   "f": "interfaz_abre",
+   "vol": 0.28,
+   "ancla": "inicio"
+  },
+  {
+   "en": 44.6,
+   "f": "p/vs_short_whoosh_5",
+   "vol": 0.2,
+   "ancla": "pico"
+  },
+  {
+   "en": 44.95,
+   "f": "p/riser_1",
+   "vol": 0.35,
+   "ancla": "fin",
+   "largo": 1.0
+  },
+  {
+   "en": 44.95,
+   "f": "p/mechanical_keyboard_click_05",
+   "vol": 0.38,
+   "ancla": "inicio"
+  },
+  {
+   "en": 45.025,
+   "f": "p/mechanical_keyboard_click_19",
+   "vol": 0.38,
+   "ancla": "inicio"
+  },
+  {
+   "en": 45.1,
+   "f": "p/mechanical_keyboard_click_07",
+   "vol": 0.38,
+   "ancla": "inicio"
+  },
+  {
+   "en": 45.175,
+   "f": "p/mechanical_keyboard_click_09",
+   "vol": 0.38,
+   "ancla": "inicio"
+  },
+  {
+   "en": 45.25,
+   "f": "p/mechanical_keyboard_click_05",
+   "vol": 0.38,
+   "ancla": "inicio"
+  },
+  {
+   "en": 45.325,
+   "f": "p/mechanical_keyboard_click_19",
+   "vol": 0.38,
+   "ancla": "inicio"
+  },
+  {
+   "en": 45.4,
+   "f": "p/mechanical_keyboard_click_07",
+   "vol": 0.38,
+   "ancla": "inicio"
+  },
+  {
+   "en": 45.475,
+   "f": "p/mechanical_keyboard_click_09",
+   "vol": 0.38,
+   "ancla": "inicio"
+  },
+  {
+   "en": 45.55,
+   "f": "p/mechanical_keyboard_click_05",
+   "vol": 0.38,
+   "ancla": "inicio"
+  },
+  {
+   "en": 45.625,
+   "f": "p/mechanical_keyboard_click_19",
+   "vol": 0.38,
+   "ancla": "inicio"
+  },
+  {
+   "en": 45.7,
+   "f": "p/mechanical_keyboard_click_07",
+   "vol": 0.38,
+   "ancla": "inicio"
+  },
+  {
+   "en": 45.775,
+   "f": "p/mechanical_keyboard_click_09",
+   "vol": 0.38,
+   "ancla": "inicio"
+  },
+  {
+   "en": 45.95,
+   "f": "p/mouse_click_04",
+   "vol": 0.6,
+   "ancla": "inicio"
+  },
+  {
+   "en": 46.01,
+   "f": "p/deep_bass_hit_1",
+   "vol": 0.4,
+   "ancla": "inicio",
+   "dur": 0.7,
+   "fade_out": 0.2
+  },
+  {
+   "en": 46.1,
+   "f": "tono_confirmacion",
+   "vol": 0.25,
+   "ancla": "inicio",
+   "dur": 0.5
+  },
+  {
+   "en": 46.07,
+   "f": "p/pop_up_sfx",
+   "vol": 0.35,
+   "ancla": "inicio"
+  }
+ ],
+ "sfx_gain": 1.7,
+ "voz_fx": [
+  {
+   "t0": 38.1,
+   "t1": 38.78,
+   "fx": "eco"
+  }
+ ],
+ "enfasis": [
+  {
+   "t0": 35.2,
+   "t1": 35.8,
+   "modo": "in",
+   "escala": 0.07
+  },
+  {
+   "t0": 38.65,
+   "t1": 39.25,
+   "modo": "in",
+   "escala": 0.07
+  }
+ ],
+ "sfx_zoom": true
+}

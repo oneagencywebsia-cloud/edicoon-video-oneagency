@@ -63,8 +63,8 @@ export const Notas: React.FC<P<'notas'>> = ({e, f0, dur}) => {
         const p = spring({frame: frame - s, fps, config: {damping: 13, stiffness: 150}});
         if (frame < s) return null;
         return (
-          <div key={i} style={{position: 'absolute', left: 40 + (i % 2) * 34, top: 175 + i * 132, width: 500, height: 112, opacity: fuera, transform: `translateX(${(1 - p) * -560}px) rotate(${rot[i % 4] * p}deg)`, background: 'linear-gradient(180deg,#FFFBEA,#F7EFD0)', borderRadius: 10, boxShadow: '0 22px 50px rgba(0,0,0,0.38), 0 2px 0 rgba(0,0,0,0.08)', display: 'flex', alignItems: 'center', paddingLeft: 40, borderLeft: `14px solid ${i % 2 ? C.acento2 : C.acento}`}}>
-            <span style={{fontFamily: FUENTE, fontWeight: 800, fontSize: 46, color: '#17172b', letterSpacing: -0.5}}>{it.texto}</span>
+          <div key={i} style={{position: 'absolute', left: 24 + (i % 2) * 22, top: 185 + i * 122, width: 330, height: 100, opacity: fuera, transform: `translateX(${(1 - p) * -560}px) rotate(${rot[i % 4] * p}deg)`, background: 'linear-gradient(180deg,#FFFBEA,#F7EFD0)', borderRadius: 10, boxShadow: '0 22px 50px rgba(0,0,0,0.38), 0 2px 0 rgba(0,0,0,0.08)', display: 'flex', alignItems: 'center', paddingLeft: 26, borderLeft: `12px solid ${i % 2 ? C.acento2 : C.acento}`}}>
+            <span style={{fontFamily: FUENTE, fontWeight: 800, fontSize: 33, color: '#17172b', letterSpacing: -0.5, lineHeight: 1.05}}>{it.texto}</span>
           </div>
         );
       })}

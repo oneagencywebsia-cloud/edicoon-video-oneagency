@@ -1,0 +1,37 @@
+[
+ {
+  "isla": 4,
+  "t0": 34.85,
+  "t1": 35.12,
+  "texto": "¡Gracias!",
+  "motivo": "toma repetida (vuelve a decirlo en la isla 5)"
+ },
+ {
+  "isla": 5,
+  "t0": 41.63,
+  "t1": 42.1,
+  "texto": "¡Gracias!",
+  "motivo": "toma repetida (vuelve a decirlo en la isla 6)"
+ },
+ {
+  "isla": 6,
+  "t0": 50.28,
+  "t1": 50.59,
+  "texto": "¡Gracias!",
+  "motivo": "toma repetida (vuelve a decirlo en la isla 7)"
+ },
+ {
+  "isla": 7,
+  "t0": 55.38,
+  "t1": 56.09,
+  "texto": "Gracias.",
+  "motivo": "toma repetida (vuelve a decirlo en la isla 11)"
+ },
+ {
+  "isla": 11,
+  "t0": 67.38,
+  "t1": 67.64,
+  "texto": "Gracias.",
+  "motivo": "confianza baja (0.29)"
+ }
+]

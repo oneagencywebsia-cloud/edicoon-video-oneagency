@@ -201,13 +201,13 @@ export const Comentario: React.FC<P<'comentario'>> = ({e, f0, dur}) => {
   const pop = spring({frame: frame - env - 6, fps, config: {damping: 9, stiffness: 220}});
   const cursor = !enviado && frame % 20 < 12;
   return (
-    <div style={{position: 'absolute', left: 80, top: 150, width: 920, opacity: a, transform: `translateY(${(1 - entra(frame, 0, 14)) * -60}px)`}}>
+    <div style={{position: 'absolute', left: e.compacto ? 24 : 80, top: e.compacto ? 185 : 150, width: e.compacto ? 540 : 920, opacity: a, transform: `translateY(${(1 - entra(frame, 0, 14)) * -60}px)`}}>
       <div style={{display: 'flex', alignItems: 'center', gap: 20, padding: '14px 26px', borderRadius: 44, ...cristal}}>
         <div style={{width: 70, height: 70, borderRadius: '50%', background: `linear-gradient(135deg,${C.acento},${C.acento2})`, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: FUENTE, fontWeight: 800, fontSize: 34, color: '#fff', flexShrink: 0}}>Tú</div>
         <div style={{flex: 1, minHeight: 70, display: 'flex', alignItems: 'center'}}>
           {!enviado && n === 0 && <span style={{fontFamily: FUENTE, fontWeight: 600, fontSize: 38, color: 'rgba(255,255,255,0.45)'}}>Añade un comentario…{cursor ? '|' : ''}</span>}
           {(enviado || n > 0) && (
-            <span style={{fontFamily: FUENTE, fontWeight: 800, fontSize: 58, color: C.texto, textShadow: sombraTexto}}>
+            <span style={{fontFamily: FUENTE, fontWeight: 800, fontSize: e.compacto ? 46 : 58, color: C.texto, textShadow: sombraTexto}}>
               {e.palabra.slice(0, enviado ? e.palabra.length : n)}
               {cursor && n > 0 ? <span style={{color: C.acento}}>|</span> : null}
             </span>
@@ -224,6 +224,43 @@ export const Comentario: React.FC<P<'comentario'>> = ({e, f0, dur}) => {
         )}
       </div>
       <div style={{fontFamily: FUENTE, fontWeight: 700, fontSize: 26, color: 'rgba(255,255,255,0.85)', marginTop: 8, marginLeft: 108, opacity: enviado ? 1 : 0, textShadow: sombraTexto}}>ahora · 1 me gusta</div>
+    </div>
+  );
+};
+
+/* ───────── Lista lateral (columna a un lado de la cabeza) ───────── */
+const ICO: Record<string, React.ReactNode> = {
+  rayo: <path d="M13 2L4 14h6l-1 8 9-12h-6z" />,
+  check: <path d="M5 12.5l4.5 4.5L19 7" fill="none" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" />,
+  enviar: <path d="M3 11.5L21 3l-6.5 18-3.2-7.3z" />,
+  chispa: <path d="M12 2l2.2 6.3L20 10l-5.8 1.7L12 18l-2.2-6.3L4 10l5.8-1.7zM19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9z" />,
+};
+export const Lista: React.FC<P<'lista'>> = ({e, f0, dur}) => {
+  const frame = useCurrentFrame();
+  const at = useAt(f0);
+  const a = vis(frame, 0, dur, 10, 8);
+  const izq = e.lado === 'izq';
+  const col = e.acento === 'naranja' ? C.acento2 : C.acento;
+  const x = izq ? 30 : 718;
+  const dir = izq ? -1 : 1;
+  return (
+    <div style={{position: 'absolute', inset: 0, opacity: a}}>
+      <div style={{position: 'absolute', left: x, top: 150, display: 'inline-flex', alignItems: 'center', gap: 10, padding: '6px 22px', borderRadius: 34, ...cristal, transform: `translateX(${(1 - entra(frame, 0, 12)) * dir * 140}px)`}}>
+        <div style={{width: 14, height: 14, borderRadius: 7, background: col, boxShadow: `0 0 14px ${col}`}} />
+        <span style={{fontFamily: FUENTE, fontWeight: 800, fontSize: 27, color: C.texto, letterSpacing: 3}}>{e.titulo}</span>
+      </div>
+      {e.items.map((it, i) => {
+        const f = frame - at(it.t);
+        const p = entra(f, 0, 14);
+        return (
+          <div key={i} style={{position: 'absolute', left: x, top: 230 + i * 142, width: 330, minHeight: 112, boxSizing: 'border-box', padding: '16px 20px', borderRadius: 30, ...cristal, opacity: p, transform: `translateX(${(1 - p) * dir * 170}px)`, display: 'flex', alignItems: 'center', gap: 16}}>
+            <div style={{width: 54, height: 54, borderRadius: 16, background: col, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, boxShadow: `0 8px 26px ${col}88`, transform: `scale(${0.7 + 0.3 * Math.min(1, p * 1.4)})`}}>
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" stroke="#fff">{ICO[it.icono ?? 'check']}</svg>
+            </div>
+            <div style={{fontFamily: FUENTE, fontWeight: 800, fontSize: 37, color: C.texto, lineHeight: 1.05, textShadow: sombraTexto}}>{it.texto}</div>
+          </div>
+        );
+      })}
     </div>
   );
 };

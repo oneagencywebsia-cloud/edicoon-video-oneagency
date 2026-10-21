@@ -17,8 +17,9 @@ export type Escena =
   | (Base & {tipo: 'periodico'; cabecera: string; titular: string[]; resaltar: string; resaltarT: number})
   | (Base & {tipo: 'broll'; src: string; desde: number; etiqueta?: string; yc?: number; reloj?: {desde: string; hasta: string}})
   | (Base & {tipo: 'cta'; boton: string; clicT: number})
+  | (Base & {tipo: 'lista'; titulo: string; lado: 'izq' | 'der'; acento?: 'azul' | 'naranja'; items: {texto: string; t: number; icono?: 'rayo' | 'check' | 'enviar' | 'chispa'}[]})
   | (Base & {tipo: 'agenda'; titulo: string; items: {hora: string; texto: string; t: number}[]})
-  | (Base & {tipo: 'comentario'; palabra: string; escribeT: number; enviaT: number});
+  | (Base & {tipo: 'comentario'; compacto?: boolean; palabra: string; escribeT: number; enviaT: number});
 
 export type Edicion = {
   id: string;

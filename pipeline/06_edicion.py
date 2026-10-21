@@ -138,7 +138,7 @@ maxpaso = float(np.abs(np.diff(zoom_curva)).max())
 print(f"curva de zoom: {len(zoom_curva)} valores, paso máx. entre fotogramas {maxpaso:.4f} en t={int(np.abs(np.diff(zoom_curva)).argmax())/fps:.2f}s (suave si < 0,02), rango {zoom_curva.min():.3f}-{zoom_curva.max():.3f}")
 
 # 3c) ventanas donde hay que recortar a la persona: TODAS las escenas que no son pantalla completa van detrás de ella
-FRENTE = {"broll", "cta", "sello"}
+FRENTE = {"broll", "cta"}
 paso = int(G.get("matte_paso", 2))
 vent = sorted([max(0.0, e["t0"] - 0.05), e["t1"] + 0.05] for e in G["escenas"] if e["tipo"] not in FRENTE)
 fus = []

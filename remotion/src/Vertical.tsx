@@ -3,7 +3,7 @@ import './fuentes';
 import type {Edicion, Escena} from './types';
 import {Subs} from './Subs';
 import {Broll, Copiar, Cta, LowerThird, Notas, Periodico, Reloj} from './escenas';
-import {Agenda, Comentario, Donut, Movil, Noche, Sectores, Sello} from './escenas2';
+import {Agenda, Comentario, Donut, Lista, Movil, Noche, Sectores, Sello} from './escenas2';
 import {Linea} from './presets';
 import {C, clamp, entra, out5, sale} from './util';
 
@@ -102,7 +102,7 @@ export const Vertical: React.FC<{ed: Edicion}> = ({ed}) => {
   const fr = (t: number) => Math.round(t * fps);
   const claves = ed.escenas.filter((e): e is ClaveE => e.tipo === 'clave');
   // TODO lo que no es pantalla completa va DETRÁS de la persona (Ángel, 2026-10-14: nada tapa la cara)
-  const FRENTE = new Set(['broll', 'cta', 'sello']);
+  const FRENTE = new Set(['broll', 'cta']);
   const detrasEsc = ed.escenas.filter((e) => !FRENTE.has(e.tipo));
   const detrasActiva = detrasEsc.some((e) => frame >= fr(e.t0) && frame <= fr(e.t1));
   const paso = ed.mattePaso ?? 1;
@@ -122,6 +122,7 @@ export const Vertical: React.FC<{ed: Edicion}> = ({ed}) => {
     if (e.tipo === 'donut') return <Donut e={e} {...comun} />;
     if (e.tipo === 'sello') return <Sello e={e} {...comun} />;
     if (e.tipo === 'agenda') return <Agenda e={e} {...comun} />;
+    if (e.tipo === 'lista') return <Lista e={e} {...comun} />;
     if (e.tipo === 'comentario') return <Comentario e={e} {...comun} />;
     if (e.tipo === 'clave') return <Clave e={e} dur={dur} />;
     return null;
