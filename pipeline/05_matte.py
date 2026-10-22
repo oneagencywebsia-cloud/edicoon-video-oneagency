@@ -49,6 +49,8 @@ def main() -> None:
             for f in range(f0, f1 + 1):
                 if f % a.paso or (f // a.paso) % n != k:
                     continue
+                if os.path.exists(os.path.join(a.salida, f"m_{f}.png")):  # ya hecho (reanudable)
+                    continue
                 p = os.path.join(td, f"f_{f:05d}.png")
                 if not os.path.exists(p):
                     continue

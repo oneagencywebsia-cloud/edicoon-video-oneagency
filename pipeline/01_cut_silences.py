@@ -210,6 +210,24 @@ def main() -> None:
         else:
             seg_f.append([s0, s1])
 
+    # 3a) sin fogonazos: un tramo de < 0,30 s (una palabra suelta entre pausas) se alarga con aire de sus propios huecos hasta 0,30 s
+    #     (si se tocan con el vecino se unen); así no hay destellos de 5-10 fotogramas de otra pose entre dos cortes
+    MINIMO = 0.30
+    for k in range(len(seg_f)):
+        s0, s1 = seg_f[k]
+        if s1 - s0 < MINIMO:
+            pad = (MINIMO - (s1 - s0)) / 2
+            lim0 = seg_f[k - 1][1] if k else 0.0
+            lim1 = seg_f[k + 1][0] if k + 1 < len(seg_f) else s1 + pad
+            seg_f[k] = [max(f(s0 - pad), (lim0 + s0) / 2 if k else 0.0), min(f(s1 + pad), (s1 + lim1) / 2)]
+    fusion = []
+    for s0, s1 in seg_f:
+        if fusion and s0 <= fusion[-1][1] + 1e-6:
+            fusion[-1][1] = max(fusion[-1][1], s1)
+        else:
+            fusion.append([s0, s1])
+    seg_f = fusion
+
     # 3b) VERIFICACIÓN: transcribe el corte (solo audio) y recorta voz de más (tomas que Whisper no vio la primera vez)
     if not a.sin_verificar:
         seg_f = verificar(a.bruto, seg_f, W, fps)

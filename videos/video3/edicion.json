@@ -8,38 +8,38 @@
   ],
   [
    3.25,
-   8.0
+   8.1
   ],
   [
-   10.35,
-   13.8
+   10.45,
+   14.0
   ],
   [
-   15.2,
-   16.45
+   15.417,
+   16.667
   ],
   [
-   16.7,
-   23.45
+   16.917,
+   23.7
   ],
   [
-   23.85,
-   28.0
+   24.1,
+   28.25
   ],
   [
-   29.45,
-   30.75
+   29.7,
+   31.0
   ],
   [
-   34.35,
-   35.2
+   34.642,
+   35.492
   ],
   [
-   40.0,
-   41.3
+   40.292,
+   41.592
   ],
   [
-   44.5,
+   44.95,
    47.1
   ]
  ],
@@ -201,7 +201,7 @@
   },
   {
    "t0": 5.06,
-   "t1": 5.76,
+   "t1": 5.8,
    "palabras": [
     {
      "w": "un",
@@ -211,954 +211,959 @@
     {
      "w": "electricista",
      "t0": 5.18,
-     "t1": 5.76
+     "t1": 5.8
     }
    ]
   },
   {
-   "t0": 5.76,
-   "t1": 6.8,
+   "t0": 5.8,
+   "t1": 6.88,
    "palabras": [
     {
      "w": "para",
-     "t0": 5.76,
-     "t1": 6.0
+     "t0": 5.8,
+     "t1": 6.1
     },
     {
      "w": "organizar",
-     "t0": 6.0,
-     "t1": 6.52
+     "t0": 6.1,
+     "t1": 6.62
     },
     {
      "w": "todo",
-     "t0": 6.52,
-     "t1": 6.8
+     "t0": 6.62,
+     "t1": 6.88
     }
    ]
   },
   {
-   "t0": 6.8,
-   "t1": 8.02,
+   "t0": 6.88,
+   "t1": 8.12,
    "palabras": [
     {
      "w": "su",
-     "t0": 6.8,
-     "t1": 6.94
+     "t0": 6.88,
+     "t1": 7.04
     },
     {
      "w": "trabajo",
-     "t0": 6.94,
-     "t1": 7.3
+     "t0": 7.04,
+     "t1": 7.4
     },
     {
      "w": "sin",
-     "t0": 7.3,
-     "t1": 7.66
+     "t0": 7.4,
+     "t1": 7.76
     },
     {
      "w": "papeles.",
-     "t0": 7.66,
-     "t1": 8.02
+     "t0": 7.76,
+     "t1": 8.12
     }
    ]
   },
   {
-   "t0": 8.12,
-   "t1": 9.06,
+   "t0": 8.22,
+   "t1": 9.14,
    "palabras": [
     {
      "w": "En",
-     "t0": 8.12,
-     "t1": 8.24
-    },
-    {
-     "w": "el",
-     "t0": 8.24,
+     "t0": 8.22,
      "t1": 8.34
     },
     {
-     "w": "negocio",
+     "w": "el",
      "t0": 8.34,
-     "t1": 8.64
+     "t1": 8.44
+    },
+    {
+     "w": "negocio",
+     "t0": 8.44,
+     "t1": 8.74
     },
     {
      "w": "familiar",
-     "t0": 8.64,
-     "t1": 9.06
+     "t0": 8.74,
+     "t1": 9.14
     }
    ]
   },
   {
-   "t0": 9.06,
-   "t1": 9.72,
+   "t0": 9.14,
+   "t1": 9.82,
    "palabras": [
     {
      "w": "de",
-     "t0": 9.06,
-     "t1": 9.3
+     "t0": 9.14,
+     "t1": 9.4
     },
     {
      "w": "una",
-     "t0": 9.3,
-     "t1": 9.42
+     "t0": 9.4,
+     "t1": 9.52
     },
     {
      "w": "empresa",
-     "t0": 9.42,
-     "t1": 9.72
+     "t0": 9.52,
+     "t1": 9.82
     }
    ]
   },
   {
-   "t0": 9.72,
-   "t1": 10.56,
+   "t0": 9.82,
+   "t1": 10.66,
    "palabras": [
     {
      "w": "de",
-     "t0": 9.72,
-     "t1": 9.86
+     "t0": 9.82,
+     "t1": 9.94
     },
     {
      "w": "electricidad",
-     "t0": 9.86,
-     "t1": 10.18
+     "t0": 9.94,
+     "t1": 10.28
     },
     {
      "w": "había",
-     "t0": 10.18,
-     "t1": 10.56
+     "t0": 10.28,
+     "t1": 10.66
     }
    ]
   },
   {
-   "t0": 10.56,
-   "t1": 11.6,
+   "t0": 10.66,
+   "t1": 11.72,
    "palabras": [
     {
      "w": "documentos",
-     "t0": 10.56,
-     "t1": 11.22
+     "t0": 10.66,
+     "t1": 11.32
     },
     {
      "w": "físicos,",
-     "t0": 11.22,
-     "t1": 11.6
+     "t0": 11.32,
+     "t1": 11.72
     }
    ]
   },
   {
-   "t0": 11.82,
-   "t1": 13.12,
+   "t0": 11.94,
+   "t1": 13.2,
    "palabras": [
     {
      "w": "papeleo",
-     "t0": 11.82,
-     "t1": 12.2
+     "t0": 11.94,
+     "t1": 12.32
     },
     {
      "w": "y",
-     "t0": 12.2,
-     "t1": 12.44
+     "t0": 12.32,
+     "t1": 12.54
     },
     {
      "w": "todo",
-     "t0": 12.44,
-     "t1": 12.7
+     "t0": 12.54,
+     "t1": 12.8
     },
     {
      "w": "muy",
-     "t0": 12.7,
-     "t1": 13.12
+     "t0": 12.8,
+     "t1": 13.2
     }
    ]
   },
   {
-   "t0": 13.12,
-   "t1": 13.72,
+   "t0": 13.2,
+   "t1": 13.92,
    "palabras": [
     {
-     "w": "estructurado.",
-     "t0": 13.12,
-     "t1": 13.72
+     "w": "desestructurado.",
+     "t0": 13.2,
+     "t1": 13.92
     }
    ]
   },
   {
-   "t0": 13.82,
-   "t1": 14.28,
+   "t0": 14.04,
+   "t1": 14.5,
    "palabras": [
     {
      "w": "Y",
-     "t0": 13.82,
-     "t1": 13.88
+     "t0": 14.04,
+     "t1": 14.1
     },
     {
      "w": "como",
-     "t0": 13.88,
-     "t1": 14.08
+     "t0": 14.1,
+     "t1": 14.3
     },
     {
      "w": "no,",
-     "t0": 14.08,
-     "t1": 14.28
+     "t0": 14.3,
+     "t1": 14.5
     }
    ]
   },
   {
-   "t0": 14.56,
-   "t1": 15.22,
+   "t0": 14.76,
+   "t1": 15.44,
    "palabras": [
     {
      "w": "tuve",
-     "t0": 14.56,
-     "t1": 14.72
+     "t0": 14.76,
+     "t1": 14.94
     },
     {
      "w": "que",
-     "t0": 14.72,
-     "t1": 14.82
+     "t0": 14.94,
+     "t1": 15.02
     },
     {
      "w": "desarrollar",
-     "t0": 14.82,
-     "t1": 15.22
+     "t0": 15.02,
+     "t1": 15.44
     }
    ]
   },
   {
-   "t0": 15.22,
-   "t1": 15.92,
+   "t0": 15.44,
+   "t1": 16.14,
    "palabras": [
     {
      "w": "una",
-     "t0": 15.22,
-     "t1": 15.3
+     "t0": 15.44,
+     "t1": 15.52
     },
     {
      "w": "aplicación",
-     "t0": 15.3,
-     "t1": 15.74
+     "t0": 15.52,
+     "t1": 15.96
     },
     {
      "w": "adaptada",
-     "t0": 15.74,
-     "t1": 15.92
+     "t0": 15.96,
+     "t1": 16.14
     }
    ]
   },
   {
-   "t0": 15.92,
-   "t1": 16.62,
+   "t0": 16.14,
+   "t1": 16.84,
    "palabras": [
     {
      "w": "a",
-     "t0": 15.92,
-     "t1": 16.1
+     "t0": 16.14,
+     "t1": 16.32
     },
     {
      "w": "la",
-     "t0": 16.1,
-     "t1": 16.28
+     "t0": 16.32,
+     "t1": 16.5
     },
     {
      "w": "empresa.",
-     "t0": 16.28,
-     "t1": 16.62
+     "t0": 16.5,
+     "t1": 16.84
     }
    ]
   },
   {
-   "t0": 16.72,
-   "t1": 17.9,
+   "t0": 16.94,
+   "t1": 18.12,
    "palabras": [
     {
      "w": "Hoy",
-     "t0": 16.72,
-     "t1": 16.84
+     "t0": 16.94,
+     "t1": 17.06
     },
     {
      "w": "permite",
-     "t0": 16.84,
-     "t1": 17.26
+     "t0": 17.06,
+     "t1": 17.48
     },
     {
      "w": "agendar",
-     "t0": 17.26,
-     "t1": 17.9
+     "t0": 17.48,
+     "t1": 18.12
     }
    ]
   },
   {
-   "t0": 17.9,
-   "t1": 18.88,
+   "t0": 18.12,
+   "t1": 19.1,
    "palabras": [
     {
      "w": "partes",
-     "t0": 17.9,
-     "t1": 18.32
+     "t0": 18.12,
+     "t1": 18.54
     },
     {
      "w": "de",
-     "t0": 18.32,
-     "t1": 18.44
+     "t0": 18.54,
+     "t1": 18.66
     },
     {
      "w": "trabajo,",
-     "t0": 18.44,
-     "t1": 18.88
+     "t0": 18.66,
+     "t1": 19.1
     }
    ]
   },
   {
-   "t0": 19.6,
-   "t1": 20.76,
+   "t0": 19.82,
+   "t1": 20.98,
    "palabras": [
     {
      "w": "consultar",
-     "t0": 19.6,
-     "t1": 20.06
+     "t0": 19.82,
+     "t1": 20.28
     },
     {
      "w": "materiales",
-     "t0": 20.06,
-     "t1": 20.76
+     "t0": 20.28,
+     "t1": 20.98
     }
    ]
   },
   {
-   "t0": 20.76,
-   "t1": 21.98,
+   "t0": 20.98,
+   "t1": 22.22,
    "palabras": [
     {
      "w": "y",
-     "t0": 20.76,
-     "t1": 20.96
+     "t0": 20.98,
+     "t1": 21.18
     },
     {
      "w": "atender",
-     "t0": 20.96,
-     "t1": 21.34
+     "t0": 21.18,
+     "t1": 21.56
     },
     {
      "w": "clientes",
-     "t0": 21.34,
-     "t1": 21.98
+     "t0": 21.56,
+     "t1": 22.22
     }
    ]
   },
   {
-   "t0": 21.98,
-   "t1": 22.68,
+   "t0": 22.22,
+   "t1": 22.92,
    "palabras": [
     {
      "w": "literalmente",
-     "t0": 21.98,
-     "t1": 22.68
+     "t0": 22.22,
+     "t1": 22.92
     }
    ]
   },
   {
-   "t0": 22.68,
-   "t1": 23.38,
+   "t0": 22.92,
+   "t1": 23.64,
    "palabras": [
     {
      "w": "de",
-     "t0": 22.68,
-     "t1": 22.8
+     "t0": 22.92,
+     "t1": 23.06
     },
     {
      "w": "una",
-     "t0": 22.8,
-     "t1": 22.9
+     "t0": 23.06,
+     "t1": 23.14
     },
     {
      "w": "aplicación.",
-     "t0": 22.9,
-     "t1": 23.38
+     "t0": 23.14,
+     "t1": 23.64
     }
    ]
   },
   {
-   "t0": 23.52,
-   "t1": 24.46,
+   "t0": 23.76,
+   "t1": 24.7,
    "palabras": [
     {
      "w": "Y",
-     "t0": 23.52,
-     "t1": 23.64
+     "t0": 23.76,
+     "t1": 23.9
     },
     {
      "w": "encima",
-     "t0": 23.64,
-     "t1": 23.88
+     "t0": 23.9,
+     "t1": 24.14
     },
     {
      "w": "conectado",
-     "t0": 23.88,
-     "t1": 24.46
+     "t0": 24.14,
+     "t1": 24.7
     }
    ]
   },
   {
-   "t0": 24.46,
-   "t1": 25.2,
+   "t0": 24.7,
+   "t1": 25.44,
    "palabras": [
     {
      "w": "a",
-     "t0": 24.46,
-     "t1": 24.74
+     "t0": 24.7,
+     "t1": 24.96
     },
     {
      "w": "Telegram",
-     "t0": 24.74,
-     "t1": 25.2
+     "t0": 24.96,
+     "t1": 25.44
     }
    ]
   },
   {
-   "t0": 25.2,
-   "t1": 26.58,
+   "t0": 25.44,
+   "t1": 26.82,
    "palabras": [
     {
      "w": "con",
-     "t0": 25.2,
-     "t1": 25.44
+     "t0": 25.44,
+     "t1": 25.68
     },
     {
      "w": "automatizaciones",
-     "t0": 25.44,
-     "t1": 26.2
+     "t0": 25.68,
+     "t1": 26.46
     },
     {
      "w": "IA",
-     "t0": 26.2,
-     "t1": 26.58
+     "t0": 26.46,
+     "t1": 26.82
     }
    ]
   },
   {
-   "t0": 26.58,
-   "t1": 27.48,
+   "t0": 26.82,
+   "t1": 27.74,
    "palabras": [
     {
      "w": "y",
-     "t0": 26.58,
-     "t1": 26.9
+     "t0": 26.82,
+     "t1": 27.16
     },
     {
      "w": "un",
-     "t0": 26.9,
-     "t1": 27.1
+     "t0": 27.16,
+     "t1": 27.34
     },
     {
      "w": "desarrollo",
-     "t0": 27.1,
-     "t1": 27.48
+     "t0": 27.34,
+     "t1": 27.74
     }
    ]
   },
   {
-   "t0": 27.48,
-   "t1": 28.08,
+   "t0": 27.74,
+   "t1": 28.32,
    "palabras": [
     {
      "w": "increíble.",
-     "t0": 27.48,
-     "t1": 28.08
+     "t0": 27.74,
+     "t1": 28.32
     }
    ]
   },
   {
-   "t0": 28.08,
-   "t1": 28.42,
+   "t0": 28.32,
+   "t1": 28.68,
    "palabras": [
     {
      "w": "Y",
-     "t0": 28.08,
-     "t1": 28.28
+     "t0": 28.32,
+     "t1": 28.52
     },
     {
      "w": "sí,",
-     "t0": 28.28,
-     "t1": 28.42
+     "t0": 28.52,
+     "t1": 28.68
     }
    ]
   },
   {
-   "t0": 28.58,
-   "t1": 29.37,
+   "t0": 28.82,
+   "t1": 29.64,
    "palabras": [
     {
      "w": "también",
-     "t0": 28.58,
-     "t1": 28.82
-    },
-    {
-     "w": "tiene",
      "t0": 28.82,
      "t1": 29.06
     },
     {
-     "w": "función",
+     "w": "tiene",
      "t0": 29.06,
-     "t1": 29.37
-    }
-   ]
-  },
-  {
-   "t0": 29.37,
-   "t1": 29.99,
-   "palabras": [
-    {
-     "w": "de",
-     "t0": 29.37,
-     "t1": 29.68
-    },
-    {
-     "w": "inteligencia",
-     "t0": 29.68,
-     "t1": 29.99
-    }
-   ]
-  },
-  {
-   "t0": 29.99,
-   "t1": 30.3,
-   "palabras": [
-    {
-     "w": "artificial.",
-     "t0": 29.99,
-     "t1": 30.3
-    }
-   ]
-  },
-  {
-   "t0": 30.36,
-   "t1": 31.24,
-   "palabras": [
-    {
-     "w": "No",
-     "t0": 30.36,
-     "t1": 30.48
-    },
-    {
-     "w": "es",
-     "t0": 30.48,
-     "t1": 30.58
-    },
-    {
-     "w": "un",
-     "t0": 30.58,
-     "t1": 30.7
-    },
-    {
-     "w": "concepto,",
-     "t0": 30.7,
-     "t1": 31.24
-    }
-   ]
-  },
-  {
-   "t0": 31.3,
-   "t1": 32.38,
-   "palabras": [
-    {
-     "w": "es",
-     "t0": 31.3,
-     "t1": 31.44
-    },
-    {
-     "w": "una",
-     "t0": 31.44,
-     "t1": 31.62
-    },
-    {
-     "w": "presentación.",
-     "t0": 31.62,
-     "t1": 32.38
-    }
-   ]
-  },
-  {
-   "t0": 32.56,
-   "t1": 33.38,
-   "palabras": [
-    {
-     "w": "y",
-     "t0": 32.56,
-     "t1": 32.833
-    },
-    {
-     "w": "alguna",
-     "t0": 32.833,
-     "t1": 33.107
-    },
-    {
-     "w": "herramienta",
-     "t0": 33.107,
-     "t1": 33.38
-    }
-   ]
-  },
-  {
-   "t0": 33.38,
-   "t1": 34.48,
-   "palabras": [
-    {
-     "w": "que",
-     "t0": 33.38,
-     "t1": 33.52
-    },
-    {
-     "w": "obviamente",
-     "t0": 33.52,
-     "t1": 33.8
-    },
-    {
-     "w": "utilizan",
-     "t0": 33.8,
-     "t1": 34.48
-    }
-   ]
-  },
-  {
-   "t0": 34.48,
-   "t1": 34.92,
-   "palabras": [
-    {
-     "w": "diariamente.",
-     "t0": 34.48,
-     "t1": 34.92
-    }
-   ]
-  },
-  {
-   "t0": 35.16,
-   "t1": 36.28,
-   "palabras": [
-    {
-     "w": "Lo",
-     "t0": 35.16,
-     "t1": 35.52
-    },
-    {
-     "w": "importante",
-     "t0": 35.52,
-     "t1": 35.96
-    },
-    {
-     "w": "no",
-     "t0": 35.96,
-     "t1": 36.18
-    },
-    {
-     "w": "es",
-     "t0": 36.18,
-     "t1": 36.28
-    }
-   ]
-  },
-  {
-   "t0": 36.28,
-   "t1": 37.12,
-   "palabras": [
-    {
-     "w": "el",
-     "t0": 36.28,
-     "t1": 36.42
-    },
-    {
-     "w": "código",
-     "t0": 36.42,
-     "t1": 36.82
-    },
-    {
-     "w": "ni",
-     "t0": 36.82,
-     "t1": 37.12
-    }
-   ]
-  },
-  {
-   "t0": 37.12,
-   "t1": 38.04,
-   "palabras": [
-    {
-     "w": "las",
-     "t0": 37.12,
-     "t1": 37.28
+     "t1": 29.3
     },
     {
      "w": "funciones",
-     "t0": 37.28,
-     "t1": 37.66
-    },
+     "t0": 29.3,
+     "t1": 29.64
+    }
+   ]
+  },
+  {
+   "t0": 29.64,
+   "t1": 30.14,
+   "palabras": [
     {
      "w": "de",
-     "t0": 37.66,
-     "t1": 37.84
+     "t0": 29.64,
+     "t1": 29.8
     },
     {
-     "w": "IA,",
-     "t0": 37.84,
-     "t1": 38.04
+     "w": "Inteligencia",
+     "t0": 29.8,
+     "t1": 30.14
     }
    ]
   },
   {
-   "t0": 38.12,
-   "t1": 38.42,
+   "t0": 30.14,
+   "t1": 30.56,
    "palabras": [
     {
-     "w": "que",
-     "t0": 38.12,
-     "t1": 38.2
+     "w": "y",
+     "t0": 30.14,
+     "t1": 30.18
     },
     {
-     "w": "también.",
-     "t0": 38.2,
-     "t1": 38.42
+     "w": "Certificate.",
+     "t0": 30.18,
+     "t1": 30.56
     }
    ]
   },
   {
-   "t0": 38.6,
-   "t1": 39.56,
+   "t0": 30.6,
+   "t1": 31.52,
    "palabras": [
     {
-     "w": "Pero",
-     "t0": 38.6,
-     "t1": 38.72
-    },
-    {
-     "w": "lo",
-     "t0": 38.72,
-     "t1": 38.86
-    },
-    {
-     "w": "importante",
-     "t0": 38.86,
-     "t1": 39.34
+     "w": "No",
+     "t0": 30.6,
+     "t1": 30.72
     },
     {
      "w": "es",
-     "t0": 39.34,
-     "t1": 39.56
+     "t0": 30.72,
+     "t1": 30.82
+    },
+    {
+     "w": "un",
+     "t0": 30.82,
+     "t1": 30.94
+    },
+    {
+     "w": "concepto,",
+     "t0": 30.94,
+     "t1": 31.52
     }
    ]
   },
   {
-   "t0": 39.56,
-   "t1": 40.38,
+   "t0": 31.6,
+   "t1": 32.68,
    "palabras": [
     {
-     "w": "lo",
-     "t0": 39.56,
-     "t1": 39.84
+     "w": "es",
+     "t0": 31.6,
+     "t1": 31.74
     },
     {
-     "w": "que",
-     "t0": 39.84,
-     "t1": 40.0
+     "w": "una",
+     "t0": 31.74,
+     "t1": 31.92
     },
     {
-     "w": "le",
-     "t0": 40.0,
-     "t1": 40.12
-    },
-    {
-     "w": "ahorra",
-     "t0": 40.12,
-     "t1": 40.38
+     "w": "presentación.",
+     "t0": 31.92,
+     "t1": 32.68
     }
    ]
   },
   {
-   "t0": 40.38,
+   "t0": 32.86,
+   "t1": 33.68,
+   "palabras": [
+    {
+     "w": "y",
+     "t0": 32.86,
+     "t1": 33.133
+    },
+    {
+     "w": "alguna",
+     "t0": 33.133,
+     "t1": 33.407
+    },
+    {
+     "w": "herramienta",
+     "t0": 33.407,
+     "t1": 33.68
+    }
+   ]
+  },
+  {
+   "t0": 33.68,
+   "t1": 34.78,
+   "palabras": [
+    {
+     "w": "que",
+     "t0": 33.68,
+     "t1": 33.82
+    },
+    {
+     "w": "obviamente",
+     "t0": 33.82,
+     "t1": 34.1
+    },
+    {
+     "w": "utilizan",
+     "t0": 34.1,
+     "t1": 34.78
+    }
+   ]
+  },
+  {
+   "t0": 34.78,
+   "t1": 35.2,
+   "palabras": [
+    {
+     "w": "diariamente.",
+     "t0": 34.78,
+     "t1": 35.2
+    }
+   ]
+  },
+  {
+   "t0": 35.46,
+   "t1": 36.58,
+   "palabras": [
+    {
+     "w": "Lo",
+     "t0": 35.46,
+     "t1": 35.82
+    },
+    {
+     "w": "importante",
+     "t0": 35.82,
+     "t1": 36.26
+    },
+    {
+     "w": "no",
+     "t0": 36.26,
+     "t1": 36.48
+    },
+    {
+     "w": "es",
+     "t0": 36.48,
+     "t1": 36.58
+    }
+   ]
+  },
+  {
+   "t0": 36.58,
+   "t1": 37.42,
+   "palabras": [
+    {
+     "w": "el",
+     "t0": 36.58,
+     "t1": 36.72
+    },
+    {
+     "w": "código",
+     "t0": 36.72,
+     "t1": 37.12
+    },
+    {
+     "w": "ni",
+     "t0": 37.12,
+     "t1": 37.42
+    }
+   ]
+  },
+  {
+   "t0": 37.42,
+   "t1": 38.34,
+   "palabras": [
+    {
+     "w": "las",
+     "t0": 37.42,
+     "t1": 37.58
+    },
+    {
+     "w": "funciones",
+     "t0": 37.58,
+     "t1": 37.94
+    },
+    {
+     "w": "de",
+     "t0": 37.94,
+     "t1": 38.14
+    },
+    {
+     "w": "IA,",
+     "t0": 38.14,
+     "t1": 38.34
+    }
+   ]
+  },
+  {
+   "t0": 38.42,
+   "t1": 38.72,
+   "palabras": [
+    {
+     "w": "que",
+     "t0": 38.42,
+     "t1": 38.5
+    },
+    {
+     "w": "también.",
+     "t0": 38.5,
+     "t1": 38.72
+    }
+   ]
+  },
+  {
+   "t0": 38.9,
+   "t1": 39.88,
+   "palabras": [
+    {
+     "w": "Pero",
+     "t0": 38.9,
+     "t1": 39.02
+    },
+    {
+     "w": "lo",
+     "t0": 39.02,
+     "t1": 39.16
+    },
+    {
+     "w": "importante",
+     "t0": 39.16,
+     "t1": 39.64
+    },
+    {
+     "w": "es",
+     "t0": 39.64,
+     "t1": 39.88
+    }
+   ]
+  },
+  {
+   "t0": 39.88,
    "t1": 40.68,
    "palabras": [
     {
-     "w": "de",
-     "t0": 40.38,
-     "t1": 40.48
+     "w": "lo",
+     "t0": 39.88,
+     "t1": 40.14
     },
     {
-     "w": "verdad",
-     "t0": 40.48,
+     "w": "que",
+     "t0": 40.14,
+     "t1": 40.3
+    },
+    {
+     "w": "le",
+     "t0": 40.3,
+     "t1": 40.42
+    },
+    {
+     "w": "ahorra",
+     "t0": 40.42,
      "t1": 40.68
     }
    ]
   },
   {
    "t0": 40.68,
-   "t1": 41.1,
+   "t1": 40.98,
+   "palabras": [
+    {
+     "w": "de",
+     "t0": 40.68,
+     "t1": 40.78
+    },
+    {
+     "w": "verdad",
+     "t0": 40.78,
+     "t1": 40.98
+    }
+   ]
+  },
+  {
+   "t0": 40.98,
+   "t1": 41.42,
    "palabras": [
     {
      "w": "a",
-     "t0": 40.68,
-     "t1": 40.8
+     "t0": 40.98,
+     "t1": 41.1
     },
     {
      "w": "la",
-     "t0": 40.8,
-     "t1": 40.82
+     "t0": 41.1,
+     "t1": 41.12
     },
     {
      "w": "empresa",
-     "t0": 40.82,
-     "t1": 41.1
+     "t0": 41.12,
+     "t1": 41.42
     }
    ]
   },
   {
-   "t0": 41.1,
-   "t1": 41.5,
+   "t0": 41.42,
+   "t1": 41.8,
    "palabras": [
     {
      "w": "y",
-     "t0": 41.1,
-     "t1": 41.3
+     "t0": 41.42,
+     "t1": 41.6
     },
     {
      "w": "todo",
-     "t0": 41.3,
-     "t1": 41.5
+     "t0": 41.6,
+     "t1": 41.8
     }
    ]
   },
   {
-   "t0": 41.5,
-   "t1": 42.06,
+   "t0": 41.8,
+   "t1": 42.37,
    "palabras": [
     {
      "w": "lo",
-     "t0": 41.5,
-     "t1": 41.62
+     "t0": 41.8,
+     "t1": 41.94
     },
     {
      "w": "que",
-     "t0": 41.62,
-     "t1": 41.72
+     "t0": 41.94,
+     "t1": 42.02
     },
     {
      "w": "uno",
-     "t0": 41.72,
-     "t1": 41.89
+     "t0": 42.02,
+     "t1": 42.195
     },
     {
      "w": "tiene",
-     "t0": 41.89,
-     "t1": 42.06
+     "t0": 42.195,
+     "t1": 42.37
     }
    ]
   },
   {
-   "t0": 42.06,
-   "t1": 42.4,
+   "t0": 42.37,
+   "t1": 42.72,
    "palabras": [
     {
      "w": "que",
-     "t0": 42.06,
-     "t1": 42.23
+     "t0": 42.37,
+     "t1": 42.545
     },
     {
      "w": "sufrir",
-     "t0": 42.23,
-     "t1": 42.4
+     "t0": 42.545,
+     "t1": 42.72
     }
    ]
   },
   {
-   "t0": 42.4,
-   "t1": 42.94,
+   "t0": 42.72,
+   "t1": 43.26,
    "palabras": [
     {
      "w": "con",
-     "t0": 42.4,
-     "t1": 42.5
+     "t0": 42.72,
+     "t1": 42.8
     },
     {
      "w": "los",
-     "t0": 42.5,
-     "t1": 42.64
+     "t0": 42.8,
+     "t1": 42.94
     },
     {
      "w": "papeles.",
-     "t0": 42.64,
-     "t1": 42.94
+     "t0": 42.94,
+     "t1": 43.26
     }
    ]
   },
   {
-   "t0": 43.06,
-   "t1": 43.96,
+   "t0": 43.48,
+   "t1": 44.4,
    "palabras": [
     {
      "w": "Si",
-     "t0": 43.06,
-     "t1": 43.3
+     "t0": 43.48,
+     "t1": 43.76
     },
     {
      "w": "esto",
-     "t0": 43.3,
-     "t1": 43.46
+     "t0": 43.76,
+     "t1": 43.92
     },
     {
      "w": "te",
-     "t0": 43.46,
-     "t1": 43.58
+     "t0": 43.92,
+     "t1": 44.04
     },
     {
      "w": "mola,",
-     "t0": 43.58,
-     "t1": 43.96
+     "t0": 44.04,
+     "t1": 44.4
     }
    ]
   },
   {
-   "t0": 44.14,
-   "t1": 44.98,
+   "t0": 44.58,
+   "t1": 45.44,
    "palabras": [
     {
      "w": "hazme",
-     "t0": 44.14,
-     "t1": 44.36
+     "t0": 44.58,
+     "t1": 44.8
     },
     {
      "w": "caso",
-     "t0": 44.36,
-     "t1": 44.58
+     "t0": 44.8,
+     "t1": 45.02
     },
     {
      "w": "y",
-     "t0": 44.58,
-     "t1": 44.7
+     "t0": 45.02,
+     "t1": 45.12
     },
     {
      "w": "comenta",
-     "t0": 44.7,
-     "t1": 44.98
+     "t0": 45.12,
+     "t1": 45.44
     }
    ]
   },
   {
-   "t0": 44.98,
-   "t1": 45.98,
+   "t0": 45.44,
+   "t1": 46.42,
    "palabras": [
     {
      "w": "la",
-     "t0": 44.98,
-     "t1": 45.12
+     "t0": 45.44,
+     "t1": 45.56
     },
     {
      "w": "palabra",
-     "t0": 45.12,
-     "t1": 45.4
+     "t0": 45.56,
+     "t1": 45.86
     },
     {
      "w": "electricidad.",
-     "t0": 45.4,
-     "t1": 45.98
+     "t0": 45.86,
+     "t1": 46.42
     }
    ]
   }
@@ -1185,7 +1190,7 @@
   {
    "tipo": "lista",
    "t0": 3.3,
-   "t1": 7.95,
+   "t1": 8.05,
    "titulo": "CASO REAL",
    "lado": "izq",
    "acento": "azul",
@@ -1199,20 +1204,20 @@
   },
   {
    "tipo": "notas",
-   "t0": 10.4,
-   "t1": 13.75,
+   "t0": 10.5,
+   "t1": 13.95,
    "items": [
     {
      "texto": "Partes de trabajo",
-     "t": 10.6
+     "t": 10.7
     },
     {
      "texto": "Materiales",
-     "t": 11.25
+     "t": 11.35
     },
     {
      "texto": "Clientes",
-     "t": 11.85
+     "t": 11.95
     }
    ]
   },
@@ -1221,58 +1226,58 @@
    "plano": "detras",
    "layout": "diagonal",
    "preset": "ambar",
-   "t0": 15.25,
-   "t1": 16.4,
+   "t0": 15.467,
+   "t1": 16.617,
    "lineas": [
     "APLICACIÓN"
    ]
   },
   {
    "tipo": "lista",
-   "t0": 16.75,
-   "t1": 23.4,
+   "t0": 16.967,
+   "t1": 23.65,
    "titulo": "APP A MEDIDA",
    "lado": "der",
    "acento": "azul",
    "items": [
     {
      "texto": "Agendar partes de trabajo",
-     "t": 17.26,
+     "t": 17.477,
      "icono": "check"
     },
     {
      "texto": "Consultar materiales",
-     "t": 19.6,
+     "t": 19.817,
      "icono": "check"
     },
     {
      "texto": "Atender clientes",
-     "t": 21.0,
+     "t": 21.217,
      "icono": "check"
     }
    ]
   },
   {
    "tipo": "lista",
-   "t0": 23.9,
-   "t1": 27.95,
+   "t0": 24.15,
+   "t1": 28.2,
    "titulo": "CONECTADA A",
    "lado": "izq",
    "acento": "naranja",
    "items": [
     {
      "texto": "Telegram",
-     "t": 24.74,
+     "t": 24.99,
      "icono": "enviar"
     },
     {
      "texto": "Automatizaciones",
-     "t": 25.44,
+     "t": 25.69,
      "icono": "rayo"
     },
     {
      "texto": "IA",
-     "t": 26.2,
+     "t": 26.45,
      "icono": "chispa"
     }
    ]
@@ -1282,8 +1287,8 @@
    "plano": "detras",
    "layout": "gigante",
    "preset": "cristal",
-   "t0": 29.5,
-   "t1": 30.7,
+   "t0": 29.75,
+   "t1": 30.95,
    "lineas": [
     "FUNCIÓN DE",
     "IA"
@@ -1291,8 +1296,8 @@
   },
   {
    "tipo": "sello",
-   "t0": 34.4,
-   "t1": 35.15,
+   "t0": 34.692,
+   "t1": 35.442,
    "texto": "EN USO",
    "x": 640,
    "y": 170,
@@ -1303,19 +1308,19 @@
    "plano": "detras",
    "layout": "centro",
    "preset": "foco",
-   "t0": 40.05,
-   "t1": 41.25,
+   "t0": 40.342,
+   "t1": 41.542,
    "lineas": [
     "AHORRA"
    ]
   },
   {
    "tipo": "comentario",
-   "t0": 44.55,
+   "t0": 45.0,
    "t1": 47.05,
    "palabra": "electricidad",
-   "escribeT": 44.95,
-   "enviaT": 45.95,
+   "escribeT": 45.4,
+   "enviaT": 46.4,
    "compacto": true
   }
  ],
@@ -1454,766 +1459,766 @@
   },
   {
    "f": "papel_desliza",
-   "ini": 10.26,
+   "ini": 10.36,
    "archivo": "sfx/papel_desliza.wav",
    "vol": 0.4,
    "desde": 0.0,
    "dur": 0.484,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 10.6,
+   "en": 10.7,
    "ancla": "pico"
   },
   {
    "f": "grapadora",
-   "ini": 11.14,
+   "ini": 11.24,
    "archivo": "sfx/grapadora.wav",
    "vol": 0.3,
    "desde": 0.0,
    "dur": 0.201,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 11.25,
+   "en": 11.35,
    "ancla": "pico"
   },
   {
    "f": "lapiz_escribe",
-   "ini": 11.84,
+   "ini": 11.94,
    "archivo": "sfx/lapiz_escribe.wav",
    "vol": 0.4,
    "desde": 0.0,
    "dur": 0.9,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 11.85,
+   "en": 11.95,
    "ancla": "inicio"
   },
   {
    "f": "p/01_riser",
-   "ini": 13.75,
+   "ini": 13.967,
    "archivo": "sfx/pack/01_riser.wav",
    "vol": 0.4,
    "desde": 3.88,
    "dur": 1.53,
    "fade_in": 1.05,
    "fade_out": 0.03,
-   "en": 15.25,
+   "en": 15.467,
    "ancla": "fin"
   },
   {
    "f": "p/woosh_effect_6",
-   "ini": 14.96,
+   "ini": 15.177,
    "archivo": "sfx/pack/woosh_effect_6.wav",
    "vol": 0.27,
    "desde": 0.0,
    "dur": 0.687,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 15.21,
+   "en": 15.427,
    "ancla": "pico"
   },
   {
    "f": "p/vs_short_whoosh_6",
-   "ini": 15.15,
+   "ini": 15.367,
    "archivo": "sfx/pack/vs_short_whoosh_6.wav",
    "vol": 0.32,
    "desde": 0.0,
    "dur": 0.757,
    "fade_in": 0.003,
    "fade_out": 0.05,
-   "en": 15.42,
+   "en": 15.636999999999999,
    "ancla": "pico"
   },
   {
    "f": "p/cinematic_bass_3",
-   "ini": 15.23,
+   "ini": 15.447,
    "archivo": "sfx/pack/cinematic_bass_3.wav",
    "vol": 0.5,
    "desde": 0.0,
    "dur": 0.9,
    "fade_in": 0.003,
    "fade_out": 0.25,
-   "en": 15.25,
+   "en": 15.467,
    "ancla": "inicio"
   },
   {
    "f": "p/mouse_click_04",
-   "ini": 15.25,
+   "ini": 15.467,
    "archivo": "sfx/pack/mouse_click_04.wav",
    "vol": 0.4,
    "desde": 0.0,
    "dur": 0.154,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 15.25,
+   "en": 15.467,
    "ancla": "inicio"
   },
   {
    "f": "p/sub_bass_drop_2",
-   "ini": 15.26,
+   "ini": 15.477,
    "archivo": "sfx/pack/sub_bass_drop_2.wav",
    "vol": 0.3,
    "desde": 0.0,
    "dur": 1.3,
    "fade_in": 0.003,
    "fade_out": 0.4,
-   "en": 15.26,
+   "en": 15.477,
    "ancla": "inicio"
   },
   {
    "f": "p/vs_short_whoosh_5",
-   "ini": 16.57,
+   "ini": 16.787,
    "archivo": "sfx/pack/vs_short_whoosh_5.wav",
    "vol": 0.2,
    "desde": 0.0,
    "dur": 0.61,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 16.8,
+   "en": 17.017,
    "ancla": "pico"
   },
   {
    "f": "interfaz_abre",
-   "ini": 16.74,
+   "ini": 16.957,
    "archivo": "sfx/interfaz_abre.wav",
    "vol": 0.28,
    "desde": 0.0,
    "dur": 0.351,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 16.75,
+   "en": 16.967,
    "ancla": "inicio"
   },
   {
    "f": "p/pop_up_sfx",
-   "ini": 17.23,
+   "ini": 17.447,
    "archivo": "sfx/pack/pop_up_sfx.wav",
    "vol": 0.4,
    "desde": 0.0,
    "dur": 0.3,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 17.26,
+   "en": 17.477,
    "ancla": "inicio"
   },
   {
    "f": "p/mechanical_keyboard_click_07",
-   "ini": 17.27,
+   "ini": 17.487,
    "archivo": "sfx/pack/mechanical_keyboard_click_07.wav",
    "vol": 0.3,
    "desde": 0.0,
    "dur": 0.36,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 17.28,
+   "en": 17.497,
    "ancla": "inicio"
   },
   {
    "f": "p/pop_up_sfx",
-   "ini": 19.57,
+   "ini": 19.787,
    "archivo": "sfx/pack/pop_up_sfx.wav",
    "vol": 0.4,
    "desde": 0.0,
    "dur": 0.3,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 19.6,
+   "en": 19.817,
    "ancla": "inicio"
   },
   {
    "f": "p/mechanical_keyboard_click_05",
-   "ini": 19.62,
+   "ini": 19.837,
    "archivo": "sfx/pack/mechanical_keyboard_click_05.wav",
    "vol": 0.3,
    "desde": 0.0,
    "dur": 0.131,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 19.62,
+   "en": 19.837,
    "ancla": "inicio"
   },
   {
    "f": "p/pop_up_sfx",
-   "ini": 20.97,
+   "ini": 21.187,
    "archivo": "sfx/pack/pop_up_sfx.wav",
    "vol": 0.4,
    "desde": 0.0,
    "dur": 0.3,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 21.0,
+   "en": 21.217,
    "ancla": "inicio"
   },
   {
    "f": "p/mechanical_keyboard_click_09",
-   "ini": 21.01,
+   "ini": 21.227,
    "archivo": "sfx/pack/mechanical_keyboard_click_09.wav",
    "vol": 0.3,
    "desde": 0.0,
    "dur": 0.062,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 21.02,
+   "en": 21.237,
    "ancla": "inicio"
   },
   {
    "f": "p/vs_short_whoosh_1",
-   "ini": 23.65,
+   "ini": 23.9,
    "archivo": "sfx/pack/vs_short_whoosh_1.wav",
    "vol": 0.25,
    "desde": 0.0,
    "dur": 0.814,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 23.9,
+   "en": 24.15,
    "ancla": "pico"
   },
   {
    "f": "p/pop_up_sfx",
-   "ini": 24.71,
+   "ini": 24.96,
    "archivo": "sfx/pack/pop_up_sfx.wav",
    "vol": 0.38,
    "desde": 0.0,
    "dur": 0.3,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 24.74,
+   "en": 24.99,
    "ancla": "inicio"
   },
   {
    "f": "mensaje_alerta",
-   "ini": 24.75,
+   "ini": 25.0,
    "archivo": "sfx/mensaje_alerta.wav",
    "vol": 0.22,
    "desde": 0.0,
    "dur": 0.089,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 24.76,
+   "en": 25.01,
    "ancla": "pico"
   },
   {
    "f": "p/pop_up_sfx",
-   "ini": 25.41,
+   "ini": 25.66,
    "archivo": "sfx/pack/pop_up_sfx.wav",
    "vol": 0.38,
    "desde": 0.0,
    "dur": 0.3,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 25.44,
+   "en": 25.69,
    "ancla": "inicio"
   },
   {
    "f": "mensaje_alerta",
-   "ini": 25.45,
+   "ini": 25.7,
    "archivo": "sfx/mensaje_alerta.wav",
    "vol": 0.22,
    "desde": 0.0,
    "dur": 0.089,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 25.46,
+   "en": 25.71,
    "ancla": "pico"
   },
   {
    "f": "p/pop_up_sfx",
-   "ini": 26.17,
+   "ini": 26.42,
    "archivo": "sfx/pack/pop_up_sfx.wav",
    "vol": 0.38,
    "desde": 0.0,
    "dur": 0.3,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 26.2,
+   "en": 26.45,
    "ancla": "inicio"
   },
   {
    "f": "mensaje_alerta",
-   "ini": 26.21,
+   "ini": 26.46,
    "archivo": "sfx/mensaje_alerta.wav",
    "vol": 0.22,
    "desde": 0.0,
    "dur": 0.089,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 26.22,
+   "en": 26.47,
    "ancla": "pico"
   },
   {
    "f": "p/02_riser",
-   "ini": 28.14,
+   "ini": 28.39,
    "archivo": "sfx/pack/02_riser.wav",
    "vol": 0.45,
    "desde": 1.79,
    "dur": 1.43,
    "fade_in": 0.98,
    "fade_out": 0.03,
-   "en": 29.54,
+   "en": 29.79,
    "ancla": "fin"
   },
   {
    "f": "p/woosh_effect_6",
-   "ini": 29.25,
+   "ini": 29.5,
    "archivo": "sfx/pack/woosh_effect_6.wav",
    "vol": 0.27,
    "desde": 0.0,
    "dur": 0.687,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 29.5,
+   "en": 29.75,
    "ancla": "pico"
   },
   {
    "f": "p/deep_bass_hit_1",
-   "ini": 29.5,
+   "ini": 29.75,
    "archivo": "sfx/pack/deep_bass_hit_1.wav",
    "vol": 0.55,
    "desde": 0.0,
    "dur": 0.9,
    "fade_in": 0.003,
    "fade_out": 0.25,
-   "en": 29.54,
+   "en": 29.79,
    "ancla": "inicio"
   },
   {
    "f": "p/sub_bass_hit",
-   "ini": 29.54,
+   "ini": 29.79,
    "archivo": "sfx/pack/sub_bass_hit.wav",
    "vol": 0.3,
    "desde": 0.0,
    "dur": 1.3,
    "fade_in": 0.003,
    "fade_out": 0.4,
-   "en": 29.55,
+   "en": 29.8,
    "ancla": "inicio"
   },
   {
    "f": "p/mouse_click_04",
-   "ini": 29.54,
+   "ini": 29.79,
    "archivo": "sfx/pack/mouse_click_04.wav",
    "vol": 0.4,
    "desde": 0.0,
    "dur": 0.154,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 29.54,
+   "en": 29.79,
    "ancla": "inicio"
   },
   {
    "f": "p/loud_whip",
-   "ini": 29.56,
+   "ini": 29.81,
    "archivo": "sfx/pack/loud_whip.wav",
    "vol": 0.32,
    "desde": 0.0,
    "dur": 0.439,
    "fade_in": 0.003,
    "fade_out": 0.05,
-   "en": 29.669999999999998,
+   "en": 29.919999999999998,
    "ancla": "pico"
   },
   {
    "f": "p/deep_bass_hit_1",
-   "ini": 34.37,
+   "ini": 34.662,
    "archivo": "sfx/pack/deep_bass_hit_1.wav",
    "vol": 0.4,
    "desde": 0.0,
    "dur": 0.7,
    "fade_in": 0.003,
    "fade_out": 0.2,
-   "en": 34.41,
+   "en": 34.702,
    "ancla": "inicio"
   },
   {
    "f": "p/mouse_click_04",
-   "ini": 34.4,
+   "ini": 34.692,
    "archivo": "sfx/pack/mouse_click_04.wav",
    "vol": 0.5,
    "desde": 0.0,
    "dur": 0.154,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 34.4,
+   "en": 34.692,
    "ancla": "inicio"
   },
   {
    "f": "tono_confirmacion",
-   "ini": 34.5,
+   "ini": 34.792,
    "archivo": "sfx/tono_confirmacion.wav",
    "vol": 0.22,
    "desde": 0.0,
    "dur": 0.5,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 34.5,
+   "en": 34.792,
    "ancla": "inicio"
   },
   {
    "f": "p/loud_whip",
-   "ini": 35.29,
+   "ini": 35.582,
    "archivo": "sfx/pack/loud_whip.wav",
    "vol": 0.32,
    "desde": 0.0,
    "dur": 0.439,
    "fade_in": 0.003,
    "fade_out": 0.05,
-   "en": 35.400000000000006,
+   "en": 35.692,
    "ancla": "pico"
   },
   {
    "f": "p/woosh_effect_5",
-   "ini": 37.84,
+   "ini": 38.132,
    "archivo": "sfx/pack/woosh_effect_5.wav",
    "vol": 0.28,
    "desde": 0.0,
    "dur": 1.086,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 38.12,
+   "en": 38.412,
    "ancla": "pico"
   },
   {
    "f": "p/02_riser",
-   "ini": 38.42,
+   "ini": 38.712,
    "archivo": "sfx/pack/02_riser.wav",
    "vol": 0.45,
    "desde": 1.49,
    "dur": 1.73,
    "fade_in": 1.19,
    "fade_out": 0.03,
-   "en": 40.12,
+   "en": 40.412,
    "ancla": "fin"
   },
   {
    "f": "p/loud_whip",
-   "ini": 38.74,
+   "ini": 39.032,
    "archivo": "sfx/pack/loud_whip.wav",
    "vol": 0.32,
    "desde": 0.0,
    "dur": 0.439,
    "fade_in": 0.003,
    "fade_out": 0.05,
-   "en": 38.85,
+   "en": 39.142,
    "ancla": "pico"
   },
   {
    "f": "p/riser_1",
-   "ini": 38.92,
+   "ini": 39.212,
    "archivo": "sfx/pack/riser_1.wav",
    "vol": 0.3,
    "desde": 0.51,
    "dur": 1.23,
    "fade_in": 0.84,
    "fade_out": 0.03,
-   "en": 40.12,
+   "en": 40.412,
    "ancla": "fin"
   },
   {
    "f": "p/woosh_effect_6",
-   "ini": 39.83,
+   "ini": 40.122,
    "archivo": "sfx/pack/woosh_effect_6.wav",
    "vol": 0.25,
    "desde": 0.0,
    "dur": 0.687,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 40.08,
+   "en": 40.372,
    "ancla": "pico"
   },
   {
    "f": "p/vs_short_whoosh_6",
-   "ini": 39.95,
+   "ini": 40.242,
    "archivo": "sfx/pack/vs_short_whoosh_6.wav",
    "vol": 0.32,
    "desde": 0.0,
    "dur": 0.757,
    "fade_in": 0.003,
    "fade_out": 0.05,
-   "en": 40.220000000000006,
+   "en": 40.512,
    "ancla": "pico"
   },
   {
    "f": "p/cinematic_bass_3",
-   "ini": 40.1,
+   "ini": 40.392,
    "archivo": "sfx/pack/cinematic_bass_3.wav",
    "vol": 0.5,
    "desde": 0.0,
    "dur": 1.0,
    "fade_in": 0.003,
    "fade_out": 0.3,
-   "en": 40.12,
+   "en": 40.412,
    "ancla": "inicio"
   },
   {
    "f": "interruptor_luz",
-   "ini": 40.12,
+   "ini": 40.412,
    "archivo": "sfx/interruptor_luz.wav",
    "vol": 0.5,
    "desde": 0.0,
    "dur": 0.125,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 40.12,
+   "en": 40.412,
    "ancla": "inicio"
   },
   {
    "f": "p/mouse_click_04",
-   "ini": 40.12,
+   "ini": 40.412,
    "archivo": "sfx/pack/mouse_click_04.wav",
    "vol": 0.4,
    "desde": 0.0,
    "dur": 0.154,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 40.12,
+   "en": 40.412,
    "ancla": "inicio"
   },
   {
    "f": "p/sub_bass_drop_2",
-   "ini": 40.13,
+   "ini": 40.422,
    "archivo": "sfx/pack/sub_bass_drop_2.wav",
    "vol": 0.26,
    "desde": 0.0,
    "dur": 1.3,
    "fade_in": 0.003,
    "fade_out": 0.4,
-   "en": 40.13,
+   "en": 40.422,
    "ancla": "inicio"
   },
   {
    "f": "p/riser_1",
-   "ini": 43.95,
+   "ini": 44.4,
    "archivo": "sfx/pack/riser_1.wav",
    "vol": 0.35,
    "desde": 0.71,
    "dur": 1.03,
    "fade_in": 0.7,
    "fade_out": 0.03,
-   "en": 44.95,
+   "en": 45.4,
    "ancla": "fin"
   },
   {
    "f": "p/vs_short_whoosh_5",
-   "ini": 44.37,
+   "ini": 44.82,
    "archivo": "sfx/pack/vs_short_whoosh_5.wav",
    "vol": 0.2,
    "desde": 0.0,
    "dur": 0.61,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 44.6,
+   "en": 45.05,
    "ancla": "pico"
   },
   {
    "f": "interfaz_abre",
-   "ini": 44.54,
+   "ini": 44.99,
    "archivo": "sfx/interfaz_abre.wav",
    "vol": 0.28,
    "desde": 0.0,
    "dur": 0.351,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 44.55,
+   "en": 45.0,
    "ancla": "inicio"
   },
   {
    "f": "p/mechanical_keyboard_click_05",
-   "ini": 44.95,
+   "ini": 45.4,
    "archivo": "sfx/pack/mechanical_keyboard_click_05.wav",
    "vol": 0.38,
    "desde": 0.0,
    "dur": 0.131,
-   "fade_in": 0.003,
-   "fade_out": 0.04,
-   "en": 44.95,
-   "ancla": "inicio"
-  },
-  {
-   "f": "p/mechanical_keyboard_click_19",
-   "ini": 45.025,
-   "archivo": "sfx/pack/mechanical_keyboard_click_19.wav",
-   "vol": 0.38,
-   "desde": 0.0,
-   "dur": 0.118,
-   "fade_in": 0.003,
-   "fade_out": 0.04,
-   "en": 45.025,
-   "ancla": "inicio"
-  },
-  {
-   "f": "p/mechanical_keyboard_click_07",
-   "ini": 45.09,
-   "archivo": "sfx/pack/mechanical_keyboard_click_07.wav",
-   "vol": 0.38,
-   "desde": 0.0,
-   "dur": 0.36,
-   "fade_in": 0.003,
-   "fade_out": 0.04,
-   "en": 45.1,
-   "ancla": "inicio"
-  },
-  {
-   "f": "p/mechanical_keyboard_click_09",
-   "ini": 45.165,
-   "archivo": "sfx/pack/mechanical_keyboard_click_09.wav",
-   "vol": 0.38,
-   "desde": 0.0,
-   "dur": 0.062,
-   "fade_in": 0.003,
-   "fade_out": 0.04,
-   "en": 45.175,
-   "ancla": "inicio"
-  },
-  {
-   "f": "p/mechanical_keyboard_click_05",
-   "ini": 45.25,
-   "archivo": "sfx/pack/mechanical_keyboard_click_05.wav",
-   "vol": 0.38,
-   "desde": 0.0,
-   "dur": 0.131,
-   "fade_in": 0.003,
-   "fade_out": 0.04,
-   "en": 45.25,
-   "ancla": "inicio"
-  },
-  {
-   "f": "p/mechanical_keyboard_click_19",
-   "ini": 45.325,
-   "archivo": "sfx/pack/mechanical_keyboard_click_19.wav",
-   "vol": 0.38,
-   "desde": 0.0,
-   "dur": 0.118,
-   "fade_in": 0.003,
-   "fade_out": 0.04,
-   "en": 45.325,
-   "ancla": "inicio"
-  },
-  {
-   "f": "p/mechanical_keyboard_click_07",
-   "ini": 45.39,
-   "archivo": "sfx/pack/mechanical_keyboard_click_07.wav",
-   "vol": 0.38,
-   "desde": 0.0,
-   "dur": 0.36,
    "fade_in": 0.003,
    "fade_out": 0.04,
    "en": 45.4,
    "ancla": "inicio"
   },
   {
-   "f": "p/mechanical_keyboard_click_09",
-   "ini": 45.465,
-   "archivo": "sfx/pack/mechanical_keyboard_click_09.wav",
-   "vol": 0.38,
-   "desde": 0.0,
-   "dur": 0.062,
-   "fade_in": 0.003,
-   "fade_out": 0.04,
-   "en": 45.475,
-   "ancla": "inicio"
-  },
-  {
-   "f": "p/mechanical_keyboard_click_05",
-   "ini": 45.55,
-   "archivo": "sfx/pack/mechanical_keyboard_click_05.wav",
-   "vol": 0.38,
-   "desde": 0.0,
-   "dur": 0.131,
-   "fade_in": 0.003,
-   "fade_out": 0.04,
-   "en": 45.55,
-   "ancla": "inicio"
-  },
-  {
    "f": "p/mechanical_keyboard_click_19",
-   "ini": 45.625,
+   "ini": 45.475,
    "archivo": "sfx/pack/mechanical_keyboard_click_19.wav",
    "vol": 0.38,
    "desde": 0.0,
    "dur": 0.118,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 45.625,
+   "en": 45.475,
    "ancla": "inicio"
   },
   {
    "f": "p/mechanical_keyboard_click_07",
-   "ini": 45.69,
+   "ini": 45.54,
    "archivo": "sfx/pack/mechanical_keyboard_click_07.wav",
    "vol": 0.38,
    "desde": 0.0,
    "dur": 0.36,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 45.7,
+   "en": 45.55,
    "ancla": "inicio"
   },
   {
    "f": "p/mechanical_keyboard_click_09",
-   "ini": 45.765,
+   "ini": 45.615,
    "archivo": "sfx/pack/mechanical_keyboard_click_09.wav",
    "vol": 0.38,
    "desde": 0.0,
    "dur": 0.062,
    "fade_in": 0.003,
    "fade_out": 0.04,
+   "en": 45.625,
+   "ancla": "inicio"
+  },
+  {
+   "f": "p/mechanical_keyboard_click_05",
+   "ini": 45.7,
+   "archivo": "sfx/pack/mechanical_keyboard_click_05.wav",
+   "vol": 0.38,
+   "desde": 0.0,
+   "dur": 0.131,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 45.7,
+   "ancla": "inicio"
+  },
+  {
+   "f": "p/mechanical_keyboard_click_19",
+   "ini": 45.775,
+   "archivo": "sfx/pack/mechanical_keyboard_click_19.wav",
+   "vol": 0.38,
+   "desde": 0.0,
+   "dur": 0.118,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
    "en": 45.775,
    "ancla": "inicio"
   },
   {
+   "f": "p/mechanical_keyboard_click_07",
+   "ini": 45.84,
+   "archivo": "sfx/pack/mechanical_keyboard_click_07.wav",
+   "vol": 0.38,
+   "desde": 0.0,
+   "dur": 0.36,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 45.85,
+   "ancla": "inicio"
+  },
+  {
+   "f": "p/mechanical_keyboard_click_09",
+   "ini": 45.915,
+   "archivo": "sfx/pack/mechanical_keyboard_click_09.wav",
+   "vol": 0.38,
+   "desde": 0.0,
+   "dur": 0.062,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 45.925,
+   "ancla": "inicio"
+  },
+  {
+   "f": "p/mechanical_keyboard_click_05",
+   "ini": 46.0,
+   "archivo": "sfx/pack/mechanical_keyboard_click_05.wav",
+   "vol": 0.38,
+   "desde": 0.0,
+   "dur": 0.131,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 46.0,
+   "ancla": "inicio"
+  },
+  {
+   "f": "p/mechanical_keyboard_click_19",
+   "ini": 46.075,
+   "archivo": "sfx/pack/mechanical_keyboard_click_19.wav",
+   "vol": 0.38,
+   "desde": 0.0,
+   "dur": 0.118,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 46.075,
+   "ancla": "inicio"
+  },
+  {
+   "f": "p/mechanical_keyboard_click_07",
+   "ini": 46.14,
+   "archivo": "sfx/pack/mechanical_keyboard_click_07.wav",
+   "vol": 0.38,
+   "desde": 0.0,
+   "dur": 0.36,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 46.15,
+   "ancla": "inicio"
+  },
+  {
+   "f": "p/mechanical_keyboard_click_09",
+   "ini": 46.215,
+   "archivo": "sfx/pack/mechanical_keyboard_click_09.wav",
+   "vol": 0.38,
+   "desde": 0.0,
+   "dur": 0.062,
+   "fade_in": 0.003,
+   "fade_out": 0.04,
+   "en": 46.225,
+   "ancla": "inicio"
+  },
+  {
    "f": "p/mouse_click_04",
-   "ini": 45.95,
+   "ini": 46.4,
    "archivo": "sfx/pack/mouse_click_04.wav",
    "vol": 0.6,
    "desde": 0.0,
    "dur": 0.154,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 45.95,
+   "en": 46.4,
    "ancla": "inicio"
   },
   {
    "f": "p/deep_bass_hit_1",
-   "ini": 45.97,
+   "ini": 46.42,
    "archivo": "sfx/pack/deep_bass_hit_1.wav",
    "vol": 0.4,
    "desde": 0.0,
    "dur": 0.7,
    "fade_in": 0.003,
    "fade_out": 0.2,
-   "en": 46.01,
+   "en": 46.46,
    "ancla": "inicio"
   },
   {
    "f": "p/pop_up_sfx",
-   "ini": 46.04,
+   "ini": 46.49,
    "archivo": "sfx/pack/pop_up_sfx.wav",
    "vol": 0.35,
    "desde": 0.0,
    "dur": 0.3,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 46.07,
+   "en": 46.52,
    "ancla": "inicio"
   },
   {
    "f": "tono_confirmacion",
-   "ini": 46.1,
+   "ini": 46.55,
    "archivo": "sfx/tono_confirmacion.wav",
    "vol": 0.25,
    "desde": 0.0,
    "dur": 0.5,
    "fade_in": 0.003,
    "fade_out": 0.04,
-   "en": 46.1,
+   "en": 46.55,
    "ancla": "inicio"
   }
  ],
  "sfx_gain": 1.7,
  "vozFx": [
   {
-   "t0": 38.1,
-   "t1": 38.78,
+   "t0": 38.392,
+   "t1": 39.072,
    "fx": "eco"
   }
  ],
@@ -2225,32 +2230,32 @@
    "escala": 0.09
   },
   {
-   "t0": 15.22,
-   "t1": 16.3,
+   "t0": 15.437,
+   "t1": 16.517,
    "modo": "out",
    "escala": 0.09
   },
   {
-   "t0": 29.47,
-   "t1": 30.6,
+   "t0": 29.72,
+   "t1": 30.85,
    "modo": "in",
    "escala": 0.09
   },
   {
-   "t0": 35.2,
-   "t1": 35.8,
+   "t0": 35.492,
+   "t1": 36.092,
    "modo": "in",
    "escala": 0.07
   },
   {
-   "t0": 38.65,
-   "t1": 39.25,
+   "t0": 38.942,
+   "t1": 39.542,
    "modo": "in",
    "escala": 0.07
   },
   {
-   "t0": 40.02,
-   "t1": 41.15,
+   "t0": 40.312,
+   "t1": 41.442,
    "modo": "out",
    "escala": 0.09
   }
@@ -2739,6 +2744,12 @@
   1.0,
   1.0,
   1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
   1.0012,
   1.0044,
   1.0094,
@@ -3083,6 +3094,12 @@
   1.06,
   1.06,
   1.06,
+  1.06,
+  1.06,
+  1.06,
+  1.06,
+  1.06,
+  1.06,
   1.0588,
   1.0556,
   1.0506,
@@ -3094,6 +3111,7 @@
   1.0094,
   1.0044,
   1.0012,
+  1.0,
   1.0,
   1.0,
   1.0,
@@ -4025,6 +4043,8 @@
   1.0,
   1.0,
   1.0,
+  1.0,
+  1.0,
   1.0144,
   1.0285,
   1.0421,
@@ -4110,6 +4130,9 @@
   1.0081,
   1.0038,
   1.001,
+  1.0,
+  1.0,
+  1.0,
   1.0,
   1.0,
   1.0,
@@ -4841,6 +4864,12 @@
   1.05,
   1.05,
   1.05,
+  1.05,
+  1.05,
+  1.05,
+  1.05,
+  1.05,
+  1.05,
   1.0502,
   1.0507,
   1.0516,
@@ -5056,63 +5085,39 @@
   1.06,
   1.06,
   1.06,
-  1.06,
-  1.06,
-  1.06,
-  1.06,
-  1.06,
-  1.06,
-  1.06,
-  1.06,
-  1.06,
-  1.06,
-  1.06,
-  1.06,
-  1.06,
-  1.06,
-  1.06,
-  1.06,
-  1.06,
-  1.06,
-  1.06,
-  1.06,
-  1.06,
-  1.06,
-  1.06,
-  1.06,
   1.06
  ],
  "zooms": [
   [
-   0,
+   0.0,
    1.0
   ],
   [
-   8.04,
+   8.14,
    1.06
   ],
   [
-   13.76,
+   13.96,
    1.0
   ],
   [
-   16.71,
+   16.927,
    1.06
   ],
   [
-   28.18,
+   28.43,
    1.0
   ],
   [
-   32.49,
+   32.782,
    1.05
   ],
   [
-   35.05,
+   35.342,
    1.0
   ],
   [
-   43.07,
+   43.462,
    1.06
   ]
  ]
