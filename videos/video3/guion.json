@@ -15,42 +15,42 @@
    "layout": "centro",
    "preset": "cromo",
    "t0": 1.75,
-   "t1": 2.95,
+   "t1": 2.983,
    "lineas": [
     "PAPELES"
    ]
   },
   {
    "tipo": "lista",
-   "t0": 3.3,
-   "t1": 8.05,
+   "t0": 3.333,
+   "t1": 7.8,
    "titulo": "CASO REAL",
    "lado": "izq",
    "acento": "azul",
    "items": [
     {
      "texto": "Electricista",
-     "t": 5.2,
+     "t": 5.233,
      "icono": "rayo"
     }
    ]
   },
   {
    "tipo": "notas",
-   "t0": 10.5,
-   "t1": 13.95,
+   "t0": 10.25,
+   "t1": 13.533,
    "items": [
     {
      "texto": "Partes de trabajo",
-     "t": 10.7
+     "t": 10.45
     },
     {
      "texto": "Materiales",
-     "t": 11.35
+     "t": 11.1
     },
     {
      "texto": "Clientes",
-     "t": 11.95
+     "t": 11.75
     }
    ]
   },
@@ -59,58 +59,58 @@
    "plano": "detras",
    "layout": "diagonal",
    "preset": "ambar",
-   "t0": 15.467,
-   "t1": 16.617,
+   "t0": 15.0,
+   "t1": 16.15,
    "lineas": [
     "APLICACIÓN"
    ]
   },
   {
    "tipo": "lista",
-   "t0": 16.967,
-   "t1": 23.65,
+   "t0": 16.517,
+   "t1": 22.55,
    "titulo": "APP A MEDIDA",
    "lado": "der",
    "acento": "azul",
    "items": [
     {
      "texto": "Agendar partes de trabajo",
-     "t": 17.477,
+     "t": 17.027,
      "icono": "check"
     },
     {
      "texto": "Consultar materiales",
-     "t": 19.817,
+     "t": 19.017,
      "icono": "check"
     },
     {
      "texto": "Atender clientes",
-     "t": 21.217,
+     "t": 20.417,
      "icono": "check"
     }
    ]
   },
   {
    "tipo": "lista",
-   "t0": 24.15,
-   "t1": 28.2,
+   "t0": 23.067,
+   "t1": 27.117,
    "titulo": "CONECTADA A",
    "lado": "izq",
    "acento": "naranja",
    "items": [
     {
      "texto": "Telegram",
-     "t": 24.99,
+     "t": 23.907,
      "icono": "enviar"
     },
     {
      "texto": "Automatizaciones",
-     "t": 25.69,
+     "t": 24.607,
      "icono": "rayo"
     },
     {
      "texto": "IA",
-     "t": 26.45,
+     "t": 25.367,
      "icono": "chispa"
     }
    ]
@@ -120,8 +120,8 @@
    "plano": "detras",
    "layout": "gigante",
    "preset": "cristal",
-   "t0": 29.75,
-   "t1": 30.95,
+   "t0": 28.733,
+   "t1": 29.983,
    "lineas": [
     "FUNCIÓN DE",
     "IA"
@@ -129,8 +129,8 @@
   },
   {
    "tipo": "sello",
-   "t0": 34.692,
-   "t1": 35.442,
+   "t0": 33.534,
+   "t1": 34.384,
    "texto": "EN USO",
    "x": 640,
    "y": 170,
@@ -141,19 +141,19 @@
    "plano": "detras",
    "layout": "centro",
    "preset": "foco",
-   "t0": 40.342,
-   "t1": 41.542,
+   "t0": 39.317,
+   "t1": 40.65,
    "lineas": [
     "AHORRA"
    ]
   },
   {
    "tipo": "comentario",
-   "t0": 45.0,
-   "t1": 47.05,
+   "t0": 44.158,
+   "t1": 46.208,
    "palabra": "electricidad",
-   "escribeT": 45.4,
-   "enviaT": 46.4,
+   "escribeT": 44.558,
+   "enviaT": 45.558,
    "compacto": true
   }
  ],
@@ -207,51 +207,51 @@
    "ancla": "pico"
   },
   {
-   "en": 3.3,
+   "en": 3.333,
    "f": "p/vs_short_whoosh_4",
    "vol": 0.3,
    "ancla": "pico"
   },
   {
-   "en": 5.2,
+   "en": 5.233,
    "f": "p/pop_up_sfx",
    "vol": 0.4,
    "ancla": "inicio"
   },
   {
-   "en": 5.22,
+   "en": 5.253,
    "f": "p/mechanical_keyboard_click_09",
    "vol": 0.3,
    "ancla": "inicio"
   },
   {
-   "en": 10.7,
+   "en": 10.45,
    "f": "papel_desliza",
    "vol": 0.4,
    "ancla": "pico"
   },
   {
-   "en": 11.35,
+   "en": 11.1,
    "f": "grapadora",
    "vol": 0.3,
    "ancla": "pico"
   },
   {
-   "en": 11.95,
+   "en": 11.75,
    "f": "lapiz_escribe",
    "vol": 0.4,
    "ancla": "inicio",
    "dur": 0.9
   },
   {
-   "en": 15.467,
+   "en": 15.0,
    "f": "p/01_riser",
    "vol": 0.4,
    "ancla": "fin",
    "largo": 1.5
   },
   {
-   "en": 15.467,
+   "en": 15.0,
    "f": "p/cinematic_bass_3",
    "vol": 0.5,
    "ancla": "inicio",
@@ -259,7 +259,7 @@
    "fade_out": 0.25
   },
   {
-   "en": 15.477,
+   "en": 15.01,
    "f": "p/sub_bass_drop_2",
    "vol": 0.3,
    "ancla": "inicio",
@@ -267,116 +267,116 @@
    "fade_out": 0.4
   },
   {
-   "en": 15.467,
+   "en": 15.0,
    "f": "p/mouse_click_04",
    "vol": 0.4,
    "ancla": "inicio"
   },
   {
-   "en": 15.427,
+   "en": 14.96,
    "f": "p/woosh_effect_6",
    "vol": 0.27,
    "ancla": "pico"
   },
   {
-   "en": 16.967,
+   "en": 16.517,
    "f": "interfaz_abre",
    "vol": 0.28,
    "ancla": "inicio"
   },
   {
-   "en": 17.017,
+   "en": 16.567,
    "f": "p/vs_short_whoosh_5",
    "vol": 0.2,
    "ancla": "pico"
   },
   {
-   "en": 17.477,
+   "en": 17.027,
    "f": "p/pop_up_sfx",
    "vol": 0.4,
    "ancla": "inicio"
   },
   {
-   "en": 17.497,
+   "en": 17.047,
    "f": "p/mechanical_keyboard_click_07",
    "vol": 0.3,
    "ancla": "inicio"
   },
   {
-   "en": 19.817,
+   "en": 19.017,
    "f": "p/pop_up_sfx",
    "vol": 0.4,
    "ancla": "inicio"
   },
   {
-   "en": 19.837,
+   "en": 19.037,
    "f": "p/mechanical_keyboard_click_05",
    "vol": 0.3,
    "ancla": "inicio"
   },
   {
-   "en": 21.217,
+   "en": 20.417,
    "f": "p/pop_up_sfx",
    "vol": 0.4,
    "ancla": "inicio"
   },
   {
-   "en": 21.237,
+   "en": 20.437,
    "f": "p/mechanical_keyboard_click_09",
    "vol": 0.3,
    "ancla": "inicio"
   },
   {
-   "en": 24.15,
+   "en": 23.067,
    "f": "p/vs_short_whoosh_1",
    "vol": 0.25,
    "ancla": "pico"
   },
   {
-   "en": 24.99,
+   "en": 23.907,
    "f": "p/pop_up_sfx",
    "vol": 0.38,
    "ancla": "inicio"
   },
   {
-   "en": 25.01,
+   "en": 23.927,
    "f": "mensaje_alerta",
    "vol": 0.22,
    "ancla": "pico"
   },
   {
-   "en": 25.69,
+   "en": 24.607,
    "f": "p/pop_up_sfx",
    "vol": 0.38,
    "ancla": "inicio"
   },
   {
-   "en": 25.71,
+   "en": 24.627,
    "f": "mensaje_alerta",
    "vol": 0.22,
    "ancla": "pico"
   },
   {
-   "en": 26.45,
+   "en": 25.367,
    "f": "p/pop_up_sfx",
    "vol": 0.38,
    "ancla": "inicio"
   },
   {
-   "en": 26.47,
+   "en": 25.387,
    "f": "mensaje_alerta",
    "vol": 0.22,
    "ancla": "pico"
   },
   {
-   "en": 29.79,
+   "en": 28.773,
    "f": "p/02_riser",
    "vol": 0.45,
    "ancla": "fin",
    "largo": 1.4
   },
   {
-   "en": 29.79,
+   "en": 28.773,
    "f": "p/deep_bass_hit_1",
    "vol": 0.55,
    "ancla": "inicio",
@@ -384,7 +384,7 @@
    "fade_out": 0.25
   },
   {
-   "en": 29.8,
+   "en": 28.783,
    "f": "p/sub_bass_hit",
    "vol": 0.3,
    "ancla": "inicio",
@@ -392,25 +392,25 @@
    "fade_out": 0.4
   },
   {
-   "en": 29.79,
+   "en": 28.773,
    "f": "p/mouse_click_04",
    "vol": 0.4,
    "ancla": "inicio"
   },
   {
-   "en": 29.75,
+   "en": 28.733,
    "f": "p/woosh_effect_6",
    "vol": 0.27,
    "ancla": "pico"
   },
   {
-   "en": 34.692,
+   "en": 33.534,
    "f": "p/mouse_click_04",
    "vol": 0.5,
    "ancla": "inicio"
   },
   {
-   "en": 34.702,
+   "en": 33.544,
    "f": "p/deep_bass_hit_1",
    "vol": 0.4,
    "ancla": "inicio",
@@ -418,34 +418,34 @@
    "fade_out": 0.2
   },
   {
-   "en": 34.792,
+   "en": 33.634,
    "f": "tono_confirmacion",
    "vol": 0.22,
    "ancla": "inicio",
    "dur": 0.5
   },
   {
-   "en": 40.412,
+   "en": 39.387,
    "f": "p/02_riser",
    "vol": 0.45,
    "ancla": "fin",
    "largo": 1.7
   },
   {
-   "en": 40.412,
+   "en": 39.387,
    "f": "p/riser_1",
    "vol": 0.3,
    "ancla": "fin",
    "largo": 1.2
   },
   {
-   "en": 40.412,
+   "en": 39.387,
    "f": "interruptor_luz",
    "vol": 0.5,
    "ancla": "inicio"
   },
   {
-   "en": 40.412,
+   "en": 39.387,
    "f": "p/cinematic_bass_3",
    "vol": 0.5,
    "ancla": "inicio",
@@ -453,7 +453,7 @@
    "fade_out": 0.3
   },
   {
-   "en": 40.422,
+   "en": 39.397,
    "f": "p/sub_bass_drop_2",
    "vol": 0.26,
    "ancla": "inicio",
@@ -461,122 +461,122 @@
    "fade_out": 0.4
   },
   {
-   "en": 40.412,
+   "en": 39.387,
    "f": "p/mouse_click_04",
    "vol": 0.4,
    "ancla": "inicio"
   },
   {
-   "en": 40.372,
+   "en": 39.347,
    "f": "p/woosh_effect_6",
    "vol": 0.25,
    "ancla": "pico"
   },
   {
-   "en": 38.412,
+   "en": 37.354,
    "f": "p/woosh_effect_5",
    "vol": 0.28,
    "ancla": "pico"
   },
   {
-   "en": 45.0,
+   "en": 44.158,
    "f": "interfaz_abre",
    "vol": 0.28,
    "ancla": "inicio"
   },
   {
-   "en": 45.05,
+   "en": 44.208,
    "f": "p/vs_short_whoosh_5",
    "vol": 0.2,
    "ancla": "pico"
   },
   {
-   "en": 45.4,
+   "en": 44.558,
    "f": "p/riser_1",
    "vol": 0.35,
    "ancla": "fin",
    "largo": 1.0
   },
   {
-   "en": 45.4,
+   "en": 44.558,
    "f": "p/mechanical_keyboard_click_05",
    "vol": 0.38,
    "ancla": "inicio"
   },
   {
-   "en": 45.475,
+   "en": 44.633,
    "f": "p/mechanical_keyboard_click_19",
    "vol": 0.38,
    "ancla": "inicio"
   },
   {
-   "en": 45.55,
+   "en": 44.708,
    "f": "p/mechanical_keyboard_click_07",
    "vol": 0.38,
    "ancla": "inicio"
   },
   {
-   "en": 45.625,
+   "en": 44.783,
    "f": "p/mechanical_keyboard_click_09",
    "vol": 0.38,
    "ancla": "inicio"
   },
   {
-   "en": 45.7,
+   "en": 44.858,
    "f": "p/mechanical_keyboard_click_05",
    "vol": 0.38,
    "ancla": "inicio"
   },
   {
-   "en": 45.775,
+   "en": 44.933,
    "f": "p/mechanical_keyboard_click_19",
    "vol": 0.38,
    "ancla": "inicio"
   },
   {
-   "en": 45.85,
+   "en": 45.008,
    "f": "p/mechanical_keyboard_click_07",
    "vol": 0.38,
    "ancla": "inicio"
   },
   {
-   "en": 45.925,
+   "en": 45.083,
    "f": "p/mechanical_keyboard_click_09",
    "vol": 0.38,
    "ancla": "inicio"
   },
   {
-   "en": 46.0,
+   "en": 45.158,
    "f": "p/mechanical_keyboard_click_05",
    "vol": 0.38,
    "ancla": "inicio"
   },
   {
-   "en": 46.075,
+   "en": 45.233,
    "f": "p/mechanical_keyboard_click_19",
    "vol": 0.38,
    "ancla": "inicio"
   },
   {
-   "en": 46.15,
+   "en": 45.308,
    "f": "p/mechanical_keyboard_click_07",
    "vol": 0.38,
    "ancla": "inicio"
   },
   {
-   "en": 46.225,
+   "en": 45.383,
    "f": "p/mechanical_keyboard_click_09",
    "vol": 0.38,
    "ancla": "inicio"
   },
   {
-   "en": 46.4,
+   "en": 45.558,
    "f": "p/mouse_click_04",
    "vol": 0.6,
    "ancla": "inicio"
   },
   {
-   "en": 46.46,
+   "en": 45.618,
    "f": "p/deep_bass_hit_1",
    "vol": 0.4,
    "ancla": "inicio",
@@ -584,14 +584,14 @@
    "fade_out": 0.2
   },
   {
-   "en": 46.55,
+   "en": 45.708,
    "f": "tono_confirmacion",
    "vol": 0.25,
    "ancla": "inicio",
    "dur": 0.5
   },
   {
-   "en": 46.52,
+   "en": 45.678,
    "f": "p/pop_up_sfx",
    "vol": 0.35,
    "ancla": "inicio"
@@ -600,21 +600,21 @@
  "sfx_gain": 1.7,
  "voz_fx": [
   {
-   "t0": 38.392,
-   "t1": 39.072,
+   "t0": 37.334,
+   "t1": 38.047,
    "fx": "eco"
   }
  ],
  "enfasis": [
   {
-   "t0": 35.492,
-   "t1": 36.092,
+   "t0": 34.434,
+   "t1": 35.034,
    "modo": "in",
    "escala": 0.07
   },
   {
-   "t0": 38.942,
-   "t1": 39.542,
+   "t0": 37.917,
+   "t1": 38.517,
    "modo": "in",
    "escala": 0.07
   }
@@ -651,6 +651,22 @@
   },
   {
    "match": [
+    "destructivo."
+   ],
+   "a": [
+    "desestructurado."
+   ]
+  },
+  {
+   "match": [
+    "estructurado."
+   ],
+   "a": [
+    "desestructurado."
+   ]
+  },
+  {
+   "match": [
     "a",
     "toda",
     "la"
@@ -659,6 +675,20 @@
     "adaptada",
     "a",
     "la"
+   ]
+  },
+  {
+   "match": [
+    "funciones",
+    "de",
+    "inteligencia",
+    "científica."
+   ],
+   "a": [
+    "función",
+    "de",
+    "inteligencia",
+    "artificial."
    ]
   },
   {
@@ -678,6 +708,31 @@
   },
   {
    "match": [
+    "un",
+    "consejo,"
+   ],
+   "a": [
+    "un",
+    "concepto,"
+   ]
+  },
+  {
+   "match": [
+    "presentación",
+    "Y",
+    "es",
+    "una",
+    "herramienta"
+   ],
+   "a": [
+    "presentación.",
+    "Y",
+    "alguna",
+    "herramienta"
+   ]
+  },
+  {
+   "match": [
     "y",
     "es",
     "una",
@@ -687,6 +742,28 @@
     "y",
     "alguna",
     "herramienta"
+   ]
+  },
+  {
+   "match": [
+    "diariamente"
+   ],
+   "a": [
+    "diariamente."
+   ]
+  },
+  {
+   "match": [
+    "de",
+    "ella",
+    "Que",
+    "también,"
+   ],
+   "a": [
+    "de",
+    "IA,",
+    "que",
+    "también."
    ]
   },
   {
@@ -705,10 +782,50 @@
   },
   {
    "match": [
-    "estructurado."
+    "papeles",
+    "Si",
+    "esto"
    ],
    "a": [
-    "desestructurado."
+    "papeles.",
+    "Si",
+    "esto"
+   ]
+  },
+  {
+   "match": [
+    "palabra",
+    "electricidad"
+   ],
+   "a": [
+    "palabra",
+    "electricidad."
+   ]
+  },
+  {
+   "match": [
+    "pero",
+    "lo",
+    "importante",
+    "es"
+   ],
+   "a": [
+    "Pero",
+    "lo",
+    "importante",
+    "es"
+   ]
+  },
+  {
+   "match": [
+    "empresa",
+    "Y",
+    "todo"
+   ],
+   "a": [
+    "empresa",
+    "y",
+    "todo"
    ]
   }
  ],
@@ -718,31 +835,31 @@
    1.0
   ],
   [
-   8.14,
+   7.89,
    1.06
   ],
   [
-   13.96,
+   13.533,
    1.0
   ],
   [
-   16.927,
+   16.477,
    1.06
   ],
   [
-   28.43,
+   27.347,
    1.0
   ],
   [
-   32.782,
+   31.624,
    1.05
   ],
   [
-   35.342,
+   34.284,
    1.0
   ],
   [
-   43.462,
+   42.554,
    1.06
   ]
  ]

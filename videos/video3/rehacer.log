@@ -1,0 +1,14 @@
+fps=60 nivel voz=-23.7 dB umbral=-47.7 dB
+32 tramos | 45.74s de 129.0s | palabras mapeadas 134/158
+nivelación: objetivo -29.0 dBFS; ajustes -15.4..+19.7 dB
+OK -> videos/video3/corte.mp4
+cola de 0.5s añadida; duración 46.242s
+159 palabras de 46.2s en 15.7s
+remapeado: videos/video3/guion.json
+antes  : {'LUFS': -16.5, 'LRA': 2.7, 'ruido_p10_dB': -42.7, 'voz_p90_dB': -10.4}
+después: {'LUFS': -16.0, 'LRA': 1.7, 'ruido_p10_dB': -37.2, 'voz_p90_dB': -11.5}
+OK -> videos/video3/corte_vozfx.mp4 | eco 37.33-38.05s
+OK -> videos/video3/corte_color.mp4
+curva de zoom: 2775 valores, paso máx. entre fotogramas 0.0156 en t=14.97s (suave si < 0,02), rango 1.000-1.150
+ventanas de matte (05_matte.py --edicion): 0.20-3.03,3.28-7.85,10.20-13.58,14.95-16.20,16.47-22.60,23.02-27.17,28.68-30.03,33.48-34.43,39.27-40.70,44.11-46.26
+MATTE_OK

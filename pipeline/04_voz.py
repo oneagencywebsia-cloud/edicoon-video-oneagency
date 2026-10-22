@@ -11,10 +11,10 @@ import subprocess
 
 import numpy as np
 
-CADENA = ("highpass=f=75,"
+CADENA = ("highpass=f=75,dynaudnorm=f=250:g=9:p=0.9:m=6:s=6,"
           "equalizer=f=250:t=q:w=1.0:g=-2,equalizer=f=3000:t=q:w=1.0:g=2.5,equalizer=f=8000:t=h:w=0.7:g=1.5,"
           "deesser=i=0.35:m=0.5:f=0.5,"
-          "acompressor=threshold=0.18:ratio=1.8:attack=10:release=200:makeup=1,alimiter=limit=0.9")
+          "acompressor=threshold=0.15:ratio=2.2:attack=10:release=200:makeup=1,alimiter=limit=0.9")
 # Sin reducción de ruido a propósito: la sala de Ángel ya está a -77 dB y afftdn no mejora nada (solo añade artefactos).
 
 

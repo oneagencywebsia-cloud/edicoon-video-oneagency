@@ -140,7 +140,7 @@ def main() -> None:
         while t0 - 0.01 > prev_fin and t0 > 0 and t1 - t0 < 3 and (t0_orig := w["t0"]) - t0 < back and hay(t0 - 0.01):
             t0 -= 0.01
         nxt = W[i + 1]["t0"] if i + 1 < len(W) else 1e9
-        while t1 + 0.01 < nxt and t1 - w["t1"] < 0.08 and env[min(int((t1 + 0.01) * 100), len(env) - 1)] > voz - 20:
+        while t1 + 0.01 < nxt and t1 - w["t1"] < 0.30 and env[min(int((t1 + 0.01) * 100), len(env) - 1)] > voz - 28:  # palabras alargadas («pueeeees»): no cortar la cola
             t1 += 0.01
         aire = 0.09 if re.search(r"[,.?!;:]$", w["w"]) else 0.06
         seg.append([t0, t1, aire])
@@ -195,8 +195,12 @@ def main() -> None:
         if len(idx) < 4:  # menos de 40 ms de voz clara: no es voz
             continue
         v0, v1 = (i0 + idx[0]) / 100, (i0 + idx[-1] + 1) / 100
+        j = int(v1 * 100)
+        while j < min(i1 + 25, len(env) - 1) and env[j] > voz - 30 and (j / 100 - v1) < 0.25:  # cola que decae (sílaba final alargada)
+            j += 1
+        v1 = max(v1, j / 100)
         s0n = max(s0, v0 - 0.06)
-        s1n = min(s1, v1 + (0.12 if fin_puntuado(v1) else 0.08))
+        s1n = min(max(s1, v1), v1 + (0.14 if fin_puntuado(v1) else 0.10))
         if s1n - s0n >= 0.1:
             afinado.append([s0n, s1n])
     out = afinado
@@ -212,11 +216,12 @@ def main() -> None:
 
     # 3a) sin fogonazos: un tramo de < 0,30 s (una palabra suelta entre pausas) se alarga con aire de sus propios huecos hasta 0,30 s
     #     (si se tocan con el vecino se unen); así no hay destellos de 5-10 fotogramas de otra pose entre dos cortes
+    seg_f = [t for t in seg_f if any(t[0] - 0.02 <= (w["t0"] + w["t1"]) / 2 <= t[1] + 0.02 for w in W)]  # un tramo sin ninguna palabra es un resto de error: fuera
     MINIMO = 0.30
     for k in range(len(seg_f)):
         s0, s1 = seg_f[k]
         if s1 - s0 < MINIMO:
-            pad = (MINIMO - (s1 - s0)) / 2
+            pad = min((MINIMO - (s1 - s0)) / 2, 0.08)
             lim0 = seg_f[k - 1][1] if k else 0.0
             lim1 = seg_f[k + 1][0] if k + 1 < len(seg_f) else s1 + pad
             seg_f[k] = [max(f(s0 - pad), (lim0 + s0) / 2 if k else 0.0), min(f(s1 + pad), (s1 + lim1) / 2)]
@@ -275,6 +280,27 @@ def main() -> None:
 
     with cf.ThreadPoolExecutor(3) as ex:
         res = list(ex.map(tramo, range(len(seg_f))))
+    # 4a) NIVELACIÓN: cada tramo se lleva al nivel mediano de la voz (±8 dB) para que no haya frases más fuertes que otras
+    import wave
+    def leer(pw):
+        with wave.open(pw) as wf:
+            return np.frombuffer(wf.readframes(wf.getnframes()), dtype="<i2").astype(np.float64) / 32768
+    niveles = []
+    for _, au in res:
+        x = leer(au)
+        ven = x[: len(x) // 480 * 480].reshape(-1, 480)
+        r_ = np.sqrt((ven ** 2).mean(1) + 1e-12)
+        v_ = r_[20 * np.log10(r_) > (20 * np.log10(r_.max() + 1e-12) - 18)]  # solo las ventanas con voz clara del propio tramo
+        niveles.append(20 * np.log10(np.sqrt((v_ ** 2).mean()) + 1e-12))
+    objetivo = float(np.median(niveles))
+    for (_, au), nv in zip(res, niveles):
+        g = float(np.clip(objetivo - nv, -8, 8))
+        if abs(g) > 0.3:
+            x = np.clip(leer(au) * 10 ** (g / 20), -0.98, 0.98)
+            with wave.open(au, "wb") as wf:
+                wf.setnchannels(1); wf.setsampwidth(2); wf.setframerate(48000)
+                wf.writeframes((x * 32767).astype("<i2").tobytes())
+    print(f"nivelación: objetivo {objetivo:.1f} dBFS; ajustes {min(objetivo - n for n in niveles):+.1f}..{max(objetivo - n for n in niveles):+.1f} dB")
     lv, la = os.path.join(tmpd, "v.txt"), os.path.join(tmpd, "a.txt")
     open(lv, "w").write("".join(f"file '{v}'\n" for v, _ in res))
     open(la, "w").write("".join(f"file '{x}'\n" for _, x in res))
