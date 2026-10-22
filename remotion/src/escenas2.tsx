@@ -241,26 +241,30 @@ export const Lista: React.FC<P<'lista'>> = ({e, f0, dur}) => {
   const a = vis(frame, 0, dur, 10, 8);
   const izq = e.lado === 'izq';
   const col = e.acento === 'naranja' ? C.acento2 : C.acento;
-  const x = izq ? 30 : 718;
+  const x = izq ? 20 : 710;
   const dir = izq ? -1 : 1;
+  const larga = Math.max(...e.items.map((it) => Math.max(...it.texto.split(' ').map((w) => w.length))));
+  const tam = Math.max(26, Math.min(37, Math.floor(232 / (larga * 0.6))));
   return (
     <div style={{position: 'absolute', inset: 0, opacity: a}}>
       <div style={{position: 'absolute', left: x, top: 150, display: 'inline-flex', alignItems: 'center', gap: 10, padding: '6px 22px', borderRadius: 34, ...cristal, transform: `translateX(${(1 - entra(frame, 0, 12)) * dir * 140}px)`}}>
         <div style={{width: 14, height: 14, borderRadius: 7, background: col, boxShadow: `0 0 14px ${col}`}} />
         <span style={{fontFamily: FUENTE, fontWeight: 800, fontSize: 27, color: C.texto, letterSpacing: 3}}>{e.titulo}</span>
       </div>
-      {e.items.map((it, i) => {
-        const f = frame - at(it.t);
-        const p = entra(f, 0, 14);
-        return (
-          <div key={i} style={{position: 'absolute', left: x, top: 230 + i * 142, width: 330, minHeight: 112, boxSizing: 'border-box', padding: '16px 20px', borderRadius: 30, ...cristal, opacity: p, transform: `translateX(${(1 - p) * dir * 170}px)`, display: 'flex', alignItems: 'center', gap: 16}}>
-            <div style={{width: 54, height: 54, borderRadius: 16, background: col, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, boxShadow: `0 8px 26px ${col}88`, transform: `scale(${0.7 + 0.3 * Math.min(1, p * 1.4)})`}}>
-              <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" stroke="#fff">{ICO[it.icono ?? 'check']}</svg>
+      <div style={{position: 'absolute', left: x, top: 226, width: 350, display: 'flex', flexDirection: 'column', gap: 16}}>
+        {e.items.map((it, i) => {
+          const f = frame - at(it.t);
+          const p = entra(f, 0, 14);
+          return (
+            <div key={i} style={{boxSizing: 'border-box', padding: '14px 16px', borderRadius: 30, ...cristal, background: 'rgba(10,14,40,0.78)', opacity: p, transform: `translateX(${(1 - p) * dir * 170}px)`, display: 'flex', alignItems: 'center', gap: 12}}>
+              <div style={{width: 46, height: 46, borderRadius: 14, background: col, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, boxShadow: `0 8px 26px ${col}88`, transform: `scale(${0.7 + 0.3 * Math.min(1, p * 1.4)})`}}>
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff" stroke="#fff">{ICO[it.icono ?? 'check']}</svg>
+              </div>
+              <div style={{fontFamily: FUENTE, fontWeight: 800, fontSize: tam, color: C.texto, lineHeight: 1.05, textShadow: sombraTexto, minWidth: 0}}>{it.texto}</div>
             </div>
-            <div style={{fontFamily: FUENTE, fontWeight: 800, fontSize: 37, color: C.texto, lineHeight: 1.05, textShadow: sombraTexto}}>{it.texto}</div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 };

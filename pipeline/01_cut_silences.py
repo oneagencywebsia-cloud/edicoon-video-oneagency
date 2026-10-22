@@ -120,6 +120,7 @@ def main() -> None:
     ap.add_argument("--lufs", type=float, default=-16)
     ap.add_argument("--fps", type=int)
     ap.add_argument("--sin-verificar", action="store_true")
+    ap.add_argument("--quitar", default="", help="tramos del BRUTO a eliminar a mano (s): 112.95-113.75,123-126.05 (falsos arranques, miradas a otro lado)")
     a = ap.parse_args()
 
     W = json.load(open(a.words, encoding="utf-8"))["palabras"]
@@ -136,7 +137,7 @@ def main() -> None:
         t0, t1 = w["t0"], w["t1"]
         prev_fin = W[i - 1]["t1"] if i else 0.0
         inicio_frase = i == 0 or re.search(r"[.?!]$", W[i - 1]["w"]) is not None
-        back = 0.25 if (inicio_frase or t1 - t0 < 0.12) else 0.04
+        back = 0.12 if (inicio_frase or t1 - t0 < 0.12) else 0.04
         while t0 - 0.01 > prev_fin and t0 > 0 and t1 - t0 < 3 and (t0_orig := w["t0"]) - t0 < back and hay(t0 - 0.01):
             t0 -= 0.01
         nxt = W[i + 1]["t0"] if i + 1 < len(W) else 1e9
@@ -164,7 +165,9 @@ def main() -> None:
                 out[i - 1][1] = out[i][0] = gap1
     # 2b) silencios REALES dentro de los tramos (Whisper reparte palabras sin hueco sobre los respiros):
     #     cualquier tramo por debajo de voz-17 dB durante >= 0,12 s se deja en ~80 ms
-    sil = env < voz - 17
+    sil = env < voz - 30  # (audio con puerta de ruido: lo flojo de una sílaba final sigue siendo voz)
+    def dentro_de_palabra(a_, b_):
+        return any(w["t0"] + 0.03 < a_ and b_ < w["t1"] - 0.03 and w["t1"] - w["t0"] < 1.2 for w in W)
     partido = []
     for s0, s1 in out:
         i0, i1 = int(s0 * 100), int(s1 * 100)
@@ -175,16 +178,16 @@ def main() -> None:
                 j = i
                 while j < i1 and sil[min(j, len(sil) - 1)]:
                     j += 1
-                if (j - i) >= 12 and i > i0 + 5 and j < i1 - 5:
-                    partido.append([corte0, i / 100 + 0.04])
-                    corte0 = j / 100 - 0.04
+                if (j - i) >= 30 and i > i0 + 5 and j < i1 - 5 and not dentro_de_palabra(i / 100, j / 100):  # solo pausas de >= 0,30 s y nunca dentro de una palabra
+                    partido.append([corte0, i / 100 + 0.10])
+                    corte0 = j / 100 - 0.08
                 i = j
             else:
                 i += 1
         partido.append([corte0, s1])
     # 2c) recorte a la extensión VOCAL real de cada tramo: 60 ms antes de la primera voz y 80 ms (120 tras coma/punto) después
     #     de la última; un tramo sin voz clara (chasquido, respiro, cola) se descarta
-    voc = env > voz - 22
+    voc = env > voz - 36
     def fin_puntuado(t):
         j = min(range(len(W)), key=lambda q: abs(W[q]["t1"] - t))
         return abs(W[j]["t1"] - t) < 0.4 and re.search(r"[,.?!;:]$", W[j]["w"]) is not None
@@ -199,8 +202,8 @@ def main() -> None:
         while j < min(i1 + 25, len(env) - 1) and env[j] > voz - 30 and (j / 100 - v1) < 0.25:  # cola que decae (sílaba final alargada)
             j += 1
         v1 = max(v1, j / 100)
-        s0n = max(s0, v0 - 0.06)
-        s1n = min(max(s1, v1), v1 + (0.14 if fin_puntuado(v1) else 0.10))
+        s0n = max(s0, v0 - 0.08)
+        s1n = min(max(s1, v1), v1 + (0.16 if fin_puntuado(v1) else 0.12))
         if s1n - s0n >= 0.1:
             afinado.append([s0n, s1n])
     out = afinado
@@ -232,6 +235,21 @@ def main() -> None:
         else:
             fusion.append([s0, s1])
     seg_f = fusion
+
+    # 3a2) tramos que Ángel/el editor marca como error (falso arranque, mirada a otro lado…)
+    if a.quitar:
+        for rg in a.quitar.split(","):
+            q0, q1 = (float(v_) for v_ in rg.split("-"))
+            nuevo = []
+            for s0, s1 in seg_f:
+                if s1 <= q0 or s0 >= q1:
+                    nuevo.append([s0, s1])
+                    continue
+                if s0 < q0 - 0.05:
+                    nuevo.append([s0, f(q0)])
+                if s1 > q1 + 0.05:
+                    nuevo.append([f(q1), s1])
+            seg_f = nuevo
 
     # 3b) VERIFICACIÓN: transcribe el corte (solo audio) y recorta voz de más (tomas que Whisper no vio la primera vez)
     if not a.sin_verificar:

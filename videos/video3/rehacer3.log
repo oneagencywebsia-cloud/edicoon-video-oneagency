@@ -1,0 +1,8 @@
+antes  : {'LUFS': -16.5, 'LRA': 3.9, 'ruido_p10_dB': -48.5, 'voz_p90_dB': -10.5}
+después: {'LUFS': -16.0, 'LRA': 1.9, 'ruido_p10_dB': -43.3, 'voz_p90_dB': -11.2}
+OK -> videos/video3/corte_vozfx.mp4 | eco 29.27-31.67s
+OK -> videos/video3/corte_color.mp4
+curva de zoom: 2899 valores, paso máx. entre fotogramas 0.0156 en t=16.32s (suave si < 0,02), rango 1.000-1.150
+ventanas de matte (05_matte.py --edicion): 0.25-3.10,3.35-8.38,10.95-14.43,16.30-17.60,17.90-24.37,24.82-29.22,30.78-32.28,36.00-36.82,41.52-43.00,46.18-48.33
+Subtítulos: Yo sé / que te quieres quitar / todos los papeles / de la oficina, / pero si te dijera / que esto es / lo que hace / un electricista / para organizar todo / su trabajo sin papeles. / En el negocio familiar / de una empresa / de electricidad había / documentos físicos, / papeleo y todo muy / desestructurado. / Y como no, / tuve que desarrollar / una aplicación adaptada / a la empresa. / Hoy permite agendar / partes de trabajo, / consultar materiales / y atender al cliente / literalmente / de una aplicación. / Y encima conectado / a Telegram / con automatizaciones IA / y un desarrollo / increíble. / Y sí, / también tiene función / de inteligencia / artificial. / No es un concepto, / es una presentación. / y alguna herramienta / que obviamente utilizan / diariamente. / Lo importante no es / el código ni / las funciones de IA, / que también. / Pero lo importante es / lo que le ahorra / de verdad / a la empresa / y todo / lo que uno tiene / que sufrir / con los papeles. / Si esto te mola, / hazme caso y comenta / la palabra electricidad.
+MATTE_OK

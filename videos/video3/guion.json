@@ -4,8 +4,8 @@
  "escenas": [
   {
    "tipo": "lowerThird",
-   "t0": 0.25,
-   "t1": 1.7,
+   "t0": 0.3,
+   "t1": 1.75,
    "nombre": "Ángel Carrillo",
    "cargo": "CEO & FOUNDER"
   },
@@ -14,43 +14,43 @@
    "plano": "detras",
    "layout": "centro",
    "preset": "cromo",
-   "t0": 1.75,
-   "t1": 2.983,
+   "t0": 1.8,
+   "t1": 3.05,
    "lineas": [
     "PAPELES"
    ]
   },
   {
    "tipo": "lista",
-   "t0": 3.333,
-   "t1": 7.8,
+   "t0": 3.4,
+   "t1": 8.333,
    "titulo": "CASO REAL",
    "lado": "izq",
    "acento": "azul",
    "items": [
     {
      "texto": "Electricista",
-     "t": 5.233,
+     "t": 5.366,
      "icono": "rayo"
     }
    ]
   },
   {
    "tipo": "notas",
-   "t0": 10.25,
-   "t1": 13.533,
+   "t0": 11.0,
+   "t1": 14.383,
    "items": [
     {
      "texto": "Partes de trabajo",
-     "t": 10.45
+     "t": 11.2
     },
     {
      "texto": "Materiales",
-     "t": 11.1
+     "t": 11.85
     },
     {
      "texto": "Clientes",
-     "t": 11.75
+     "t": 12.533
     }
    ]
   },
@@ -59,58 +59,58 @@
    "plano": "detras",
    "layout": "diagonal",
    "preset": "ambar",
-   "t0": 15.0,
-   "t1": 16.15,
+   "t0": 16.35,
+   "t1": 17.55,
    "lineas": [
     "APLICACIÓN"
    ]
   },
   {
    "tipo": "lista",
-   "t0": 16.517,
-   "t1": 22.55,
+   "t0": 17.95,
+   "t1": 24.317,
    "titulo": "APP A MEDIDA",
    "lado": "der",
    "acento": "azul",
    "items": [
     {
      "texto": "Agendar partes de trabajo",
-     "t": 17.027,
+     "t": 18.46,
      "icono": "check"
     },
     {
      "texto": "Consultar materiales",
-     "t": 19.017,
+     "t": 20.534,
      "icono": "check"
     },
     {
      "texto": "Atender clientes",
-     "t": 20.417,
+     "t": 21.967,
      "icono": "check"
     }
    ]
   },
   {
    "tipo": "lista",
-   "t0": 23.067,
-   "t1": 27.117,
+   "t0": 24.867,
+   "t1": 29.167,
    "titulo": "CONECTADA A",
    "lado": "izq",
    "acento": "naranja",
    "items": [
     {
      "texto": "Telegram",
-     "t": 23.907,
+     "t": 25.707,
      "icono": "enviar"
     },
     {
      "texto": "Automatizaciones",
-     "t": 24.607,
+     "t": 26.59,
      "icono": "rayo"
     },
     {
      "texto": "IA",
-     "t": 25.367,
+     "t": 27.35,
      "icono": "chispa"
     }
    ]
@@ -120,8 +120,8 @@
    "plano": "detras",
    "layout": "gigante",
    "preset": "cristal",
-   "t0": 28.733,
-   "t1": 29.983,
+   "t0": 30.833,
+   "t1": 32.233,
    "lineas": [
     "FUNCIÓN DE",
     "IA"
@@ -129,8 +129,8 @@
   },
   {
    "tipo": "sello",
-   "t0": 33.534,
-   "t1": 34.384,
+   "t0": 36.051,
+   "t1": 36.767,
    "texto": "EN USO",
    "x": 640,
    "y": 170,
@@ -141,45 +141,45 @@
    "plano": "detras",
    "layout": "centro",
    "preset": "foco",
-   "t0": 39.317,
-   "t1": 40.65,
+   "t0": 41.567,
+   "t1": 42.95,
    "lineas": [
     "AHORRA"
    ]
   },
   {
    "tipo": "comentario",
-   "t0": 44.158,
-   "t1": 46.208,
+   "t0": 46.233,
+   "t1": 48.283,
    "palabra": "electricidad",
-   "escribeT": 44.558,
-   "enviaT": 45.558,
+   "escribeT": 46.633,
+   "enviaT": 47.633,
    "compacto": true
   }
  ],
  "sfx": [
   {
-   "en": 1.78,
+   "en": 1.83,
    "f": "p/02_riser",
    "vol": 0.5,
    "ancla": "fin",
    "largo": 1.75
   },
   {
-   "en": 1.78,
+   "en": 1.83,
    "f": "p/riser",
    "vol": 0.3,
    "ancla": "fin",
    "largo": 1.4
   },
   {
-   "en": 0.3,
+   "en": 0.35,
    "f": "p/swoosh_01_04",
    "vol": 0.35,
    "ancla": "pico"
   },
   {
-   "en": 1.78,
+   "en": 1.83,
    "f": "p/deep_bass_hit_1",
    "vol": 0.55,
    "ancla": "inicio",
@@ -187,7 +187,7 @@
    "fade_out": 0.25
   },
   {
-   "en": 1.79,
+   "en": 1.84,
    "f": "p/sub_bass_drop_4",
    "vol": 0.3,
    "ancla": "inicio",
@@ -195,63 +195,63 @@
    "fade_out": 0.4
   },
   {
-   "en": 1.78,
+   "en": 1.83,
    "f": "p/mouse_click_03",
    "vol": 0.4,
    "ancla": "inicio"
   },
   {
-   "en": 1.74,
+   "en": 1.79,
    "f": "p/woosh_effect_12",
    "vol": 0.27,
    "ancla": "pico"
   },
   {
-   "en": 3.333,
+   "en": 3.4,
    "f": "p/vs_short_whoosh_4",
    "vol": 0.3,
    "ancla": "pico"
   },
   {
-   "en": 5.233,
+   "en": 5.366,
    "f": "p/pop_up_sfx",
    "vol": 0.4,
    "ancla": "inicio"
   },
   {
-   "en": 5.253,
+   "en": 5.386,
    "f": "p/mechanical_keyboard_click_09",
    "vol": 0.3,
    "ancla": "inicio"
   },
   {
-   "en": 10.45,
+   "en": 11.2,
    "f": "papel_desliza",
    "vol": 0.4,
    "ancla": "pico"
   },
   {
-   "en": 11.1,
+   "en": 11.85,
    "f": "grapadora",
    "vol": 0.3,
    "ancla": "pico"
   },
   {
-   "en": 11.75,
+   "en": 12.533,
    "f": "lapiz_escribe",
    "vol": 0.4,
    "ancla": "inicio",
    "dur": 0.9
   },
   {
-   "en": 15.0,
+   "en": 16.35,
    "f": "p/01_riser",
    "vol": 0.4,
    "ancla": "fin",
    "largo": 1.5
   },
   {
-   "en": 15.0,
+   "en": 16.35,
    "f": "p/cinematic_bass_3",
    "vol": 0.5,
    "ancla": "inicio",
@@ -259,7 +259,7 @@
    "fade_out": 0.25
   },
   {
-   "en": 15.01,
+   "en": 16.36,
    "f": "p/sub_bass_drop_2",
    "vol": 0.3,
    "ancla": "inicio",
@@ -267,116 +267,116 @@
    "fade_out": 0.4
   },
   {
-   "en": 15.0,
+   "en": 16.35,
    "f": "p/mouse_click_04",
    "vol": 0.4,
    "ancla": "inicio"
   },
   {
-   "en": 14.96,
+   "en": 16.31,
    "f": "p/woosh_effect_6",
    "vol": 0.27,
    "ancla": "pico"
   },
   {
-   "en": 16.517,
+   "en": 17.95,
    "f": "interfaz_abre",
    "vol": 0.28,
    "ancla": "inicio"
   },
   {
-   "en": 16.567,
+   "en": 18.0,
    "f": "p/vs_short_whoosh_5",
    "vol": 0.2,
    "ancla": "pico"
   },
   {
-   "en": 17.027,
+   "en": 18.46,
    "f": "p/pop_up_sfx",
    "vol": 0.4,
    "ancla": "inicio"
   },
   {
-   "en": 17.047,
+   "en": 18.48,
    "f": "p/mechanical_keyboard_click_07",
    "vol": 0.3,
    "ancla": "inicio"
   },
   {
-   "en": 19.017,
+   "en": 20.534,
    "f": "p/pop_up_sfx",
    "vol": 0.4,
    "ancla": "inicio"
   },
   {
-   "en": 19.037,
+   "en": 20.554,
    "f": "p/mechanical_keyboard_click_05",
    "vol": 0.3,
    "ancla": "inicio"
   },
   {
-   "en": 20.417,
+   "en": 21.967,
    "f": "p/pop_up_sfx",
    "vol": 0.4,
    "ancla": "inicio"
   },
   {
-   "en": 20.437,
+   "en": 21.987,
    "f": "p/mechanical_keyboard_click_09",
    "vol": 0.3,
    "ancla": "inicio"
   },
   {
-   "en": 23.067,
+   "en": 24.867,
    "f": "p/vs_short_whoosh_1",
    "vol": 0.25,
    "ancla": "pico"
   },
   {
-   "en": 23.907,
+   "en": 25.707,
    "f": "p/pop_up_sfx",
    "vol": 0.38,
    "ancla": "inicio"
   },
   {
-   "en": 23.927,
+   "en": 25.727,
    "f": "mensaje_alerta",
    "vol": 0.22,
    "ancla": "pico"
   },
   {
-   "en": 24.607,
+   "en": 26.59,
    "f": "p/pop_up_sfx",
    "vol": 0.38,
    "ancla": "inicio"
   },
   {
-   "en": 24.627,
+   "en": 26.61,
    "f": "mensaje_alerta",
    "vol": 0.22,
    "ancla": "pico"
   },
   {
-   "en": 25.367,
+   "en": 27.35,
    "f": "p/pop_up_sfx",
    "vol": 0.38,
    "ancla": "inicio"
   },
   {
-   "en": 25.387,
+   "en": 27.37,
    "f": "mensaje_alerta",
    "vol": 0.22,
    "ancla": "pico"
   },
   {
-   "en": 28.773,
+   "en": 30.873,
    "f": "p/02_riser",
    "vol": 0.45,
    "ancla": "fin",
    "largo": 1.4
   },
   {
-   "en": 28.773,
+   "en": 30.873,
    "f": "p/deep_bass_hit_1",
    "vol": 0.55,
    "ancla": "inicio",
@@ -384,7 +384,7 @@
    "fade_out": 0.25
   },
   {
-   "en": 28.783,
+   "en": 30.883,
    "f": "p/sub_bass_hit",
    "vol": 0.3,
    "ancla": "inicio",
@@ -392,25 +392,25 @@
    "fade_out": 0.4
   },
   {
-   "en": 28.773,
+   "en": 30.873,
    "f": "p/mouse_click_04",
    "vol": 0.4,
    "ancla": "inicio"
   },
   {
-   "en": 28.733,
+   "en": 30.833,
    "f": "p/woosh_effect_6",
    "vol": 0.27,
    "ancla": "pico"
   },
   {
-   "en": 33.534,
+   "en": 36.051,
    "f": "p/mouse_click_04",
    "vol": 0.5,
    "ancla": "inicio"
   },
   {
-   "en": 33.544,
+   "en": 36.061,
    "f": "p/deep_bass_hit_1",
    "vol": 0.4,
    "ancla": "inicio",
@@ -418,34 +418,34 @@
    "fade_out": 0.2
   },
   {
-   "en": 33.634,
+   "en": 36.151,
    "f": "tono_confirmacion",
    "vol": 0.22,
    "ancla": "inicio",
    "dur": 0.5
   },
   {
-   "en": 39.387,
+   "en": 41.637,
    "f": "p/02_riser",
    "vol": 0.45,
    "ancla": "fin",
    "largo": 1.7
   },
   {
-   "en": 39.387,
+   "en": 41.637,
    "f": "p/riser_1",
    "vol": 0.3,
    "ancla": "fin",
    "largo": 1.2
   },
   {
-   "en": 39.387,
+   "en": 41.637,
    "f": "interruptor_luz",
    "vol": 0.5,
    "ancla": "inicio"
   },
   {
-   "en": 39.387,
+   "en": 41.637,
    "f": "p/cinematic_bass_3",
    "vol": 0.5,
    "ancla": "inicio",
@@ -453,7 +453,7 @@
    "fade_out": 0.3
   },
   {
-   "en": 39.397,
+   "en": 41.647,
    "f": "p/sub_bass_drop_2",
    "vol": 0.26,
    "ancla": "inicio",
@@ -461,122 +461,122 @@
    "fade_out": 0.4
   },
   {
-   "en": 39.387,
+   "en": 41.637,
    "f": "p/mouse_click_04",
    "vol": 0.4,
    "ancla": "inicio"
   },
   {
-   "en": 39.347,
+   "en": 41.597,
    "f": "p/woosh_effect_6",
    "vol": 0.25,
    "ancla": "pico"
   },
   {
-   "en": 37.354,
+   "en": 39.571,
    "f": "p/woosh_effect_5",
    "vol": 0.28,
    "ancla": "pico"
   },
   {
-   "en": 44.158,
+   "en": 46.233,
    "f": "interfaz_abre",
    "vol": 0.28,
    "ancla": "inicio"
   },
   {
-   "en": 44.208,
+   "en": 46.283,
    "f": "p/vs_short_whoosh_5",
    "vol": 0.2,
    "ancla": "pico"
   },
   {
-   "en": 44.558,
+   "en": 46.633,
    "f": "p/riser_1",
    "vol": 0.35,
    "ancla": "fin",
    "largo": 1.0
   },
   {
-   "en": 44.558,
+   "en": 46.633,
    "f": "p/mechanical_keyboard_click_05",
    "vol": 0.38,
    "ancla": "inicio"
   },
   {
-   "en": 44.633,
+   "en": 46.708,
    "f": "p/mechanical_keyboard_click_19",
    "vol": 0.38,
    "ancla": "inicio"
   },
   {
-   "en": 44.708,
+   "en": 46.783,
    "f": "p/mechanical_keyboard_click_07",
    "vol": 0.38,
    "ancla": "inicio"
   },
   {
-   "en": 44.783,
+   "en": 46.858,
    "f": "p/mechanical_keyboard_click_09",
    "vol": 0.38,
    "ancla": "inicio"
   },
   {
-   "en": 44.858,
+   "en": 46.933,
    "f": "p/mechanical_keyboard_click_05",
    "vol": 0.38,
    "ancla": "inicio"
   },
   {
-   "en": 44.933,
+   "en": 47.008,
    "f": "p/mechanical_keyboard_click_19",
    "vol": 0.38,
    "ancla": "inicio"
   },
   {
-   "en": 45.008,
+   "en": 47.083,
    "f": "p/mechanical_keyboard_click_07",
    "vol": 0.38,
    "ancla": "inicio"
   },
   {
-   "en": 45.083,
+   "en": 47.158,
    "f": "p/mechanical_keyboard_click_09",
    "vol": 0.38,
    "ancla": "inicio"
   },
   {
-   "en": 45.158,
+   "en": 47.233,
    "f": "p/mechanical_keyboard_click_05",
    "vol": 0.38,
    "ancla": "inicio"
   },
   {
-   "en": 45.233,
+   "en": 47.308,
    "f": "p/mechanical_keyboard_click_19",
    "vol": 0.38,
    "ancla": "inicio"
   },
   {
-   "en": 45.308,
+   "en": 47.383,
    "f": "p/mechanical_keyboard_click_07",
    "vol": 0.38,
    "ancla": "inicio"
   },
   {
-   "en": 45.383,
+   "en": 47.458,
    "f": "p/mechanical_keyboard_click_09",
    "vol": 0.38,
    "ancla": "inicio"
   },
   {
-   "en": 45.558,
+   "en": 47.633,
    "f": "p/mouse_click_04",
    "vol": 0.6,
    "ancla": "inicio"
   },
   {
-   "en": 45.618,
+   "en": 47.693,
    "f": "p/deep_bass_hit_1",
    "vol": 0.4,
    "ancla": "inicio",
@@ -584,14 +584,14 @@
    "fade_out": 0.2
   },
   {
-   "en": 45.708,
+   "en": 47.783,
    "f": "tono_confirmacion",
    "vol": 0.25,
    "ancla": "inicio",
    "dur": 0.5
   },
   {
-   "en": 45.678,
+   "en": 47.753,
    "f": "p/pop_up_sfx",
    "vol": 0.35,
    "ancla": "inicio"
@@ -600,21 +600,21 @@
  "sfx_gain": 1.7,
  "voz_fx": [
   {
-   "t0": 37.334,
-   "t1": 38.047,
+   "t0": 29.27,
+   "t1": 31.67,
    "fx": "eco"
   }
  ],
  "enfasis": [
   {
-   "t0": 34.434,
-   "t1": 35.034,
+   "t0": 36.767,
+   "t1": 37.217,
    "modo": "in",
    "escala": 0.07
   },
   {
-   "t0": 37.917,
-   "t1": 38.517,
+   "t0": 40.15,
+   "t1": 40.75,
    "modo": "in",
    "escala": 0.07
   }
@@ -739,7 +739,7 @@
     "herramienta"
    ],
    "a": [
-    "y",
+    "Y",
     "alguna",
     "herramienta"
    ]
@@ -827,39 +827,47 @@
     "y",
     "todo"
    ]
+  },
+  {
+   "match": [
+    "ella,"
+   ],
+   "a": [
+    "IA,"
+   ]
   }
  ],
  "zooms": [
   [
-   0.0,
+   0.05,
    1.0
   ],
   [
-   7.89,
+   8.423,
    1.06
   ],
   [
-   13.533,
+   14.383,
    1.0
   ],
   [
-   16.477,
+   17.91,
    1.06
   ],
   [
-   27.347,
+   29.447,
    1.0
   ],
   [
-   31.624,
+   34.141,
    1.05
   ],
   [
-   34.284,
+   36.767,
    1.0
   ],
   [
-   42.554,
+   44.733,
    1.06
   ]
  ]
