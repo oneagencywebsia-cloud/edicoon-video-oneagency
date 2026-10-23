@@ -33,6 +33,7 @@ export type Edicion = {
   vozFx?: {t0: number; t1: number; fx: string}[];
   zoomCurva?: number[];
   mattePaso?: number;
+  musica?: boolean;
   ventanasMatte?: [number, number][];
   enfasis?: {t0: number; t1: number; modo: 'in' | 'out'; escala: number}[];
 };

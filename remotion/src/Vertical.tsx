@@ -161,6 +161,7 @@ export const Vertical: React.FC<{ed: Edicion}> = ({ed}) => {
 
       {/* efectos de sonido: pista única (pipeline/08_sfx_bed.py) */}
       <Audio src={staticFile(`${ed.id}/sfx_bed.wav`)} />
+      {ed.musica && <Audio src={staticFile(`${ed.id}/musica.wav`)} />}
     </AbsoluteFill>
   );
 };

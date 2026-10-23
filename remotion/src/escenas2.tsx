@@ -33,22 +33,20 @@ export const Sectores: React.FC<P<'sectores'>> = ({e, f0, dur}) => {
   const at = useAt(f0);
   const fuera = sale(frame, dur, 8);
   return (
-    <div style={{position: 'absolute', left: 0, right: 0, top: 400, opacity: fuera}}>
-      <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 18, padding: '0 36px'}}>
-        {e.items.map((it, i) => {
-          const s = at(it.t);
-          const p = interpolate(frame, [s, s + 9], [0, 1], {...clamp, easing: out5});
-          const col = [C.acento, '#60a5fa', '#ffffff', C.acento2, '#93c5fd'][i % 5];
-          return (
-            <div key={i} style={{...cristal, opacity: p, transform: `translateY(${(1 - p) * 50}px) scale(${0.85 + 0.15 * p})`, height: 112, borderRadius: 56, padding: '0 38px 0 28px', display: 'flex', alignItems: 'center', gap: 16}}>
-              <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke={col} strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" style={{filter: `drop-shadow(0 0 10px ${col}99)`}}>
-                {ICONOS[it.icono]}
-              </svg>
-              <span style={{fontFamily: FUENTE, fontWeight: 800, fontSize: 46, color: '#fff', textShadow: sombraTexto}}>{it.texto}</span>
-            </div>
-          );
-        })}
-      </div>
+    <div style={{position: 'absolute', left: 20, top: 290, width: 350, opacity: fuera, display: 'flex', flexDirection: 'column', gap: 12}}>
+      {e.items.map((it, i) => {
+        const s = at(it.t);
+        const p = interpolate(frame, [s, s + 9], [0, 1], {...clamp, easing: out5});
+        const col = [C.acento, '#60a5fa', '#ffffff', C.acento2, '#93c5fd'][i % 5];
+        return (
+          <div key={i} style={{...cristal, background: 'rgba(10,14,40,0.78)', opacity: p, transform: `translateX(${(1 - p) * -160}px)`, height: 86, borderRadius: 43, padding: '0 28px 0 22px', display: 'flex', alignItems: 'center', gap: 14}}>
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke={col} strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" style={{filter: `drop-shadow(0 0 10px ${col}99)`}}>
+              {ICONOS[it.icono]}
+            </svg>
+            <span style={{fontFamily: FUENTE, fontWeight: 800, fontSize: 38, color: '#fff', textShadow: sombraTexto}}>{it.texto}</span>
+          </div>
+        );
+      })}
     </div>
   );
 };
