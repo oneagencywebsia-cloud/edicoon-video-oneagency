@@ -1,0 +1,19 @@
+fps=60 nivel voz=-23.1 dB umbral=-47.1 dB
+17 tramos | 32.77s de 86.8s | palabras mapeadas 91/101
+nivelación: objetivo -28.8 dBFS; ajustes -10.9..+7.7 dB
+OK -> videos/video2/corte.mp4
+100 palabras de 32.7s en 14.2s
+remapeado: videos/video2/guion.json
+antes  : {'LUFS': -16.3, 'LRA': 2.6, 'ruido_p10_dB': -48.6, 'voz_p90_dB': -10.3}
+después: {'LUFS': -16.0, 'LRA': 1.8, 'ruido_p10_dB': -43.5, 'voz_p90_dB': -11.2}
+OK -> videos/video2/corte_vozfx.mp4 | eco 25.30-27.98s
+OK -> videos/video2/corte_color.mp4
+curva de zoom: 1966 valores, paso máx. entre fotogramas 0.0156 en t=9.58s (suave si < 0,02), rango 1.000-1.170
+ventanas de matte (05_matte.py --edicion): 0.37-2.52,2.57-7.63,9.57-14.17,14.42-17.95,18.85-22.55,23.05-24.53,25.33-28.08,28.18-32.82
+Subtítulos: Si tienes una empresa / y sigues trabajando / cuando todos se van / a casa, / escucha esto. / Durante el día atiendes / clientes, / haces parte de trabajo, / atiendes llamadas. / Y cuando llegues / a casa comienzas / tu segundo turno. / Llamadas, / parte de trabajo, / atención al cliente. / Pero dime una cosa, / ¿cuánto de ese trabajo / necesitas realmente hacer tú? / Porque si todos / los días copias / la misma información / de un sitio / a otro, / probablemente haya / una forma mejor / y más eficiente. / Y no necesitas convertir / tu empresa / en una multinacional. / Si quieres dejarte / las tardes libres, / comenta la palabra / tecnología y ya / me lo agradecerás.
+golpes a sincronizar: [2.617, 9.617, 16.6, 23.1]
+pulso: 117.00 BPM, primer pulso en 0.075s
+tempo x1.020 -> 119.3 BPM; error medio de los golpes 50 ms
+la pista arranca en 2.09s
+musica.wav listo (-33.5 -> -27.0 LUFS, ganancia +6.5 dB)
+MATTE_OK
