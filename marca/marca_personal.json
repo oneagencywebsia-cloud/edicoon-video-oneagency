@@ -1,13 +1,25 @@
 {
   "modo": "personal",
-  "persona": { "nombre": "Ángel Carrillo", "cargo": null },
+  "persona": {
+    "nombre": "Ángel Carrillo",
+    "cargo": null
+  },
   "reglas": {
-    "lowerThird": { "nombre": "Ángel Carrillo", "cargo": null, "logo": false },
+    "lowerThird": {
+      "nombre": "Ángel Carrillo",
+      "cargo": null,
+      "logo": false
+    },
     "sinLogoOneAgency": true,
     "sinCargo": true,
     "sinCtaOneAgencyPorDefecto": true,
-    "handle": "POR CONFIRMAR (no usar @one-agency.es en marca personal)"
+    "handle": "@an.carrilloo",
+    "cta": "el que diga Ángel en cada vídeo; sin CTA de One Agency por defecto"
   },
-  "drive": { "raiz": "O.N.E Agency S.L / Vídeos / Contenido en vertical / MP", "brutos": "Vídeos Brutos / <carpeta por vídeo>", "nota": "cada carpeta puede traer vídeo hablado, b-rolls, audios sueltos o cualquier formato" },
+  "drive": {
+    "raiz": "O.N.E Agency S.L / Vídeos / Contenido en vertical / MP",
+    "brutos": "Vídeos Brutos / <carpeta por vídeo>",
+    "nota": "cada carpeta puede traer vídeo hablado, b-rolls, audios sueltos o cualquier formato"
+  },
   "estilo": "igual que la marca agencia: mismos colores, tipografía, subtítulos, rótulos, sonido, zoom, música y reglas de cara/zona segura"
 }

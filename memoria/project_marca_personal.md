@@ -10,3 +10,5 @@ Desde 2026-10-26 Ángel quiere seguir editando IGUAL, pero enfocado a su **MARCA
 - **Entrada:** Ángel sube una CARPETA por vídeo a `MP / Vídeos Brutos / <carpeta>` con archivos de cualquier tipo: vídeo hablando a cámara (con o sin audio de micro aparte), b-rolls, audios sueltos, etc. Clasificar con `pipeline/00a_clasificar.py` (inventario) y decidir el uso de cada archivo; preguntar solo si no se deduce.
 - Todo lo demás (estilo, sonido, música, zoom, cara visible, zona segura, descripciones con estrategia, nivelación de voz) se mantiene.
 - Config: `marca/marca_personal.json`.
+- **Handle personal (2026-10-26): @an.carrilloo** (usar en descripciones y rótulos si hace falta; NO @one-agency.es).
+- **CTA:** no hay uno fijo; se usa el que Ángel diga en cada vídeo (comentar una palabra, seguir, guardar…). Si no dice ninguno, proponer uno coherente con el tema y avisarle; nada de diagnóstico de One Agency salvo que lo pida.
