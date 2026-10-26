@@ -4,7 +4,7 @@ export type Sfx = {f: string; ini: number; archivo: string; vol: number; desde: 
 
 type Base = {t0: number; t1: number};
 export type Escena =
-  | (Base & {tipo: 'lowerThird'; nombre: string; cargo: string})
+  | (Base & {tipo: 'lowerThird'; nombre: string; cargo?: string; logo?: boolean})
   | (Base & {tipo: 'reloj'; desde: string; hasta: string; etiqueta: string})
   | (Base & {tipo: 'clave'; plano: 'detras' | 'frente'; layout: 'centro' | 'diagonal' | 'gigante'; preset: 'neon' | 'cromo' | 'ambar' | 'cristal' | 'foco' | 'hielo' | 'sombra'; lineas: string[]})
   | (Base & {tipo: 'sectores'; items: {texto: string; icono: string; t: number}[]})

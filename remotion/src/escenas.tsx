@@ -15,10 +15,10 @@ export const LowerThird: React.FC<P<'lowerThird'>> = ({e, f0, dur}) => {
   const w = entra(frame, 0, 16);
   return (
     <div style={{position: 'absolute', left: 44, top: 150, opacity: a, display: 'flex', alignItems: 'center', gap: 24, transform: `translateX(${(1 - w) * -70}px)`}}>
-      <Img src={staticFile('_shared/logos/avatar.png')} style={{width: 112, height: 112, borderRadius: '50%', border: `4px solid ${C.acento}`, boxShadow: `0 0 40px ${C.acento}88`}} />
+      {e.logo !== false && <Img src={staticFile('_shared/logos/avatar.png')} style={{width: 112, height: 112, borderRadius: '50%', border: `4px solid ${C.acento}`, boxShadow: `0 0 40px ${C.acento}88`}} />}
       <div>
         <div style={{fontFamily: FUENTE, fontWeight: 800, fontSize: 60, color: C.texto, lineHeight: 1.05, textShadow: sombraTexto}}>{e.nombre}</div>
-        <div style={{fontFamily: FUENTE, fontWeight: 700, fontSize: 31, color: C.acento2, letterSpacing: 6, marginTop: 8, textShadow: sombraTexto}}>{e.cargo}</div>
+        {e.cargo ? <div style={{fontFamily: FUENTE, fontWeight: 700, fontSize: 31, color: C.acento2, letterSpacing: 6, marginTop: 8, textShadow: sombraTexto}}>{e.cargo}</div> : null}
         <div style={{height: 6, width: 380 * w, background: C.acento, marginTop: 12, borderRadius: 3}} />
       </div>
     </div>

@@ -10,5 +10,6 @@
 - [[feedback_cortes_y_edicion]] — cortes secos, última toma, verificar transcribiendo
 - [[feedback_brolls]] — b-roll solo con sentido, sin audio, licencias del pack
 - [[feedback_descripciones]] — descripción de CADA vídeo: analizar lo dicho, neuromarketing sutil, nada forzado ni robótico
+- [[project_marca_personal]] — MARCA PERSONAL: sin CEO/Founder ni logo One Agency; carpeta MP; cuándo volver al modo agencia
 - [[feedback_comunicacion]] — español conciso, no publicar/gastar/subir sin preguntar
 - [[reference_drive_y_packs]] — repo, Drive, pack de editor, entorno

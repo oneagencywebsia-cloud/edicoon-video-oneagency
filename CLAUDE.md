@@ -5,6 +5,10 @@ Si Ángel da un consejo nuevo: actualiza el archivo de memoria que lo cubra (no 
 
 Ver `ESTADO.md` para el estado y las decisiones. Identidad solo desde `marca/` (nada fijo en el código).
 
+## MODO MARCA PERSONAL (desde 2026-10-26; ver memoria/project_marca_personal.md y marca/marca_personal.json)
+- Por defecto se edita para la MARCA PERSONAL de Ángel: SIN «CEO», SIN «Founder», SIN logo/avatar de O.N.E Agency (`lowerThird`: solo nombre, `logo: false`, sin `cargo`), sin @one-agency.es ni diagnóstico de One Agency en descripciones salvo que lo pida. Modo agencia solo cuando diga «edita para One Agency».
+- Drive: `O.N.E Agency S.L / Vídeos / Contenido en vertical / MP / Vídeos Brutos / <carpeta>`: cada carpeta trae archivos de cualquier tipo (vídeo a cámara, b-rolls, audios). Primero `python pipeline/00a_clasificar.py raw/<video>` (inventario hablado / b-roll / audio-voz) y decidir el uso de cada archivo.
+
 ## Entorno de trabajo: LOCAL (PC de Ángel: Windows 11, Ryzen 7 5800X, 32 GB, RTX 5060 8 GB) — decisión 2026-10-14
 Antes se trabajaba en la nube; ahora el editor corre en local. Los brutos ya NO se bajan por la API de Drive.
 - Preparación (una vez): `powershell -ExecutionPolicy Bypass -File tools\setup_local.ps1` (crea `.venv` con Python 3.12, instala `requirements-local.txt`, `npm install` y el navegador de Remotion). Necesita Node 20+, ffmpeg y Python 3.12 en el PATH.
